@@ -1,19 +1,19 @@
 @font-face {
   font-family: 'Streamster';
-  src: url('../fonts/Streamster.ttf');
+  src: url('/fonts/streamster.ttf');
 }
 
 @font-face {
   font-family: 'Outrun Future';
-  src: url("../fonts/Outrun\ future.otf");
+  src: url('/fonts/outrun-future.otf');
 }
 @font-face {
   font-family: 'Neon 80s';
-  src: url("../fonts/Neon.ttf");
+  src: url('/fonts/neon.ttf');
 }
 @font-face {
   font-family: 'Good Times';
-  src: url('../fonts/good\ times\ rg.ttf');
+  src: url('/fonts/good-times-rg.ttf');
 }
 
 html,
