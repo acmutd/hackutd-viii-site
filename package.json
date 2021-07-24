@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
-    "format": "prettier --write '**/*.{js,ts,tsx}'"
+    "format": "prettier --write '**/*.{js,ts,tsx,css}'"
   },
   "dependencies": {
     "@material-ui/icons": "^4.11.2",
@@ -38,7 +38,7 @@
   "lint-staged": {
     "**/*.{js,ts,tsx}": [
       "eslint --cache --fix",
-      "prettier --write '**/*.{js,ts,tsx}'"
+      "prettier --write '**/*.{js,ts,tsx,css}'"
     ]
   },
   "config": {
