@@ -32,6 +32,10 @@ function PortalApp({ Component, pageProps }: AppProps) {
         {process.env.ENABLE_PWA ||
           (process.env.NODE_ENV !== 'development' && <link rel="manifest" href="/manifest.json" />)}
 
+        <link rel="preload" href="/fonts/streamster.ttf" as="font" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/outrun-future.otf" as="font" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/neon.ttf" as="font" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/good-times-rg.ttf" as="font" crossOrigin="anonymous" />
         <link href="/icons/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16" />
         <link href="/icons/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32" />
         <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
