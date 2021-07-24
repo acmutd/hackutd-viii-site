@@ -1,9 +1,68 @@
+@font-face {
+  font-family: 'Streamster';
+  src: url('../fonts/Streamster.ttf');
+}
+
+@font-face {
+  font-family: 'Outrun Future';
+  src: url("../fonts/Outrun\ future.otf");
+}
+@font-face {
+  font-family: 'Neon 80s';
+  src: url("../fonts/Neon.ttf");
+}
+@font-face {
+  font-family: 'Good Times';
+  src: url('../fonts/good\ times\ rg.ttf');
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
+  width: 100%;
+  text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: #ffffff;
+  background-color: #000000;
+  }
+
+
+@media (max-width: 600px) {
+  div.Navbar{
+    display: none !important;
+  }
+
+  div.SidebarMobile{
+    display: flex !important;
+  }
+
+  div.SidebarLinks{
+    flex-direction: column;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: .5s;
+  }
+
+  div.Jumbotron{
+    display: none !important;
+  }
+
+  div.Stats{
+    display: none !important;
+  }
+
+  div.AboutHackUTD{
+    display: none !important;
+  }
+
+
 }
 
 a {
@@ -13,4 +72,214 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+button {
+  font-family: 'Good Times';
+  border-radius: 45%;
+  background-color: #000000;
+  text-shadow: 0px 0px 6px #00E0FF;
+}
+
+div.Navbar{
+  padding: 1%;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  font-family: 'Neon 80s';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 115%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+div.leftNav{
+  display: flex;
+  justify-content: space-around;
+  flex-basis: 300px;
+  align-items: center;
+  
+}
+div.SidebarMobile{
+  display:none;
+}
+a.link{
+  padding-right: 30px;
+}
+img{
+  margin-right: 30px;
+}
+
+button.SigninButton{
+  border-radius: 15% !important;
+  font-family: 'Neon 80s';
+  color: #66E900;
+  border: 2px solid #66E900;
+  font-size: 100%;
+}
+
+div.Jumbotron{
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+div.TitleScreen{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 400px;
+  background-image: url("../public/HackUTD8Assets/Sun.svg"), url('../public/HackUTD8Assets/NightSkyDesktop.svg');
+  background-size: absolute;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+h1.Eventname{
+  user-select: none;
+  font-family: 'Good Times';
+  font-size: 100px;
+  margin: 0;
+}
+
+h2.ACMname{
+  user-select: none;
+  font-family: 'Streamster';
+  text-shadow: 3px 3px 8px #FF00E5;
+  color: transparent;
+  background-image: linear-gradient(to right, #E500F3, #a70761 70%);
+  background-clip: text;
+  margin: 0;
+  font-size: 30px;
+}
+
+h3.subTitle{
+  user-select: none;
+  font-family: 'Outrun Future';
+  text-shadow: 4px 4px 15px #AD00FF;
+  font-style: normal;
+  font-weight: normal;  
+  color: transparent;
+  background-image: linear-gradient(to right, #00B6F9, #006CD1);
+  background-clip: text;
+  margin: 0;
+  font-size: 35px;
+}
+
+div.joinButtons{
+  background-image: url("../public/HackUTD8Assets/Ground.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  height: 150px;
+}
+
+button.HackerButton{
+  color: #00E0FF;
+  border: 2px solid #00E0FF;
+  padding: 10px;
+  margin: 30px;
+  box-shadow: 0px 0px 6px #00E0FF;
+}
+
+button.MentorButton{
+  color: #66E900;
+  border: 2px solid #66E900;
+  padding: 10px;
+  margin: 30px;
+  box-shadow: 0px 0px 6px #00E0FF;
+}
+
+button.SponserButton{
+  color: #FFD600;
+  border: 2px solid #FFD600;
+  padding: 10px;
+  margin: 30px;
+  box-shadow: 0px 0px 6px #00E0FF;
+}
+
+div.Stats{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+div.Statsright{
+  font-size: 150%;
+  padding-left: 3%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-auto-columns: minmax(70px, auto);
+}
+
+div.video{
+  padding-right: 2%;
+}
+.statsOne{
+  grid-row: 1;
+  grid-column: 2;
+  background: url("../public/HackUTD8Assets/Ring\ Accent.svg");
+  background-position: center;
+  background-size: cover;
+}
+
+.statsTwo{
+  grid-row: 2;
+  grid-column: 1;
+  background: url("../public/HackUTD8Assets/Ring\ Accent.svg");
+  background-position: center;
+  background-size: cover;
+}
+
+.statsThree{
+  grid-row: 2;
+  grid-column: 3;
+  background: url("../public/HackUTD8Assets/Ring\ Accent.svg");
+  background-position: center;
+  background-size: cover;
+}
+h5.Info{
+  color: #FF00E5;
+  font-family: 'Neon 80s';
+}
+
+h6.Info{
+  color: #00E0FF;
+  font-family: 'Neon 80s';
+}
+
+div.AboutHackUTD{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+
+  margin: 0;
+  margin-top: 3%;
+  padding: 10px;
+}
+
+h4.Subtitle{
+
+  font-family: 'Good Times';
+  font-style: normal;
+  font-weight: normal;
+  color: #00E0FF;
+  text-shadow: 0px 4px 4px #FF0000;
+}
+
+p.paragraph{
+  padding-left: 50px;
+  padding-right: 50px;
+  max-width: 950px;
+  font-family: 'Neon 80s';
+  font-style: normal;
 }

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2468" height="2484" viewBox="0 0 2468 2484">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke-width: 61.99px;
+        stroke: url(#linear-gradient);
+        filter: url(#filter);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="2347" y1="1752.547" x2="103" y2="753.453" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff66f6"/>
+      <stop offset="1" stop-color="#1fc8ff"/>
+    </linearGradient>
+    <filter id="filter" x="58" y="86" width="2335" height="2335" filterUnits="userSpaceOnUse">
+      <feGaussianBlur result="blur" stdDeviation="4.333" in="SourceAlpha"/>
+      <feComposite result="composite"/>
+      <feComposite result="composite-2"/>
+      <feComposite result="composite-3"/>
+      <feColorMatrix result="color" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0"/>
+      <feColorMatrix result="color-2" values="0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0"/>
+      <feColorMatrix result="color-3" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0"/>
+      <feComponentTransfer result="comp" color-interpolation-filters="sRGB">
+        <feFuncR type="table" tableValues="NaN 0"/>
+        <feFuncG type="table" tableValues="NaN 0.918"/>
+        <feFuncB type="table" tableValues="NaN 1"/>
+      </feComponentTransfer>
+      <feBlend result="blend" in2="SourceGraphic"/>
+      <feBlend result="blend-2" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g style="fill: none; filter: url(#filter)">
+    <circle id="circle" class="cls-1" cx="1225" cy="1253" r="1122" style="stroke: inherit; filter: none; fill: inherit"/>
+  </g>
+  <use xlink:href="#circle" style="stroke: url(#linear-gradient); filter: none; fill: none"/>
+</svg>
