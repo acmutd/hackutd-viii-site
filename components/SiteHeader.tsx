@@ -1,17 +1,14 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import HackUTDLogo from './HackUTDLogo';
 
 export default function SiteHeader() {
   return (
     <div className="Navbar">
       <div className="leftNav">
         <Link href="https://acmutd.co/">
-          <Image
-            src="../HackUTD8Assets/Logo.png"
-            width="47px"
-            height="55px"
-            padding-right="30px"
-          ></Image>
+          <a>
+            <HackUTDLogo />
+          </a>
         </Link>
         <Link href="/schedule">
           <a className="link">Schedule</a>

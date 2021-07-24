@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
-
 import SiteHeader from '../components/SiteHeader';
+import HackUTDLogo from '../components/HackUTDLogo';
 
 export default function Home() {
   return (
@@ -26,12 +26,7 @@ export default function Home() {
         </div>
 
         <span>
-          <Image
-            src="../HackUTD8Assets/Logo.png"
-            width="47px"
-            height="55px"
-            padding-right="30px"
-          ></Image>
+          <HackUTDLogo />
         </span>
       </div>
 
