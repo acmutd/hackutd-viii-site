@@ -5,7 +5,7 @@ export default function SiteHeader() {
   return (
     <div className="Navbar">
       <div className="leftNav">
-        <Link href="https://acmutd.co/">
+        <Link href="/">
           <a>
             <HackUTDLogo />
           </a>
@@ -17,7 +17,7 @@ export default function SiteHeader() {
           <a className="link">Speakers</a>
         </Link>
         <Link href="/sponsors">
-          <a className="link">sponsors</a>
+          <a className="link">Sponsors</a>
         </Link>
         <Link href="/faq">
           <a className="link">FAQ</a>

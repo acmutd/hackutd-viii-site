@@ -136,10 +136,16 @@ div.TitleScreen {
   flex-direction: column;
   justify-content: center;
   height: 400px;
-  background-image: url('/assets/sun.svg'), url('/assets/night-sky-desktop.svg');
-  background-size: absolute;
+  background-image: url('/assets/dallas.svg'), url('/assets/sun.svg'),
+    url('/assets/night-sky-desktop.svg');
+  background-size: absolute, absolute, contain !important;
+  /*-webkit-background-size: absolute, absolute, contain !important;
+  -moz-background-size: absolute, absolute, contain !important;
+  -o-background-size: absolute, absolute, contain !important;
+  background-attachment: fixed;*/
   background-repeat: no-repeat;
   background-position-x: center;
+  background-position-y: 240px, -50px, top;
 }
 
 h1.Eventname {
@@ -284,3 +290,12 @@ p.paragraph {
   font-family: 'Neon 80s';
   font-style: normal;
 }
+
+/* This point on is css conserning faq page*/
+div.faqs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 80%;
+}
+/*End for css conserning faq page*/
