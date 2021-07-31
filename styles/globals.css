@@ -138,14 +138,14 @@ div.TitleScreen {
   height: 400px;
   background-image: url('/assets/dallas.svg'), url('/assets/sun.svg'),
     url('/assets/night-sky-desktop.svg');
+  background-position-x: center;
+  background-position-y: 240px, -50px, top;
   background-size: absolute, absolute, contain !important;
   /*-webkit-background-size: absolute, absolute, contain !important;
   -moz-background-size: absolute, absolute, contain !important;
   -o-background-size: absolute, absolute, contain !important;
   background-attachment: fixed;*/
   background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: 240px, -50px, top;
 }
 
 h1.Eventname {
@@ -209,6 +209,16 @@ button.SponserButton {
   padding: 10px;
   margin: 30px;
   box-shadow: 0px 0px 6px #00e0ff;
+}
+
+div.date {
+  font-family: 'Good Times';
+  font-size: 56px;
+  color: #ffd600;
+  text-shadow: 0px 4px 4px #ff00e5;
+  justify-content: center;
+  align-self: center;
+  padding-bottom: 50px;
 }
 
 div.Stats {

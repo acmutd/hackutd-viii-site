@@ -44,7 +44,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="date">JOIN IS ON NOVEMBER __ ___</div>
+      <div className="date">JOIN US ON NOVEMBER 13 & 14</div>
 
       <div className="Stats">
         <div className="Statsright">
