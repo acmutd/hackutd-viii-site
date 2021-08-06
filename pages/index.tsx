@@ -52,13 +52,15 @@ export default function Home() {
             <h5 className="Info">700+</h5>
             <h6 className="Info">participants</h6>
           </div>
-          <div className="statsTwo">
-            <h5 className="Info">24</h5>
-            <h6 className="Info">hours</h6>
-          </div>
-          <div className="statsThree">
-            <h5 className="Info">34</h5>
-            <h6 className="Info">events</h6>
+          <div className="row">
+            <div className="statsTwo">
+              <h5 className="Info">24</h5>
+              <h6 className="Info">hours</h6>
+            </div>
+            <div className="statsThree">
+              <h5 className="Info">34</h5>
+              <h6 className="Info">events</h6>
+            </div>
           </div>
         </div>
 
@@ -74,9 +76,7 @@ export default function Home() {
       </div>
 
       <div className="AboutHackUTD">
-        <div className="left">
-          <h4 className="Subtitle">About HackUTD</h4>
-        </div>
+        <h4 className="Subtitle">About HackUTD</h4>
 
         <p className="paragraph">
           Here will be a short paragraph providing a general overview of what hackutd is including

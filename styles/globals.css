@@ -52,15 +52,64 @@ body {
   }
 
   div.Jumbotron {
-    display: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin: 0 auto;
+  }
+
+  div.TitleScreen {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center;
+    margin-top: 150px;
+  }
+
+  div.joinButtons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 300px !important;
+  }
+
+  button.HackerButton{
+    width: 230px;
+  }
+
+  button.MentorButton{
+    width: 230px;
+  }
+
+  button.SponserButton{
+    width: 230px;
+  }
+
+  div.date {
+    display: flex;
+    margin-top: 150px;
+    font-size: 100% !important;
   }
 
   div.Stats {
-    display: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  div.Statsright {
+    display: flex !important;
+    flex-direction: row !important;
+    margin-left: 0 !important;
+    margin-bottom: 50px;
+  }
+
+  div.statsOne{
+    width:150px;
+    background-size: 100% 100% !important;
   }
 
   div.AboutHackUTD {
-    display: none !important;
+    display: flex;
   }
 }
 
@@ -140,11 +189,7 @@ div.TitleScreen {
     url('/assets/night-sky-desktop.svg');
   background-position-x: center;
   background-position-y: 240px, -50px, top;
-  background-size: absolute, absolute, contain !important;
-  /*-webkit-background-size: absolute, absolute, contain !important;
-  -moz-background-size: absolute, absolute, contain !important;
-  -o-background-size: absolute, absolute, contain !important;
-  background-attachment: fixed;*/
+  background-size: absolute, absolute, cover !important;
   background-repeat: no-repeat;
 }
 
@@ -224,54 +269,62 @@ div.date {
 div.Stats {
   display: flex;
   flex-direction: row-reverse;
+  flex-wrap: wrap;
+  flex: 0 0 50%;
   justify-content: center;
   align-items: center;
-  z-index: 1;
 }
 
 div.Statsright {
-  font-size: 150%;
-  padding-left: 3%;
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-auto-columns: minmax(70px, auto);
+  display: flex;
+  flex-direction: column;
+  margin-left: 60px;
+}
+
+div.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap:inherit;
+  justify-content: center;
 }
 
 div.video {
   padding-right: 2%;
 }
 .statsOne {
-  grid-row: 1;
-  grid-column: 2;
+  font-size: 180%;
   background: url('/assets/ring-accent.svg');
   background-position: center;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 .statsTwo {
-  grid-row: 2;
-  grid-column: 1;
+  font-size: 180%;
+  width: 150px;
   background: url('/assets/ring-accent.svg');
   background-position: center;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 .statsThree {
-  grid-row: 2;
-  grid-column: 3;
+  font-size: 180%;
+  width: 150px;
   background: url('/assets/ring-accent.svg');
   background-position: center;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 h5.Info {
   color: #ff00e5;
   font-family: 'Neon 80s';
+  margin-bottom: 1px;
+
 }
 
 h6.Info {
   color: #00e0ff;
   font-family: 'Neon 80s';
+  margin-top: 1px;
 }
 
 div.AboutHackUTD {
@@ -291,6 +344,8 @@ h4.Subtitle {
   font-weight: normal;
   color: #00e0ff;
   text-shadow: 0px 4px 4px #ff0000;
+  text-align: left;
+  max-width: 950px;
 }
 
 p.paragraph {
@@ -302,10 +357,41 @@ p.paragraph {
 }
 
 /* This point on is css conserning faq page*/
+div.mainFAQSContent {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+h4.faqTitle {
+  width: 700px;
+  font-family: 'Good Times';
+  font-size: 56px;
+  line-height: 67px;
+  text-align: left;
+  margin-top: 37px;
+  margin-bottom: 37px;
+  margin-left: 50px;
+  color: #00e0ff;
+  text-shadow: 0px 4px 4px #ad00ff;
+}
+
 div.faqs {
+  font-family: 'Neon 80s';
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 80%;
+  width: 1250px;
+}
+
+div.leftFacts {
+  width: 40%;
+  margin-right: 3%;
+}
+
+div.rightFacts {
+  width: 40%;
+  margin-left: 3%;
 }
 /*End for css conserning faq page*/
