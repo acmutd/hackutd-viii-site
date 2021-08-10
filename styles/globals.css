@@ -52,37 +52,45 @@ body {
   }
 
   div.Jumbotron {
-    display: flex !important;
-    flex-direction: column !important;
     justify-content: center !important;
+    align-content: center;
     width: 100% !important;
-    margin: 0 auto;
+    margin: -10px;
   }
 
   div.TitleScreen {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center;
-    margin-top: 150px;
+    margin-top: -50px !important;
+    background-size: contain, cover, cover;
+    background-position-y: 330px, 70px, 100px !important;
+  }
+
+  h1.Eventname{
+    font-size: 80px !important;
+  }
+
+  h3.subTitle{
+    font-size: 30px !important;
   }
 
   div.joinButtons {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 300px !important;
+    justify-content: center;
+    height: 200px !important;
+    background-size: 100% 100% !important;
   }
 
-  button.HackerButton{
-    width: 230px;
+  button.HackerButton {
+    margin: 10px !important;
   }
 
-  button.MentorButton{
-    width: 230px;
+  button.MentorButton {
+    margin: 10px !important;
   }
 
-  button.SponserButton{
-    width: 230px;
+  button.SponserButton {
+    margin: 10px !important;
   }
 
   div.date {
@@ -103,8 +111,8 @@ body {
     margin-bottom: 50px;
   }
 
-  div.statsOne{
-    width:150px;
+  div.statsOne {
+    width: 150px;
     background-size: 100% 100% !important;
   }
 
@@ -129,6 +137,10 @@ button {
   text-shadow: 0px 0px 6px #00e0ff;
 }
 
+div.SidebarMobile {
+  display: none;
+}
+
 div.Navbar {
   padding: 1%;
   position: relative;
@@ -151,10 +163,6 @@ div.leftNav {
   justify-content: space-around;
   flex-basis: 300px;
   align-items: center;
-}
-
-div.SidebarMobile {
-  display: none;
 }
 
 a.link {
@@ -214,10 +222,10 @@ h2.ACMname {
 h3.subTitle {
   user-select: none;
   font-family: 'Outrun Future';
-  text-shadow: 4px 4px 15px #ad00ff;
   font-style: normal;
   font-weight: normal;
   color: transparent;
+  text-shadow: #000000;
   background-image: linear-gradient(to right, #00b6f9, #006cd1);
   background-clip: text;
   margin: 0;
@@ -284,7 +292,7 @@ div.Statsright {
 div.row {
   display: flex;
   flex-direction: row;
-  flex-wrap:inherit;
+  flex-wrap: inherit;
   justify-content: center;
 }
 
@@ -318,7 +326,6 @@ h5.Info {
   color: #ff00e5;
   font-family: 'Neon 80s';
   margin-bottom: 1px;
-
 }
 
 h6.Info {
@@ -360,8 +367,10 @@ p.paragraph {
 div.mainFAQSContent {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-content: center;
   justify-content: center;
+  text-align: left;
 }
 
 h4.faqTitle {
@@ -369,7 +378,6 @@ h4.faqTitle {
   font-family: 'Good Times';
   font-size: 56px;
   line-height: 67px;
-  text-align: left;
   margin-top: 37px;
   margin-bottom: 37px;
   margin-left: 50px;
@@ -378,20 +386,41 @@ h4.faqTitle {
 }
 
 div.faqs {
+  width: 1250px;
   font-family: 'Neon 80s';
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 1250px;
 }
 
 div.leftFacts {
   width: 40%;
-  margin-right: 3%;
+  margin-right: 5%;
 }
 
 div.rightFacts {
   width: 40%;
-  margin-left: 3%;
+  margin-left: 5%;
 }
+
+div.facts{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Neon 80s';
+}
+
+div.facts:hover{
+  cursor: pointer;
+}
+
+div.faqMiniTitles{
+  display: flex;
+  flex-direction: row;
+}
+
+h3.answers{
+  font-size: 16px;
+}
+
 /*End for css conserning faq page*/
+
