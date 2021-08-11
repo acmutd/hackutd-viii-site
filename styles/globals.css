@@ -42,7 +42,7 @@ body {
     position: relative;
   }
 
-  a.logo{
+  a.logo {
     display: flex;
     align-content: left;
     margin: 10px;
@@ -59,7 +59,7 @@ body {
     margin-top: 80px;
   }
 
-  a.link{
+  a.link {
     font-family: 'Neon 80s';
     padding: 8px 0px 8px 16px;
   }
@@ -134,11 +134,11 @@ body {
   }
 
   /*FAQ css for mobile*/
-  h4.faqTitle{
+  h4.faqTitle {
     display: none;
   }
 
-  h4.faqTitle-mobile{
+  h4.faqTitle-mobile {
     display: flex !important;
     justify-content: center;
     text-align: center !important;
@@ -148,7 +148,6 @@ body {
     color: #00e0ff;
     text-shadow: 0px 4px 4px #ad00ff;
   }
-
 }
 
 a {
@@ -403,7 +402,7 @@ div.mainFAQSContent {
   text-align: left;
 }
 
-h4.faqTitle-mobile{
+h4.faqTitle-mobile {
   display: none;
 }
 
@@ -457,3 +456,62 @@ h3.answers {
 }
 
 /*End for css conserning faq page*/
+
+/*css for other pages*/
+.sponsorsMainPage{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Neon 80s';
+}
+
+.sponsorsTitle{
+  display: flex;
+  font-size: 56px;
+  line-height: 67px;
+  margin-top: 37px;
+  margin-bottom: 37px;
+  margin-left: 50px;
+  font-family: 'Good Times';
+  color: #FF00E5;
+  text-shadow: 0px 4px 4px #00E0FF;
+}
+
+.speakersMainPage{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Neon 80s';
+}
+
+.speakersTitle{
+  display: flex;
+  font-size: 56px;
+  line-height: 67px;
+  margin-top: 37px;
+  margin-bottom: 37px;
+  margin-left: 50px;
+  font-family: 'Good Times';
+  color: #FFD600;
+  text-shadow: 0px 4px 4px #ff0000;
+}
+
+.scheduleMainPage{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Neon 80s';
+}
+
+.scheduleTitle{
+  display: flex;
+  font-size: 56px;
+  line-height: 67px;
+  margin-top: 37px;
+  margin-bottom: 37px;
+  margin-left: 50px;
+  font-family: 'Good Times';
+  color: #66E900;
+  text-shadow: 0px 4px 4px #ff00e5;
+}
+
+h5{
+  font-size: 30px;
+}

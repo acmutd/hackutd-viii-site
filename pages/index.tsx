@@ -1,34 +1,14 @@
-import Link from 'next/link';
-import Image from 'next/image';
 import SiteHeader from '../components/SiteHeader';
-import HackUTDLogo from '../components/HackUTDLogo';
+import MobileHeader from '../components/MobileHeader';
+import MobileLinks from '../components/MobileLinks';
 
 export default function Home() {
   return (
     <div>
       <SiteHeader></SiteHeader>
-      <div className="SidebarMobile">
-        <div className="SidebarLinks" id="SidebarLinks">
-          <a>X</a>
-          <Link href="/schedule">
-            <a className="link">Schedule</a>
-          </Link>
-          <Link href="/speakers">
-            <a className="link">Speakers</a>
-          </Link>
-          <Link href="/sponsors">
-            <a className="link">Sponsors</a>
-          </Link>
-          <Link href="/faq">
-            <a className="link">FAQ</a>
-          </Link>
-          <button className="SigninButton">Sign-in</button>
-        </div>
-
-        <span>
-          <HackUTDLogo />
-        </span>
-      </div>
+      <MobileHeader>
+        <MobileLinks></MobileLinks>
+      </MobileHeader>
 
       <div className="Jumbotron">
         <div className="TitleScreen">
