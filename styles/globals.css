@@ -37,18 +37,31 @@ body {
 
   div.SidebarMobile {
     display: flex !important;
+    flex-direction: column;
+    justify-content: left;
+    position: relative;
+  }
+
+  a.logo{
+    display: flex;
+    align-content: left;
+    margin: 10px;
   }
 
   div.SidebarLinks {
+    width: 300px;
+    height: 100vh;
+    display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 0;
+    justify-content: flex-start;
     position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
-    transition: 0.5s;
+    background-color: #000000;
+    margin-top: 80px;
+  }
+
+  a.link{
+    font-family: 'Neon 80s';
+    padding: 8px 0px 8px 16px;
   }
 
   div.Jumbotron {
@@ -64,11 +77,11 @@ body {
     background-position-y: 330px, 70px, 100px !important;
   }
 
-  h1.Eventname{
+  h1.Eventname {
     font-size: 80px !important;
   }
 
-  h3.subTitle{
+  h3.subTitle {
     font-size: 30px !important;
   }
 
@@ -119,6 +132,23 @@ body {
   div.AboutHackUTD {
     display: flex;
   }
+
+  /*FAQ css for mobile*/
+  h4.faqTitle{
+    display: none;
+  }
+
+  h4.faqTitle-mobile{
+    display: flex !important;
+    justify-content: center;
+    text-align: center !important;
+
+    font-family: 'Good Times';
+    font-size: 56px;
+    color: #00e0ff;
+    text-shadow: 0px 4px 4px #ad00ff;
+  }
+
 }
 
 a {
@@ -373,6 +403,10 @@ div.mainFAQSContent {
   text-align: left;
 }
 
+h4.faqTitle-mobile{
+  display: none;
+}
+
 h4.faqTitle {
   width: 700px;
   font-family: 'Good Times';
@@ -403,24 +437,23 @@ div.rightFacts {
   margin-left: 5%;
 }
 
-div.facts{
+div.facts {
   display: flex;
   flex-direction: column;
   font-family: 'Neon 80s';
 }
 
-div.facts:hover{
+div.facts:hover {
   cursor: pointer;
 }
 
-div.faqMiniTitles{
+div.faqMiniTitles {
   display: flex;
   flex-direction: row;
 }
 
-h3.answers{
+h3.answers {
   font-size: 16px;
 }
 
 /*End for css conserning faq page*/
-

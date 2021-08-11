@@ -6,7 +6,7 @@ export default function SiteHeader() {
     <div className="Navbar">
       <div className="leftNav">
         <Link href="/">
-          <a>
+          <a className="link">
             <HackUTDLogo />
           </a>
         </Link>
