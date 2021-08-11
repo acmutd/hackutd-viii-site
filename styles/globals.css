@@ -30,6 +30,13 @@ body {
   background-color: #000000;
 }
 
+@media (max-width:400px) {
+  div.joinButtons{
+    margin-top:-35px;
+  }
+  
+}
+
 @media (max-width: 600px) {
   div.Navbar {
     display: none !important;
@@ -49,19 +56,56 @@ body {
   }
 
   div.SidebarLinks {
-    width: 300px;
+    width: 250px;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: flex-start;
+    text-align: left;
     position: fixed;
+    font-size: 25px;
     background-color: #000000;
     margin-top: 80px;
+    padding: 30px;
   }
 
-  a.link {
+  div.link {
     font-family: 'Neon 80s';
-    padding: 8px 0px 8px 16px;
+    padding: 8px 0px 15px 16px;
+    cursor: pointer;
+  }
+
+  span {
+    height: 10px !important;
+    width: 10px !important;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  span.scheduledot {
+    background-color: #66e900;
+    box-shadow: 0px 0px 4px #66e900;
+  }
+
+  span.speakerdot {
+    background-color: #ffd600;
+    box-shadow: 0px 0px 4px #ffd600;
+  }
+
+  span.sponsordot {
+    background-color: #ff00e5;
+    box-shadow: 0px 0px 4px #ff00e5;
+  }
+
+  span.faqdot {
+    background-color: #00e0ff;
+    box-shadow: 0px 0px 4px #00e0ff;
+  }
+
+  button.SigninButton {
+    width: 100px;
   }
 
   div.Jumbotron {
@@ -78,11 +122,11 @@ body {
   }
 
   h1.Eventname {
-    font-size: 80px !important;
+    font-size: 300% !important;
   }
 
   h3.subTitle {
-    font-size: 30px !important;
+    font-size: 130% !important;
   }
 
   div.joinButtons {
@@ -142,11 +186,28 @@ body {
     display: flex !important;
     justify-content: center;
     text-align: center !important;
-
+    margin: 0 !important;
     font-family: 'Good Times';
     font-size: 56px;
     color: #00e0ff;
     text-shadow: 0px 4px 4px #ad00ff;
+  }
+
+  div.faqs {
+    width: 80% !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    margin-top: 10px;
+  }
+
+  div.leftFacts {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  div.rightFacts {
+    width: 100% !important;
+    margin: 0 !important;
   }
 }
 
@@ -458,13 +519,13 @@ h3.answers {
 /*End for css conserning faq page*/
 
 /*css for other pages*/
-.sponsorsMainPage{
+.sponsorsMainPage {
   display: flex;
   flex-direction: column;
   font-family: 'Neon 80s';
 }
 
-.sponsorsTitle{
+.sponsorsTitle {
   display: flex;
   font-size: 56px;
   line-height: 67px;
@@ -472,17 +533,17 @@ h3.answers {
   margin-bottom: 37px;
   margin-left: 50px;
   font-family: 'Good Times';
-  color: #FF00E5;
-  text-shadow: 0px 4px 4px #00E0FF;
+  color: #ff00e5;
+  text-shadow: 0px 4px 4px #00e0ff;
 }
 
-.speakersMainPage{
+.speakersMainPage {
   display: flex;
   flex-direction: column;
   font-family: 'Neon 80s';
 }
 
-.speakersTitle{
+.speakersTitle {
   display: flex;
   font-size: 56px;
   line-height: 67px;
@@ -490,17 +551,17 @@ h3.answers {
   margin-bottom: 37px;
   margin-left: 50px;
   font-family: 'Good Times';
-  color: #FFD600;
+  color: #ffd600;
   text-shadow: 0px 4px 4px #ff0000;
 }
 
-.scheduleMainPage{
+.scheduleMainPage {
   display: flex;
   flex-direction: column;
   font-family: 'Neon 80s';
 }
 
-.scheduleTitle{
+.scheduleTitle {
   display: flex;
   font-size: 56px;
   line-height: 67px;
@@ -508,10 +569,10 @@ h3.answers {
   margin-bottom: 37px;
   margin-left: 50px;
   font-family: 'Good Times';
-  color: #66E900;
+  color: #66e900;
   text-shadow: 0px 4px 4px #ff00e5;
 }
 
-h5{
+h5 {
   font-size: 30px;
 }
