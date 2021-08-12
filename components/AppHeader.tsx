@@ -23,14 +23,14 @@ export default function AppHeader() {
 
   return (
     <>
-      <header className="sticky top-0 p-2 md:p-4 flex bg-gray-900 shadow-md">
-        <div className="md:flex justify-center text-xl font-header text-center md:text-left">
-          <Link href="/">
-            <a className="pr-4 flex font-display content--center" onClick={dismissDialog}>
+      <header className="flex flex-row justify-between sticky p-2 md:p-4 bg-gray-900 shadow-md">
+      <Link href="/">
+            <a className="flex font-display self-center inline-block" onClick={dismissDialog}>
               <HackUTDLogo />
               <span>HackUTD</span>
             </a>
           </Link>
+        <div className="md:flex justify-center text-xl font-header md:text-left">
           <Link href="/schedule">
             <a onClick={dismissDialog}>
               <span className="inline scheduledot md:invisible"></span>
@@ -56,7 +56,7 @@ export default function AppHeader() {
             </a>
           </Link>
         </div>
-        <div className="flex flex-grow flex-row-reverse text-xl">
+        <div className="flex flex-row-reverse text-xl">
           <div className="mx-4">
             <button className="SigninButton font-header" onClick={toggleDialog}>
               Sign In

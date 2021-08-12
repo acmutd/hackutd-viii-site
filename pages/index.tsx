@@ -12,7 +12,7 @@ export default function Home() {
         </div>
 
         <div className="joinButtons">
-          <button className="HackerButton font-display bg-black">BECOME A HACKER</button>
+          <div className=" font-display text-2xl bg-black">REGISTRATION OPENING SOON</div>
         </div>
       </div>
 
@@ -20,17 +20,17 @@ export default function Home() {
 
       <div className="Stats">
         <div className="Statsright">
-          <div className="statsOne">
-            <h5 className="Info">700+</h5>
+          <div className="p-5 HackerButton text-2xl">
+            <h5 className="Info text-3xl">700+</h5>
             <h6 className="Info">participants</h6>
           </div>
           <div className="row">
-            <div className="statsTwo">
-              <h5 className="Info">24</h5>
+            <div className="HackerButton text-2xl">
+              <h5 className="Info text-3xl">24</h5>
               <h6 className="Info">hours</h6>
             </div>
-            <div className="statsThree">
-              <h5 className="Info">34</h5>
+            <div className="p-10  HackerButton text-2xl">
+              <h5 className="Info text-3xl">34</h5>
               <h6 className="Info">events</h6>
             </div>
           </div>
