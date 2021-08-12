@@ -26,8 +26,8 @@ function PortalApp({ Component, pageProps }: AppProps) {
           content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
         />
 
-        <title>HackPortal</title>
-        <meta name="description" content="Your all-in-one guide to this hackathon." />
+        <title>HackUTD VIII</title>
+        <meta name="description" content="HackUTD VIII - Blast From the Past, a hackathon by ACM UTD." />
 
         {process.env.ENABLE_PWA ||
           (process.env.NODE_ENV !== 'development' && <link rel="manifest" href="/manifest.json" />)}

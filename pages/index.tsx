@@ -1,6 +1,3 @@
-import MobileHeader from '../components/MobileHeader';
-import MobileLinks from '../components/MobileLinks';
-
 export default function Home() {
   return (
     <div>
@@ -21,7 +18,7 @@ export default function Home() {
       <div className="Stats">
         <div className="Statsright">
           <div className="p-5 HackerButton text-2xl">
-            <h5 className="Info text-3xl">700+</h5>
+            <h5 className="Info text-3xl">750+</h5>
             <h6 className="Info">participants</h6>
           </div>
           <div className="row">
@@ -30,7 +27,7 @@ export default function Home() {
               <h6 className="Info">hours</h6>
             </div>
             <div className="p-10  HackerButton text-2xl">
-              <h5 className="Info text-3xl">34</h5>
+              <h5 className="Info text-3xl">16</h5>
               <h6 className="Info">events</h6>
             </div>
           </div>
@@ -48,17 +45,29 @@ export default function Home() {
       </div>
 
       <div className="AboutHackUTD p-4">
-        <h4 className="Subtitle p-4">About HackUTD</h4>
+        <h4 className="Subtitle p-8 pt-8">About HackUTD</h4>
 
         <p className="paragraph">
           HackUTD, the largest university hackathon in North Texas, is a weekend long event where
           students build apps, hardware, and more. HackUTD provides a venue for self-expression and
           creativity through technology. People with varying technical backgrounds come together,
           form teams around a problem or idea, and collaboratively code a unique solution from
-          scratch. Whether you&amp;re a frequent hackathon attendee or just getting started,
-          we&amp;d love to see what you can make.
+          scratch. Whether you&apos;re a frequent hackathon attendee or just getting started,
+          we&apos;d love to see what you can make.
         </p>
+        <br/>
+        <br/>
       </div>
+      <footer className="footer">
+        <meta charSet="UTF-8"/>
+        <a  
+          href="https://acmutd.co/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Made with &#x1F303; by ACM Development
+        </a>
+      </footer>
     </div>
   );
 }
