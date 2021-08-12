@@ -148,6 +148,7 @@ button.SigninButton {
 
   h3.subTitle {
     font-size: 130% !important;
+
   }
 
   div.joinButtons {
@@ -196,6 +197,7 @@ button.SigninButton {
 
   div.AboutHackUTD {
     display: flex;
+    text-align: left;
   }
 
   /*FAQ css for mobile*/
@@ -319,7 +321,8 @@ div.TitleScreen {
 h1.Eventname {
   user-select: none;
   font-family: 'Good Times';
-  font-size: 100px;
+  font-size: 6rem;
+  text-shadow: 8px 3px 4px #000000;
   margin: 0;
 }
 
@@ -339,8 +342,8 @@ h3.subTitle {
   font-family: 'Outrun Future';
   font-style: normal;
   font-weight: normal;
-  color: transparent;
-  text-shadow: #000000;
+  color: #006cd1;
+  text-shadow: 12px -12px 2px #ae00ff6c;
   background-image: linear-gradient(to right, #00b6f9, #006cd1);
   background-clip: text;
   margin: 0;
@@ -351,8 +354,8 @@ div.joinButtons {
   background-image: url('/assets/ground.svg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-clip: content-box;
-  height: 150px;
+  background-clip: border-box;
+  height: 20rem;
 }
 
 button.HackerButton {
@@ -381,7 +384,7 @@ button.SponserButton {
 
 div.date {
   font-family: 'Good Times';
-  font-size: 56px;
+  font-size: 4rem;
   color: #ffd600;
   text-shadow: 0px 4px 4px #ff00e5;
   justify-content: center;
@@ -463,11 +466,12 @@ div.AboutHackUTD {
 
 h4.Subtitle {
   font-family: 'Good Times';
+  font-size: larger;
+  text-align: left;
   font-style: normal;
   font-weight: normal;
   color: #00e0ff;
   text-shadow: 0px 4px 4px #ff0000;
-  text-align: left;
   max-width: 950px;
 }
 
@@ -477,6 +481,7 @@ p.paragraph {
   max-width: 950px;
   font-family: 'Neon 80s';
   font-style: normal;
+  font-size: larger;
 }
 
 /* This point on is css conserning faq page*/
@@ -597,6 +602,24 @@ h3.answers {
   font-family: 'Good Times';
   color: #66e900;
   text-shadow: 0px 4px 4px #ff00e5;
+}
+
+.footer {
+  background: repeating-radial-gradient(#d871a67a, #28b2bf7a);
+  width: 100%;
+  height: 3rem;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  font-family: 'Good Times';
+  font-size: larger;
+  display: flex-center;
+  justify-content: center;
+  align-items: center;
 }
 
 h5 {
