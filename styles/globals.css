@@ -32,7 +32,21 @@ body {
 
 @media (max-width:400px) {
   div.joinButtons{
-    margin-top:-35px;
+    margin-top:-25px;
+  }
+
+  div.statsOne{
+    background: none;
+    margin-left: -20%;
+  }
+
+  div.statsTwo{
+    background: none;
+    margin-left: -40px;
+  }
+  div.statsThree{
+    background: none;
+    margin-left: -60px;
   }
   
 }
