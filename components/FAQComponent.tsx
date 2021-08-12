@@ -5,7 +5,7 @@ export default function FAQComponent(props) {
 
   return (
     <div className="facts">
-      <h2 className="question" onClick={() => setOpen(!open)}>
+      <h2 className="question text-3xl" onClick={() => setOpen(!open)}>
         {props.faqquestion}
       </h2>
       {open && props.children}

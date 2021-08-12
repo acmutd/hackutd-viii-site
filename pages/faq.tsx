@@ -1,4 +1,3 @@
-import SiteHeader from '../components/SiteHeader';
 import MobileHeader from '../components/MobileHeader';
 import MobileLinks from '../components/MobileLinks';
 import FAQComponent from '../components/FAQComponent';
@@ -7,10 +6,6 @@ import FAQDropdownItem from '../components/FAQDropdownItem';
 export default function faq() {
   return (
     <div>
-      <SiteHeader></SiteHeader>
-      <MobileHeader>
-        <MobileLinks></MobileLinks>
-      </MobileHeader>
       <div className="mainFAQSContent">
         <h4 className="faqTitle">FREQUENTLY ASKED QUESTIONS</h4>
         <h4 className="faqTitle-mobile">FAQ</h4>

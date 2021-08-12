@@ -4,6 +4,11 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
+    fontFamily: {
+      sans: ['Neon 80s', 'sans-serif'],
+      display: ['Good Times', 'sans-serif'],
+      header: ['Neon 80s', 'sans-serif'],
+    },
   },
   variants: {
     extend: {},
