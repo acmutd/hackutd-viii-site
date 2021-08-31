@@ -1,5 +1,5 @@
 const { black } = require('tailwindcss/colors');
-const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors');
 
 module.exports = {
   mode: 'jit',
@@ -12,7 +12,7 @@ module.exports = {
       display: ['Good Times', 'sans-serif'],
       header: ['Neon 80s', 'sans-serif'],
     },
- },
+  },
   variants: {
     extend: {},
   },

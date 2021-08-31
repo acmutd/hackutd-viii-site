@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { AppProps } from 'next/dist/next-server/lib/router/router';
+import { AppProps } from 'next/app';
 import 'firebase/auth';
 import AppHeader from '../components/AppHeader';
 import { initFirebase } from '../lib/firebase-client';
@@ -27,7 +27,10 @@ function PortalApp({ Component, pageProps }: AppProps) {
         />
 
         <title>HackUTD VIII</title>
-        <meta name="description" content="HackUTD VIII - Blast From the Past, a hackathon by ACM UTD." />
+        <meta
+          name="description"
+          content="HackUTD VIII - Blast From the Past, a hackathon by ACM UTD."
+        />
 
         {process.env.ENABLE_PWA ||
           (process.env.NODE_ENV !== 'development' && <link rel="manifest" href="/manifest.json" />)}

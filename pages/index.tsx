@@ -1,4 +1,8 @@
+import { useRouter } from 'next/router';
+
 export default function Home() {
+  const router = useRouter();
+
   return (
     <div>
       <div className="Jumbotron">
@@ -9,7 +13,13 @@ export default function Home() {
         </div>
 
         <div className="joinButtons">
-          <div className=" font-display text-2xl bg-black">REGISTRATION OPENING SOON</div>
+          <button
+            type="button"
+            onClick={() => router.push('/register')}
+            className="HackerButton font-display bg-black"
+          >
+            BECOME A HACKER
+          </button>
         </div>
       </div>
 
@@ -27,7 +37,7 @@ export default function Home() {
               <h6 className="Info">hours</h6>
             </div>
             <div className="p-10  HackerButton text-2xl">
-              <h5 className="Info text-3xl">16</h5>
+              <h5 className="Info text-3xl">34</h5>
               <h6 className="Info">events</h6>
             </div>
           </div>
@@ -55,16 +65,12 @@ export default function Home() {
           scratch. Whether you&apos;re a frequent hackathon attendee or just getting started,
           we&apos;d love to see what you can make.
         </p>
-        <br/>
-        <br/>
+        <br />
+        <br />
       </div>
       <footer className="footer">
-        <meta charSet="UTF-8"/>
-        <a  
-          href="https://acmutd.co/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <meta charSet="UTF-8" />
+        <a href="https://acmutd.co/" target="_blank" rel="noopener noreferrer">
           Made with &#x1F303; by ACM Development
         </a>
       </footer>
