@@ -23,7 +23,7 @@ export default function AppHeader() {
 
   return (
     <>
-      <header className="top-0 sticky flex flex-row justify-between p-2 md:p-4 bg-black shadow-md items-center">
+      <header className="top-0 sticky flex flex-row justify-between p-2 md:p-4 bg-black shadow-md items-center ">
         <Link href="/">
           <a
             className="flex font-display self-center inline-block items-center"
@@ -33,7 +33,7 @@ export default function AppHeader() {
             <span className="text-2xl">HackUTD</span>
           </a>
         </Link>
-        <div className="md:flex justify-center text-xl font-header md:text-left">
+        <div className="md:flex justify-left text-xl font-header md:text-left cursor:pointer">
           <Link href="/schedule">
             <a onClick={dismissDialog}>
               <span className="inline scheduledot md:invisible"></span>
@@ -46,7 +46,7 @@ export default function AppHeader() {
               <a className="link">Speakers</a>
             </a>
           </Link>
-          <Link href="/sponsorship-packet.pdf">
+          <Link href="/sponsors">
             <a onClick={dismissDialog}>
               <span className="inline sponsordot md:invisible"></span>
               <a className="link">Sponsors</a>
