@@ -235,7 +235,7 @@ button.SigninButton {
   .homeLogo{
     display: none;
   }
-
+  
 }
 
 a {
@@ -292,7 +292,7 @@ a.link {
   /* @apply px-4; */
 }
 
-@media (max-width: 900px){
+@media (max-width: 900px) {
   a.link {
     padding: 0px 0.5rem !important;
   }
@@ -659,17 +659,17 @@ h5 {
   display: block;
 }
 
-.dropdown{
+.dropdown {
   font-family: 'Neon 80s';
   border: 2px solid #66e900;
   /* border-radius: 15% !important; */
 }
 
-.dropdownButton{
+.dropdownButton {
   color: #66e900 !important;
 }
 
-.dropdown-menu{
+.dropdown-menu {
   font-family: 'Neon 80s';
   border: 2px solid #66e900;
   color: #66e900 !important;
