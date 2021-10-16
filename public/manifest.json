@@ -1,5 +1,6 @@
 {
- "name": "App",
+  "name": "HackPortal Dev",
+  "short_name": "HackPortal Dev",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",
@@ -37,5 +38,10 @@
    "type": "image\/png",
    "density": "4.0"
   }
- ]
+],
+  "theme_color": "#5D5FEF",
+  "background_color": "#5D5FEF",
+  "start_url": "/",
+  "display": "standalone"
+
 }
