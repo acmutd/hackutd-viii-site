@@ -48,10 +48,22 @@ body {
     background: none;
     margin-left: -40px;
   }
+
   div.statsThree {
     background: none;
     margin-left: -60px;
   }
+
+  .video{
+    zoom: 0.75 !important;
+    -moz-transform: scale(0.75) !important;
+    -moz-transform-origin: top center;
+    -o-transform: scale(0.75) !important;
+    -o-transform-origin: top center;
+    -webkit-transform: scale(0.75) !important;
+    -webkit-transform-origin: top center;
+  }
+
 }
 
 .scheduledot {
@@ -134,6 +146,11 @@ button.SigninButton {
     align-content: center;
     width: 100% !important;
     margin: -10px;
+    margin-bottom: 50px !important;
+  }
+
+  div.date {
+    margin-top: 50px !important;
   }
 
   div.TitleScreen {
@@ -155,6 +172,7 @@ button.SigninButton {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     height: 200px !important;
     background-size: 100% 100% !important;
   }
@@ -174,12 +192,13 @@ button.SigninButton {
   div.date {
     display: flex;
     margin-top: 150px;
-    font-size: 100% !important;
+    font-size: 150% !important;
   }
 
   div.Stats {
     display: flex !important;
     flex-direction: column !important;
+    justify-items: center !important;
   }
 
   div.Statsright {
@@ -232,10 +251,19 @@ button.SigninButton {
     margin: 0 !important;
   }
 
-  .homeLogo{
+  .homeLogo {
     display: none;
   }
-  
+
+  .video{
+    zoom: 0.90;
+    -moz-transform: scale(0.90);
+    -moz-transform-origin: top center;
+    -o-transform: scale(0.90);
+    -o-transform-origin: top center;
+    -webkit-transform: scale(0.90);
+    -webkit-transform-origin: top center;
+  }
 }
 
 a {
@@ -298,6 +326,16 @@ a.link {
   }
   button.SigninButton {
     width: 100px;
+  }
+
+}
+
+@media (max-width: 900px) and (min-width: 600px){
+  h1.Eventname {
+    font-size: 600% !important;
+  }
+  div.date {
+    font-size: 300% !important;
   }
 }
 
@@ -421,6 +459,7 @@ div.Stats {
   flex: 0 0 50%;
   justify-content: center;
   align-items: center;
+  align-content: center;
 }
 
 div.Statsright {
@@ -436,9 +475,9 @@ div.row {
   justify-content: center;
 }
 
-div.video {
+/* div.video {
   padding-right: 2%;
-}
+} */
 
 .statsOne {
   font-size: 180%;

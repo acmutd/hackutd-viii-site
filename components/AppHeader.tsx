@@ -24,7 +24,7 @@ export default function AppHeader() {
 
   return (
     <>
-      <header className="top-0 sticky flex flex-row justify-between p-2 md:p-4 bg-black shadow-md items-center ">
+      <header className="top-0 sticky flex flex-row justify-between p-2 md:p-4 bg-black shadow-md items-center z-50">
         <Link href="/">
           <a
             className="flex font-display self-center inline-block items-center"
