@@ -3,6 +3,7 @@ import React from 'react';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ProfileDialog from './ProfileDialog';
 import HackUTDLogo from './HackUTDLogo';
+import MenuIcon from '@material-ui/icons/Menu';
 
 /**
  * A global site header throughout the entire app.
@@ -30,10 +31,11 @@ export default function AppHeader() {
             onClick={dismissDialog}
           >
             <HackUTDLogo />
-            <span className="text-2xl">HackUTD</span>
+            <span className="homeLogo md:text-2xl text-lg">HackUTD</span>
           </a>
         </Link>
-        <div className="md:flex justify-left text-xl font-header md:text-left cursor:pointer">
+        {/* Menu items */}
+        <div className="sm:inline hidden md:flex justify-left md:text-xl text-md font-header md:text-left cursor:pointer">
           <Link href="/schedule">
             <a onClick={dismissDialog}>
               <span className="inline scheduledot md:invisible"></span>
@@ -59,9 +61,48 @@ export default function AppHeader() {
             </a>
           </Link>
         </div>
-        <div className="flex flex-row-reverse text-xl">
-          <div className="mx-4">
-            <button className="SigninButton font-header" onClick={toggleDialog}>
+        {/* Menu dropdown for mobile */}
+        <div className="sm:hidden">
+          <div className="dropdown inline-block relative bg-black text-sm rounded-full hover:rounded-b-none hover:rounded-t-2xl">
+            <button className="dropdownButton text-gray-700 font-semibold py-1 px-3 rounded inline-flex items-center">
+              <div className="mr-1">Menu</div>
+              <MenuIcon />
+            </button>
+            <ul className="dropdown-menu absolute hidden text-gray-700 pt-1 -left-px">
+              <li className="">
+                <Link href="/schedule">
+                  <a className="bg-black hover:bg-gray-700 py-2 px-4 block whitespace-no-wrap">
+                    Schedule
+                  </a>
+                </Link>
+              </li>
+              <li className="">
+                <Link href="/speakers">
+                  <a className="bg-black hover:bg-gray-700 py-2 px-4 block whitespace-no-wrap">
+                    Speakers
+                  </a>
+                </Link>
+              </li>
+              <li className="">
+                <Link href="/sponsors">
+                  <a className="bg-black hover:bg-gray-700 py-2 px-4 block whitespace-no-wrap">
+                    Sponsors
+                  </a>
+                </Link>
+              </li>
+              <li className="">
+                <Link href="/faq">
+                  <a className="bg-black hover:bg-gray-700 py-2 px-4 block whitespace-no-wrap">
+                    FAQ
+                  </a>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="flex flex-row-reverse md:text-xl text-sm">
+          <div className="md:mx-4 mx-1">
+            <button className="SigninButton font-header rounded-full" onClick={toggleDialog}>
               Sign In
             </button>
           </div>
