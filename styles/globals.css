@@ -55,12 +55,12 @@ body {
   }
 
   .video{
-    zoom: 0.75 !important;
-    -moz-transform: scale(0.75) !important;
+    zoom: 0.7 !important;
+    -moz-transform: scale(0.7) !important;
     -moz-transform-origin: top center;
-    -o-transform: scale(0.75) !important;
+    -o-transform: scale(0.7) !important;
     -o-transform-origin: top center;
-    -webkit-transform: scale(0.75) !important;
+    -webkit-transform: scale(0.7) !important;
     -webkit-transform-origin: top center;
   }
 
@@ -264,6 +264,19 @@ button.SigninButton {
     -webkit-transform: scale(0.90);
     -webkit-transform-origin: top center;
   }
+
+  .sponsorsTitle {
+    font-size: 40px !important;
+  }
+
+  .speakersTitle {
+    font-size: 40px !important;
+  }
+
+  .scheduleTitle {
+    font-size: 40px !important;
+  }
+
 }
 
 a {
