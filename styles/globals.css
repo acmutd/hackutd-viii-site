@@ -54,7 +54,7 @@ body {
     margin-left: -60px;
   }
 
-  .video{
+  .video {
     zoom: 0.7 !important;
     -moz-transform: scale(0.7) !important;
     -moz-transform-origin: top center;
@@ -63,7 +63,6 @@ body {
     -webkit-transform: scale(0.7) !important;
     -webkit-transform-origin: top center;
   }
-
 }
 
 .scheduledot {
@@ -156,7 +155,7 @@ button.SigninButton {
   div.TitleScreen {
     margin-top: -50px !important;
     background-size: contain, cover, cover;
-    background-position-y: 330px, 70px, 100px !important;
+    background-position-y: 335px, 70px, 100px !important;
   }
 
   h1.Eventname {
@@ -255,13 +254,13 @@ button.SigninButton {
     display: none;
   }
 
-  .video{
-    zoom: 0.90;
-    -moz-transform: scale(0.90);
+  .video {
+    zoom: 0.9;
+    -moz-transform: scale(0.9);
     -moz-transform-origin: top center;
-    -o-transform: scale(0.90);
+    -o-transform: scale(0.9);
     -o-transform-origin: top center;
-    -webkit-transform: scale(0.90);
+    -webkit-transform: scale(0.9);
     -webkit-transform-origin: top center;
   }
 
@@ -276,7 +275,6 @@ button.SigninButton {
   .scheduleTitle {
     font-size: 40px !important;
   }
-
 }
 
 a {
@@ -340,10 +338,9 @@ a.link {
   button.SigninButton {
     width: 100px;
   }
-
 }
 
-@media (max-width: 900px) and (min-width: 600px){
+@media (max-width: 900px) and (min-width: 600px) {
   h1.Eventname {
     font-size: 600% !important;
   }
