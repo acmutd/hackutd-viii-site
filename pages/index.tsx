@@ -27,24 +27,23 @@ export default function Home() {
 
       <div className="Stats">
         <div className="Statsright">
-          <div className="p-5 HackerButton text-2xl">
+          <div className="p-5 HackerButton sm:text-2xl text-lg">
             <h5 className="Info text-3xl">750+</h5>
             <h6 className="Info">participants</h6>
           </div>
           <div className="row">
-            <div className="HackerButton text-2xl">
+            <div className="HackerButton sm:text-2xl text-lg">
               <h5 className="Info text-3xl">24</h5>
               <h6 className="Info">hours</h6>
             </div>
-            <div className="p-10  HackerButton text-2xl">
+            <div className="p-10  HackerButton sm:text-2xl text-lg">
               <h5 className="Info text-3xl">34</h5>
               <h6 className="Info">events</h6>
             </div>
           </div>
         </div>
-
         <iframe
-          className="video"
+          className="video z-0"
           width="560"
           height="315"
           src="https://www.youtube.com/embed/dQw4w9WgXcQ"

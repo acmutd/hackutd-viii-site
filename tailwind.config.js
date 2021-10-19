@@ -12,6 +12,12 @@ module.exports = {
       display: ['Good Times', 'sans-serif'],
       header: ['Neon 80s', 'sans-serif'],
     },
+    minWidth: {
+      '1/4': '25%',
+      '1/2': '50%',
+      '3/4': '75%',
+      '160px': '160px',
+    },
   },
   variants: {
     extend: {},
