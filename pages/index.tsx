@@ -16,13 +16,13 @@ export default function Home() {
           <button
             type="button"
             onClick={() => router.push('/register')}
-            className="HackerButton font-display bg-black"
+            className="HackerButton font-display bg-black mb-16"
           >
             BECOME A HACKER
           </button>
         </div>
       </div>
-      <div>
+      <div className = "mt-16">
         <button
           type="button"
           onClick={() => router.push('/mentor')}
