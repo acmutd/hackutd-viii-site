@@ -451,7 +451,7 @@ button.HackerButton {
   font-size: 25px;
   padding: 10px;
   margin: 10px;
-  margin-top: 90px;
+  margin-top: 20px;
   width: 350px;
   height: 80px;
   box-shadow: 0px 0px 6px #00e0ff;
@@ -460,16 +460,26 @@ button.HackerButton {
 button.MentorButton {
   color: #66e900;
   border: 2px solid #66e900;
+  border-radius: 90px;
+  font-size: 25px/1.2;
   padding: 10px;
-  margin: 30px;
+  margin: 10px;
+  margin-top: -30px;
+  width: 350px/1.2;
+  height: 80px/1.2;
   box-shadow: 0px 0px 6px #00e0ff;
 }
 
 button.SponserButton {
   color: #ffd600;
   border: 2px solid #ffd600;
+  border-radius: 90px;
+  font-size: 25px/1.2;
   padding: 10px;
-  margin: 30px;
+  margin: 10px;
+  margin-top: 10px;
+  width: 350px/1.2;
+  height: 80px/1.2;
   box-shadow: 0px 0px 6px #00e0ff;
 }
 
@@ -638,7 +648,7 @@ div.faqMiniTitles {
 }
 
 h3.answers {
-  font-size: 16px;
+  font-size: 17px;
 }
 
 /*End for css conserning faq page*/
