@@ -22,7 +22,25 @@ export default function Home() {
           </button>
         </div>
       </div>
+      <div>
+        <button
+          type="button"
+          onClick={() => router.push('/mentor')}
+          className="MentorButton font-display bg-black"
+        >
+          BECOME A MENTOR
+        </button>
+      </div>
 
+      <div>
+        <button
+          type="button"
+          onClick={() => router.push('/volunteer')}
+          className="SponserButton font-display bg-black"
+        >
+          VOLUNTEER
+        </button>
+      </div>
       <div className="date">JOIN US ON NOVEMBER&nbsp;13&nbsp;&amp;&nbsp;14</div>
 
       <div className="Stats">
