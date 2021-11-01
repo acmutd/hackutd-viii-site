@@ -58,7 +58,7 @@ export default function faq() {
             </div>
 
             <FAQComponent faqquestion="When is registration?">
-              <FAQDropdownItem>Registration starts August 12th!</FAQDropdownItem>
+              <FAQDropdownItem>Registration began August 12th!</FAQDropdownItem>
             </FAQComponent>
           </div>
           <div className="rightFacts">
@@ -79,8 +79,7 @@ export default function faq() {
             <FAQComponent faqquestion="What are the general rules?">
               <FAQDropdownItem>
                 Your project must be built entirely over the course of the weekend. No previous
-                projects or code may be used, and all attendees must abide by the MLH code of
-                conduct.
+                projects or code may be used. Have fun!
               </FAQDropdownItem>
             </FAQComponent>
             <div>
@@ -99,8 +98,8 @@ export default function faq() {
 
             <FAQComponent faqquestion="Can I volunteer?">
               <FAQDropdownItem>
-                Mentor and volunteer applications will be open whenever we get it together and
-                figure out the logistics
+                Mentor and volunteer applications are open now! Check the home page for the sign-up
+                links!
               </FAQDropdownItem>
             </FAQComponent>
             <div>
@@ -110,7 +109,7 @@ export default function faq() {
             <FAQComponent faqquestion="Free swag? pls?">
               <FAQDropdownItem>
                 We will have custom HackUTD VIII swag for all participants along with gear provided
-                by our sponsors!
+                by our sponsors! And free food!
               </FAQDropdownItem>
             </FAQComponent>
           </div>

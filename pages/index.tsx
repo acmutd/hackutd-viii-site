@@ -22,7 +22,7 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <div className = "mt-16">
+      <div className="mt-16">
         <button
           type="button"
           onClick={() => router.push('/mentor')}
