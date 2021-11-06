@@ -4,6 +4,7 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ProfileDialog from './ProfileDialog';
 import HackUTDLogo from './HackUTDLogo';
 import MenuIcon from '@material-ui/icons/Menu';
+import { getItemCount } from '../pages/dashboard/index';
 
 /**
  * A global site header throughout the entire app.
@@ -36,6 +37,17 @@ export default function AppHeader() {
         </Link>
         {/* Menu items */}
         <div className="sm:inline hidden md:flex justify-left md:text-xl text-md font-header md:text-left cursor:pointer">
+          <Link href="/dashboard">
+            <a
+              onClick={() => {
+                dismissDialog();
+                getItemCount();
+              }}
+            >
+              <span className="inline scheduledot md:invisible"></span>
+              <a className="link">Dashboard</a>
+            </a>
+          </Link>
           <Link href="/schedule">
             <a onClick={dismissDialog}>
               <span className="inline scheduledot md:invisible"></span>
@@ -64,11 +76,24 @@ export default function AppHeader() {
         {/* Menu dropdown for mobile */}
         <div className="sm:hidden">
           <div className="dropdown inline-block relative bg-black text-sm rounded-full hover:rounded-b-none hover:rounded-t-2xl">
-            <button className="dropdownButton text-gray-700 font-semibold py-1 px-3 rounded inline-flex items-center">
-              <div className="mr-1">Menu</div>
+            <button className="dropdownButton text-gray-700 font-semibold py-1 px-4 rounded inline-flex items-center">
+              <div className="mr-2">Menu</div>
               <MenuIcon />
             </button>
-            <ul className="dropdown-menu absolute hidden text-gray-700 pt-1 -left-px">
+            <ul className="dropdown-menu absolute hidden text-gray-700 pt-1 -left-0.5">
+              <li className="">
+                <Link href="/dashboard">
+                  <a
+                    className="bg-black hover:bg-gray-700 py-2 px-4 block whitespace-no-wrap"
+                    onClick={() => {
+                      dismissDialog();
+                      getItemCount();
+                    }}
+                  >
+                    Dashboard
+                  </a>
+                </Link>
+              </li>
               <li className="">
                 <Link href="/schedule">
                   <a className="bg-black hover:bg-gray-700 py-2 px-4 block whitespace-no-wrap">

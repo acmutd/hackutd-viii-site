@@ -44,3 +44,15 @@ type User = Person & {
    */
   permissions: UserPermission[];
 };
+
+/**
+ *
+ * Represent a color scheme consist of a light and dark version used by a component
+ *
+ * @param light color code of the light variant
+ * @param dark color code of the dark variant
+ */
+type ColorScheme = {
+  light: string;
+  dark: string;
+};
