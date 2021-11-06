@@ -61,7 +61,6 @@ export default function Home() {
           </div>
         </div>
         <iframe
-          className="video z-0"
           width="560"
           height="315"
           src="https://www.youtube.com/embed/niFBblrblqo"
