@@ -39,76 +39,6 @@ export default function Dashboard() {
     eventCountString = `${eventCount} events are happening right now!`;
   }
 
-  {
-    /*
-  var eventCount = 0;
-  if (typeof window !== 'undefined') {
-    document.querySelectorAll('.carousel').forEach((carousel) => {
-      const items = carousel.querySelectorAll('.carousel__item');
-
-      //run if there are carousel items
-      if (items !== undefined && items !== null && items.length !== 0) {
-        const buttonsHtml = Array.from(items, () => {
-          return `<span class="carousel__button"></span>`;
-        });
-
-        carousel.insertAdjacentHTML(
-          'beforeend',
-          `
-          	<div class="carousel__nav">
-          		${buttonsHtml.join('')}
-          	</div>
-          `,
-        );
-
-        const buttons = carousel.querySelectorAll('.carousel__button');
-        eventCount = items.length;
-        buttons.forEach((button, i) => {
-          button.addEventListener('click', () => {
-            // un-select all the items
-            items.forEach((item) => item.classList.remove('carousel__item--selected'));
-            buttons.forEach((button) => button.classList.remove('carousel__button--selected'));
-
-            console.log(i - buttons.length / 2);
-            const itemNumber = i - buttons.length / 2;
-
-            items[itemNumber].classList.add('carousel__item--selected');
-            button.classList.add('carousel__button--selected');
-          });
-        });
-
-        //Set default to first item
-        items[0].classList.add('carousel__item--selected');
-        buttons[0].classList.add('carousel__button--selected');
-      }
-    });
-  }
-
-  var eventCountString;
-  if (eventCount === 1) {
-    eventCountString = '1 event is happening right now!';
-  } else {
-    eventCountString = `${eventCount} events are happening right now!`;
-  }
-  */
-  }
-  // var eventCount = 0;
-
-  // export const getItemCount = () => {
-  //   if (typeof window !== 'undefined'){
-  //   const items = document.querySelectorAll('.scrollItem');
-  //   if (items !== undefined && items !== null && items.length !== 0) {
-  //     eventCount = items.length;
-  //   }
-  // }
-  // };
-  // var eventCountString;
-  // if (eventCount === 1) {
-  //   eventCountString = '1 event is happening right now!';
-  // } else {
-  //   eventCountString = `${eventCount} events are happening right now!`;
-  // }
-
   return (
     <>
       <Script
@@ -246,7 +176,7 @@ export default function Dashboard() {
             </div>
           </div>
           {/* Events and Team */}
-          <div className="flex flex-wrap h-96 my-16">
+          {/* <div className="flex flex-wrap h-96 my-16">
             <div className="md:w-3/5 w-screen ">
               <h1 className="md:text-3xl text-xl font-black">Your Saved Events</h1>
             </div>
@@ -256,7 +186,7 @@ export default function Dashboard() {
                 Hackergang
               </div>
             </div>
-          </div>
+          </div> */}
         </section>
       </div>
     </>

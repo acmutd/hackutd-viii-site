@@ -44,6 +44,12 @@ module.exports = {
       left: {
         '-0.5': '-0.1rem',
       },
+      borderColor: (theme) => ({
+        aqua: '#D8F8FF',
+        darkAqua: '#B0F1FF',
+        pink: '#FF00E5',
+        green: '#66E900',
+      }),
     },
     fontFamily: {
       sans: ['Neon 80s', 'sans-serif'],

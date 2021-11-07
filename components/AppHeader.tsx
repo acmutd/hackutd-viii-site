@@ -36,7 +36,7 @@ export default function AppHeader() {
           </a>
         </Link>
         {/* Menu items */}
-        <div className="sm:inline hidden md:flex justify-left md:text-xl text-md font-header md:text-left cursor:pointer">
+        <div className="lg:inline hidden md:flex justify-left md:text-xl text-md font-header md:text-left cursor:pointer">
           <Link href="/dashboard">
             <a
               onClick={() => {
@@ -45,36 +45,36 @@ export default function AppHeader() {
               }}
             >
               <span className="inline scheduledot md:invisible"></span>
-              <a className="link">Dashboard</a>
+              <a className="link lg:inline hidden">Dashboard</a>
             </a>
           </Link>
           <Link href="/schedule">
             <a onClick={dismissDialog}>
               <span className="inline scheduledot md:invisible"></span>
-              <a className="link">Schedule</a>
+              <a className="link lg:inline hidden">Schedule</a>
             </a>
           </Link>
           <Link href="/speakers">
             <a onClick={dismissDialog}>
               <span className="inline speakerdot md:invisible"></span>
-              <a className="link">Speakers</a>
+              <a className="link lg:inline hidden">Speakers</a>
             </a>
           </Link>
           <Link href="/sponsors">
             <a onClick={dismissDialog}>
               <span className="inline sponsordot md:invisible"></span>
-              <a className="link">Sponsors</a>
+              <a className="link lg:inline hidden">Sponsors</a>
             </a>
           </Link>
           <Link href="/faq">
             <a onClick={dismissDialog}>
               <span className="inline faqdot md:invisible"></span>
-              <a className="link">FAQ</a>
+              <a className="link lg:inline hidden">FAQ</a>
             </a>
           </Link>
         </div>
         {/* Menu dropdown for mobile */}
-        <div className="sm:hidden">
+        <div className="lg:hidden">
           <div className="dropdown inline-block relative bg-black text-sm rounded-full hover:rounded-b-none hover:rounded-t-2xl">
             <button className="dropdownButton text-gray-700 font-semibold py-1 px-4 rounded inline-flex items-center">
               <div className="mr-2">Menu</div>
