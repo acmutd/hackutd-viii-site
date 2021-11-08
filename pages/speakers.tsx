@@ -9,7 +9,7 @@ export default function speakers() {
           {/* path is relative path from speakers.tsx file(this file) to assets*/}
           {/* general path -  /../public/assets/speakerImages/{speaker file}*/}
           <SpeakerCard
-            path="/../public/assets/speakerImages/speaker.jpg"
+            path="public/assets/speakerImages/speaker.jpg"
             name="Paul Bailo"
             company="OrangeShine"
             description="Paul Bailo is widely recognized by industry thought leaders for his C-level executive skills in Digital Transformation, Marketing and Business Operations. 
