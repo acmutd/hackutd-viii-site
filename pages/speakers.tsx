@@ -20,7 +20,7 @@ export default function speakers() {
              Goldman Sachs, MasterCard, American Express, GE, Citibank, Federal Reserve Bank of New York, NYC Transit Authority and US Department of Transportation."
             website="https://www.linkedin.com/in/paulbailo/"
           />
-          <SpeakerCard
+          {/* <SpeakerCard
             path="/../public/assets/speakerImages/default_image.jpg"
             name="Name"
             company="company"
@@ -63,7 +63,7 @@ export default function speakers() {
                 better visualize the space this will take. Here is filler so we can better visualize the
                 space this will take."
             website="www.speakerwebsitehere.com"
-          />
+         /> */}
         </div>
       </div>
     </div>
