@@ -759,3 +759,26 @@ h5 {
 .dashboardTag {
   background-color: #000000 !important;
 }
+
+.hackerPackShadow {
+  text-shadow: 1px 1px 7px #65edff, 1px 1px 7px #00e0ff;
+}
+
+.scrollSnap {
+  scroll-margin-top: 100px;
+  scroll-behavior: smooth;
+}
+
+.sponsorBackground {
+  background-color: #00e0ff;
+}
+
+td, th {
+  border: 1px solid #00e0ff;
+  text-align: left;
+  padding: 8px;
+}
+
+.row {
+  background-color: #00e0ff;
+}

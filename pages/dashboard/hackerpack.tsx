@@ -5,6 +5,7 @@ import React from 'react';
 import { useUser } from '../../lib/profile/user-data';
 import { useAuthContext } from '../../lib/user/AuthContext';
 import DocLink from './Components/DocLinks';
+import SponsorCard from './Components/SponsorChallenge';
 
 /**
  * The dashboard / hackerpack.
@@ -40,7 +41,7 @@ export default function HackerPack() {
               General
               <ul className="pl-4">
                 <li>
-                  <a href="#Subsection1">Food</a>
+                  <a href="#About">Overview</a>
                 </li>
                 <li>
                   <a href="#Subsection2">Mentors</a>
@@ -110,9 +111,11 @@ export default function HackerPack() {
         <section id="subheader" className="p-4">
           <DashboardHeader active="/dashboard/hackerpack" />
         </section>
-        <div className="font-bold text-2xl md:text-4xl lg-text-6xl">Big Heading</div>
+        <p className="hackerPackShadow inline font-bold text-2xl md:text-4xl lg-text-6xl text-white">
+          HackerPack
+        </p>
 
-        <section
+        {/* <section
           id="docLinks"
           className="bg-gray-200 rounded-lg my-6 p-5 w-5/6 bg-opacity-0 border-2 border-aqua"
         >
@@ -149,56 +152,145 @@ export default function HackerPack() {
               title="An Essay for Comm"
             />
           </div>
-        </section>
+        </section> */}
 
-        <div id="Subsection1" className="my-7">
-          <div className="font-bold text-lg md:text-xl lg-text-3xl mb-4">SubHeading 1</div>
+        <div id="About" className="my-7 scrollSnap">
+          <div className="font-bold text-lg md:text-xl lg-text-3xl mb-4">What is HackUTD?</div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Morbi tempus iaculis urna id volutpat lacus
-            laoreet non curabitur. Eget aliquet nibh praesent tristique. In est ante in nibh mauris.
-            Imperdiet dui accumsan sit amet nulla facilisi morbi. Sed pulvinar proin gravida
-            hendrerit lectus a.
+            HackUTD is a weekend-long event where students build apps, hardware, and more. HackUTD
+            provides a venue for self-expression and creativity through technology. People with
+            varying technical backgrounds come together, form teams around a problem or idea, and
+            collaboratively build a unique solution from scratch. Whether you&#39;re a frequent
+            hackathon attendee or just getting started, we&#39;d love to see what you can make.
           </p>
-          <p>
+          {/* <p>
             <br></br>Cursus mattis molestie a iaculis at. Fusce ut placerat orci nulla pellentesque
             dignissim enim sit amet. Placerat orci nulla pellentesque dignissim enim sit amet
             venenatis. Dolor magna eget est lorem ipsum dolor sit.
+          </p> */}
+        </div>
+
+        <div id="" className="my-7">
+          <div className="font-bold text-lg md:text-xl lg-text-3xl mb-4">Purpose</div>
+          <p>
+            Develop CS &amp; non-CS student relations and skills through hacking challenges.
+            Showcase new technologies through workshops and facilitate meetings with industry
+            leaders who choose to participate in our hackathon!
+          </p>
+        </div>
+
+        <div id="" className="my-7">
+          <div className="font-bold text-lg md:text-xl lg-text-3xl mb-4">Why attend HackUTD?</div>
+          <p>
+            HackUTD is a student organized hackathon aimed at offering fellow students an outlet for
+            self expression and welcoming everyone with or without experience! HackUTD hosts events
+            that introduce key concepts and relevant topics that new hackers will find useful.
           </p>
         </div>
 
         <div id="Subsection2" className="my-7">
-          <div className="font-bold text-lg md:text-xl lg-text-3xl mb-4">SubHeading 2</div>
-          <div className="flex grid grid-cols-2 gap-x-4 ">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et eu et vitae, in quis metus
-              quam integer et. Luctus elit cursus a habitasse velit. Egestas nisi, vel, sodales
-              proin vitae quam aenean ullamcorper. Fames enim nunc augue velit nunc neque, fermentum
-              odio elementum.
-            </p>
-            <p>
-              Luctus elit cursus a habitasse velit. Egestas nisi, vel, sodales proin vitae quam
-              aenean ullamcorper. Fames enim nunc augue velit nunc neque, fermentum odio elementum.
-              <ul className="list-disc list-inside">
-                <li>Luctus elit cursus</li>
-                <li>A habitasse velit </li>
-                <li>Egestas nisi</li>
-                <li>Vel Sodales proin vitae</li>
-              </ul>
-            </p>
+          <div className="font-bold text-lg md:text-xl lg-text-3xl mb-4">Sponsor Challenges</div>
+          <div className="w-full flex flex-wrap">
+            <SponsorCard challenge="General Challenge" description="Challenge Description" />
+            <SponsorCard
+              challenge="American Airlines Challenge"
+              description="Challenge Description"
+            />
+            <SponsorCard challenge="Goldman Sachs Challenge" description="Challenge Description" />
+            <SponsorCard challenge="Capital One Challenge" description="Challenge Description" />
+            <SponsorCard challenge="StateFarm Challenge" description="Challenge Description" />
           </div>
         </div>
 
         <div id="Subsection3" className="my-7">
-          <div className="font-bold text-lg md:text-xl lg-text-3xl mb-4">SubHeading 3</div>
-          <p>
-            Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Mauris nunc congue nisi
-            vitae suscipit. Vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet.
-            Mi proin sed libero enim sed. Sit amet nisl suscipit adipiscing bibendum. Enim sit amet
-            venenatis urna cursus eget. Est lorem ipsum dolor sit amet consectetur adipiscing elit
-            pellentesque. Donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum
-            arcu. Enim nulla aliquet porttitor lacus luctus accumsan tortor.
-          </p>
+          <div className="font-bold text-lg md:text-xl lg-text-3xl mb-4">Places to Eat</div>
+          <table className="border-collapse w-full">
+            <tr>
+              <th>Student Union</th>
+              <th>Saturday</th>
+              <th>Sunday</th>
+            </tr>
+            <tr>
+              <td>Starbucks (cafe)</td>
+              <td>9:00 am - 3:00 pm</td>
+              <td>closed</td>
+            </tr>
+            <tr>
+              <td>Chick-Fil-A (take-out)</td>
+              <td>10:20 am - 3:00 pm</td>
+              <td>closed</td>
+            </tr>
+            <tr>
+              <td>Panda Express</td>
+              <td>10:20 am - 3:00 pm</td>
+              <td>closed</td>
+            </tr>
+            <tr className="row">
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Parking Structure 3</th>
+              <th>Saturday</th>
+              <th>Sunday</th>
+            </tr>
+            <tr>
+              <td>Taco Bell Cantina (dine-in)</td>
+              <td>8:00 am - 3:00 pm</td>
+              <td>11:00 am - 7:00 pm</td>
+            </tr>
+            <tr className="row">
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Dining Hall West</th>
+              <th>Saturday</th>
+              <th>Sunday</th>
+            </tr>
+            <tr>
+              <td>Papa Johns (take-out)</td>
+              <td>11:00 am - 11:00 pm</td>
+              <td>Closed</td>
+            </tr>
+            <tr>
+              <td>The Market</td>
+              <td>11:00 am - 11:00 pm</td>
+              <td>Closed</td>
+            </tr>
+            <tr className="row">
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Northside</th>
+              <th>Saturday</th>
+              <th>Sunday</th>
+            </tr>
+            <tr>
+              <td>7-Eleven</td>
+              <td>Open 24 Hours</td>
+              <td>Open 24 Hours</td>
+            </tr>
+            <tr>
+              <td>Northside Drafthouse &amp; Eatery </td>
+              <td>11:00 am - 2:00 am</td>
+              <td>11:00 am - 12:00 am</td>
+            </tr>
+            <tr>
+              <td>Pinto Urban Thai Dinner</td>
+              <td>12:00 pm - 9:00 pm</td>
+              <td>Closed</td>
+            </tr>
+            <tr>
+              <td>Starbucks</td>
+              <td>6:00 am - 10:00 pm</td>
+              <td>6:00 am - 10:00 pm</td>
+            </tr>
+          </table>
         </div>
 
         <div id="Subsection4" className="my-7">

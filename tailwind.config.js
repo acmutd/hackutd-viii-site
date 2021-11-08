@@ -50,6 +50,12 @@ module.exports = {
         pink: '#FF00E5',
         green: '#66E900',
       }),
+      textColor: {
+        aqua: '#00e0ff',
+      },
+      boxShadow: {
+        lgAqua: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 224, 255, 1)',
+      },
     },
     fontFamily: {
       sans: ['Neon 80s', 'sans-serif'],
