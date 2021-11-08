@@ -755,3 +755,7 @@ h5 {
   border: 2px solid #66e900;
   color: #66e900 !important;
 }
+
+.dashboardTag {
+  background-color: #000000 !important;
+}

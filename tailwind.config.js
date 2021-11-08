@@ -45,7 +45,7 @@ module.exports = {
         '-0.5': '-0.1rem',
       },
       borderColor: (theme) => ({
-        aqua: '#D8F8FF',
+        aqua: '#00e0ff',
         darkAqua: '#B0F1FF',
         pink: '#FF00E5',
         green: '#66E900',

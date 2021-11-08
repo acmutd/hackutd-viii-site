@@ -26,12 +26,12 @@ export default function HackerPack() {
       {/* ghost section to fill in for fixed sidebar */}
       <section
         id="ghost"
-        className="flex justify-center h-screen sticky top-0 w-1/4 md:w-1/6 2xl:w-1/8 text-xs md:text-xs lg:text-sm overflow-auto"
+        className="flex justify-center h-screen sticky bg-black top-0 w-1/4 md:w-1/6 2xl:w-1/8 text-xs md:text-xs lg:text-sm overflow-auto"
       ></section>
 
       <section
         id="Sidebar"
-        className="flex justify-center h-screen fixed top-16 border-r-2 border-gray-600 w-1/4 md:w-1/6 2xl:w-1/8 text-xs md:text-xs lg:text-sm overflow-auto"
+        className="flex justify-center min-h-[90vh] max-h-[90vh] fixed top-24 border-r-2 border-t-2 border-aqua w-1/4 md:w-1/6 2xl:w-1/8 text-xs md:text-xs lg:text-sm overflow-auto"
       >
         <section id="options" className="relative px-6 py-4">
           <div className="font-bold mb-3">HackerPack</div>
@@ -100,7 +100,7 @@ export default function HackerPack() {
             </li>
           </ul>
         </section>
-        <div className="fixed bottom-0 border-t-2 border-r-2 border-gray-600 w-1/4 md:w-1/6 2xl:w-1/8 text-center py-3 bg-white">
+        <div className="dashboardTag fixed bottom-0 border-t-2 border-r-2 border-aqua w-1/4 md:w-1/6 2xl:w-1/8 text-center py-3 bg-white">
           <div>Welcome, {!user || !isSignedIn ? 'hacker' : user.firstName}</div>
           <div className="text-indigo-500">{role}</div>
         </div>
@@ -112,9 +112,12 @@ export default function HackerPack() {
         </section>
         <div className="font-bold text-2xl md:text-4xl lg-text-6xl">Big Heading</div>
 
-        <section id="docLinks" className="bg-gray-200 rounded-lg my-6 p-5 w-5/6">
+        <section
+          id="docLinks"
+          className="bg-gray-200 rounded-lg my-6 p-5 w-5/6 bg-opacity-0 border-2 border-aqua"
+        >
           Linked Documents:
-          <div className="flex flex-wrap grid grid-cols-2 lg:grid-cols-3 ">
+          <div className="flex flex-wrap grid grid-cols-2 lg:grid-cols-3">
             <DocLink
               type="doc"
               link="https://docs.google.com/document/d/1adXBUwGyVwdzgt43W8JTWb67JMPAaiERei6QWopodVw/edit"
