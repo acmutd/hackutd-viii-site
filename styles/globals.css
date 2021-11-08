@@ -773,7 +773,8 @@ h5 {
   background-color: #00e0ff;
 }
 
-td, th {
+td,
+th {
   border: 1px solid #00e0ff;
   text-align: left;
   padding: 8px;
