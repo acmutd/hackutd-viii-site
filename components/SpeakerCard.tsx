@@ -16,7 +16,7 @@ function SpeakerCard(props) {
           <div className=" min-w-[18rem] flex flex-col items-center p-4 ">
             <Image
               className="rounded-lg border-blue border-2"
-              src={speakerDude}
+              src={props.path}
               alt="Speaker Picture"
               width={500}
               height={500}
@@ -39,8 +39,8 @@ function SpeakerCard(props) {
         <div className="min-h-[26rem] min-w-[18rem] mx-5 my-3 flex flex-col border-pink border-2 rounded-lg">
           <div className="h-2/5 flex justify-center items-center pt-2">
             <Image
-              className="rounded-full"
-              src={`/../pages/speakers.tsx/..${props.path}`}
+              className="rounded-xl"
+              src={props.path}
               alt="Speaker Picture"
               width={150}
               height={150}
