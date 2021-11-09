@@ -10,6 +10,7 @@ export default function speakers() {
           {/* path is relative path from speakers.tsx file(this file) to assets*/}
           {/* general path -  /../public/assets/speakerImages/{speaker file}*/}
           <SpeakerCard
+
             path="/assets/speakerImages/speaker.jpg"
             name="Paul Bailo"
             company="OrangeShine"

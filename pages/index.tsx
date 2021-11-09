@@ -4,7 +4,7 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <div>
+    <div className="text-center">
       <div className="Jumbotron">
         <div className="TitleScreen">
           <h2 className="ACMname">ACM presents</h2>
@@ -61,6 +61,7 @@ export default function Home() {
           </div>
         </div>
         <iframe
+          className="video z-0"
           width="560"
           height="315"
           src="https://www.youtube.com/embed/niFBblrblqo"
