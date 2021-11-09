@@ -11,8 +11,8 @@ First, make sure you have a working installation of Node.js and NPM.
 Now clone the repository and install dependencies:
 
 ```
-git clone https://github.com/acmutd/hackportal
-cd hackportal
+git clone https://github.com/acmutd/hackportal-hackutd
+cd hackportal-hackutd
 npm install
 ```
 
