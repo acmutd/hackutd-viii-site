@@ -9,7 +9,7 @@ export default function speakers() {
           {/* path is relative path from speakers.tsx file(this file) to assets*/}
           {/* general path -  /../public/assets/speakerImages/{speaker file}*/}
           <SpeakerCard
-            path="/../public/assets/speaker.jpg"
+            path=""
             name="Paul Bailo"
             company="OrangeShine"
             description="Paul Bailo is widely recognized by industry thought leaders for his C-level executive skills in Digital Transformation, Marketing and Business Operations. 
@@ -20,50 +20,6 @@ export default function speakers() {
              Goldman Sachs, MasterCard, American Express, GE, Citibank, Federal Reserve Bank of New York, NYC Transit Authority and US Department of Transportation."
             website="https://www.linkedin.com/in/paulbailo/"
           />
-          {/* <SpeakerCard
-            path="/../public/assets/speakerImages/default_image.jpg"
-            name="Name"
-            company="company"
-            description="Short bio containing information provided by the speaker, will likely contain a paragraph
-                of words. Here is filler so we can better visualize the space this will take. Here is
-                filler so we can better visualize the space this will take. Here is filler so we can
-                better visualize the space this will take. Here is filler so we can better visualize the
-                space this will take."
-            website="www.speakerwebsitehere.com"
-          />
-          <SpeakerCard
-            path="/../public/assets/speakerImages/default_image.jpg"
-            name="Name"
-            company="company"
-            description="Short bio containing information provided by the speaker, will likely contain a paragraph
-                of words. Here is filler so we can better visualize the space this will take. Here is
-                filler so we can better visualize the space this will take. Here is filler so we can
-                better visualize the space this will take. Here is filler so we can better visualize the
-                space this will take."
-            website="www.speakerwebsitehere.com"
-          />
-          <SpeakerCard
-            path="/../public/assets/speakerImages/default_image.jpg"
-            name="Name"
-            company="company"
-            description="Short bio containing information provided by the speaker, will likely contain a paragraph
-                of words. Here is filler so we can better visualize the space this will take. Here is
-                filler so we can better visualize the space this will take. Here is filler so we can
-                better visualize the space this will take. Here is filler so we can better visualize the
-                space this will take."
-            website="www.speakerwebsitehere.com"
-          />
-          <SpeakerCard
-            path="/../public/assets/speakerImages/default_image.jpg"
-            name="Name"
-            company="company"
-            description="Short bio containing information provided by the speaker, will likely contain a paragraph
-                of words. Here is filler so we can better visualize the space this will take. Here is
-                filler so we can better visualize the space this will take. Here is filler so we can
-                better visualize the space this will take. Here is filler so we can better visualize the
-                space this will take."
-            website="www.speakerwebsitehere.com"
-         /> */}
         </div>
       </div>
     </div>

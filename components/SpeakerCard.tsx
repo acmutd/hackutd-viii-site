@@ -8,6 +8,7 @@ import Image from 'next/image';
  */
 function SpeakerCard(props) {
   const result = props.website.replace(/(^\w+:|^)\/\//, '');
+  const speakerDude = `/public/assets/speaker.jpg`;
   return (
     <>
       <div id="SpeakerCards" className="hidden sm:flex flex-wrap justify-center w-full">
@@ -15,7 +16,7 @@ function SpeakerCard(props) {
           <div className=" min-w-[18rem] flex flex-col items-center p-4 ">
             <Image
               className="rounded-lg border-blue border-2"
-              src={`${props.path}`}
+              src={'/..' + speakerDude}
               alt="Speaker Picture"
               width={500}
               height={500}
