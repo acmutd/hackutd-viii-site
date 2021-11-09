@@ -4,7 +4,7 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <div>
+    <div className="text-center">
       <div className="Jumbotron">
         <div className="TitleScreen">
           <h2 className="ACMname">ACM presents</h2>
