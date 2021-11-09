@@ -37,17 +37,6 @@ export default function AppHeader() {
         </Link>
         {/* Menu items */}
         <div className="lg:inline hidden md:flex justify-left md:text-xl text-md font-header md:text-left cursor:pointer">
-          <Link href="/dashboard">
-            <a
-              onClick={() => {
-                dismissDialog();
-                getItemCount();
-              }}
-            >
-              <span className="inline scheduledot md:invisible"></span>
-              <a className="link lg:inline hidden">Dashboard</a>
-            </a>
-          </Link>
           <Link href="/schedule">
             <a onClick={dismissDialog}>
               <span className="inline scheduledot md:invisible"></span>
