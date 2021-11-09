@@ -15,7 +15,7 @@ module.exports = withPWA(
     },
   },
   (module.exports = withImages({
-    fileExtensions: ['jpg', 'jpeg', 'png', 'gif'],
+    fileExtensions: ['jpg', 'jpeg', 'png', 'gif', 'svg'],
     webpack(config, options) {
       return config;
     },
