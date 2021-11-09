@@ -19,7 +19,7 @@ export default function speakers() {
             His background in digital transformation, digital communications, emerging payments, operational excellence, data-driven decision-making and ongoing product innovation is unparalleled. 
             His blue-chip background encompasses Google, Apple, ATT, Bank of America, 
             Goldman Sachs, MasterCard, American Express, GE, Citibank, Federal Reserve Bank of New York, NYC Transit Authority and US Department of Transportation."
-            website="linkedin.com/in/paulbailo"
+            website="https://www.linkedin.com/in/paulbailo/"
           />
         </div>
         <div id="SpeakerCards" className="flex flex-wrap justify-center md:w-5/6 w-screen">
