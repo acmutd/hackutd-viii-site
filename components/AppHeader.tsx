@@ -71,19 +71,6 @@ export default function AppHeader() {
             </button>
             <ul className="dropdown-menu absolute hidden text-gray-700 pt-1 -left-0.5">
               <li className="">
-                <Link href="/dashboard">
-                  <a
-                    className="bg-black hover:bg-gray-700 py-2 px-4 block whitespace-no-wrap"
-                    onClick={() => {
-                      dismissDialog();
-                      getItemCount();
-                    }}
-                  >
-                    Dashboard
-                  </a>
-                </Link>
-              </li>
-              <li className="">
                 <Link href="/schedule">
                   <a className="bg-black hover:bg-gray-700 py-2 px-4 block whitespace-no-wrap">
                     Schedule
