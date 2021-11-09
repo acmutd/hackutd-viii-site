@@ -1,4 +1,5 @@
-import SpeakerCard from '../components/SpeakerCard';
+// import SpeakerCard from '../components/SpeakerCard';
+import SpeakerCard from './SpeakerCard';
 
 export default function speakers() {
   return (
@@ -9,7 +10,7 @@ export default function speakers() {
           {/* path is relative path from speakers.tsx file(this file) to assets*/}
           {/* general path -  /../public/assets/speakerImages/{speaker file}*/}
           <SpeakerCard
-            path=""
+            path="/../public/assets/speakerImages/speaker.svg"
             name="Paul Bailo"
             company="OrangeShine"
             description="Paul Bailo is widely recognized by industry thought leaders for his C-level executive skills in Digital Transformation, Marketing and Business Operations. 
