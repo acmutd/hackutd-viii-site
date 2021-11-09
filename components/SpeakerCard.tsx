@@ -16,7 +16,7 @@ function SpeakerCard(props) {
           <div className=" min-w-[18rem] flex flex-col items-center p-4 ">
             <Image
               className="rounded-lg border-blue border-2"
-              src={'/..' + speakerDude}
+              src={speakerDude}
               alt="Speaker Picture"
               width={500}
               height={500}
