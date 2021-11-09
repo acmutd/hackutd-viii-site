@@ -5,7 +5,6 @@ export default function speakers() {
     <div className="speakersPage">
       <div className="speakersMainPage flex flex-col items-center">
         <h4 className="speakersTitle">Speakers</h4>
-
         <div id="SpeakerCards" className="flex flex-wrap justify-center md:w-5/6 w-screen">
           {/* path is relative path from speakers.tsx file(this file) to assets*/}
           {/* general path -  /../public/assets/speakerImages/{speaker file}*/}

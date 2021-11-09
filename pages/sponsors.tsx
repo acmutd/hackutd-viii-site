@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function sponsors() {
   return (
-    <div className="sponsorsPage">
+    <div className="sponsorsPage text-center">
       <div className="sponsersMainPage">
         <h4 className="sponsorsTitle">Sponsors</h4>
         <div>
