@@ -810,3 +810,31 @@ th {
   text-align: left;
   padding: 8px;
 }
+
+/* Calendar Styles */
+.rbc-time-content > * + * > *,
+.rbc-time-slot,
+.rbc-day-bg,
+.rbc-time-header-content,
+.rbc-header {
+  /* removes most default lines */
+  border: none !important;
+}
+
+.rbc-timeslot-group,
+.rbc-time-column {
+  border: 1px solid #204900 !important;
+  /* border: 1px solid #4e4e4e !important; */
+}
+
+.rbc-time-content {
+  border-top: 3px solid #00e0ff !important;
+}
+
+.rbc-time-view {
+  border: 3px solid #00e0ff !important;
+  border-radius: 15px;
+}
+
+/* rbc-time-header-content
+ */

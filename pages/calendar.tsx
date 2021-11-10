@@ -102,23 +102,21 @@ WeekendView.navigate = (date, action, { localizer }) => {
 };
 
 WeekendView.title = (date) => {
-  return `HackUTD Schedule:`;
+  return `Schedule:`;
 };
 
 const Toolbar = () => {
-  // empty
   return <div className="scheduleTitle">Schedule</div>;
 };
 
 const CalendarComp = () => (
   <>
-    <div className="self-center w-3/4 h-2/6">
+    <div className="self-center w-11/12">
       <Calendar
         events={events}
         localizer={localizer}
         views={{ week: WeekendView }}
         defaultView={Views.WEEK}
-        step={30}
         startAccessor="startDate"
         endAccessor="endDate"
         defaultDate={new Date(2021, 10, 12)}
