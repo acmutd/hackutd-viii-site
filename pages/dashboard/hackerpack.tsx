@@ -6,7 +6,8 @@ import { useUser } from '../../lib/profile/user-data';
 import { useAuthContext } from '../../lib/user/AuthContext';
 import DocLink from './Components/DocLinks';
 import SponsorCard from './Components/SponsorChallenge';
-
+import Image from 'next/image';
+import ClubCard from './Components/ClubCard';
 /**
  * The dashboard / hackerpack.
  *
@@ -18,7 +19,7 @@ export default function HackerPack() {
   const role = user.permissions?.length > 0 ? user.permissions[0] : '';
 
   return (
-    <div className="flex flex-grow flex-wrap">
+    <div className="font flex flex-grow flex-wrap">
       <Head>
         <title>HackerPacks</title>
         <meta name="description" content="HackPortal's HackerPacks" />
@@ -101,7 +102,7 @@ export default function HackerPack() {
             </li>
           </ul>
         </section>
-        <div className="dashboardTag fixed bottom-0 border-t-2 border-r-2 border-aqua w-1/4 md:w-1/6 2xl:w-1/8 text-center py-3 bg-white">
+        <div className="dashboardTag fixed bottom-0 border-t-2 border-r-2 border-aqua w-1/4 md:w-1/6 2xl:w-1/8 text-center py-3 bg-black">
           <div>Welcome, {!user || !isSignedIn ? 'hacker' : user.firstName}</div>
           <div className="text-indigo-500">{role}</div>
         </div>
@@ -126,36 +127,11 @@ export default function HackerPack() {
               link="https://docs.google.com/document/d/1adXBUwGyVwdzgt43W8JTWb67JMPAaiERei6QWopodVw/edit"
               title="Easy Mac and Cheese Recipe"
             />
-            <DocLink
-              type="pdf"
-              link="https://cdn1.parksmedia.wdprapps.disney.com/media/blog/wp-content/uploads/2020/08/RECIPE_WDW_Epcot_FW_MacandCheeseMarketplace_GourmetMacandCheese.pdf"
-              title="Easy Mac and Cheese Recipe"
-            />
-            <DocLink
-              type="doc"
-              link="https://docs.google.com/document/d/1adXBUwGyVwdzgt43W8JTWb67JMPAaiERei6QWopodVw/edit"
-              title="Easy Mac and Cheese Recipe"
-            />
-            <DocLink
-              type="doc"
-              link="https://docs.google.com/document/d/1PCCYh-EUiYYK-CCYcZZ2PXQTVTpzY7HpAqHS3DT9p6U/edit"
-              title="An Essay for Comm"
-            />
-            <DocLink
-              type="doc"
-              link="https://docs.google.com/document/d/1PCCYh-EUiYYK-CCYcZZ2PXQTVTpzY7HpAqHS3DT9p6U/edit"
-              title="An Essay for Comm"
-            />
-            <DocLink
-              type="doc"
-              link="https://docs.google.com/document/d/1PCCYh-EUiYYK-CCYcZZ2PXQTVTpzY7HpAqHS3DT9p6U/edit"
-              title="An Essay for Comm"
-            />
           </div>
         </section> */}
 
         <div id="About" className="my-7 scrollSnap">
-          <div className="font-bold text-lg md:text-xl lg-text-3xl mb-4">What is HackUTD?</div>
+          <div className="font-bold text-lg md:text-xl lg:text-3xl mb-4">What is HackUTD?</div>
           <p>
             HackUTD is a weekend-long event where students build apps, hardware, and more. HackUTD
             provides a venue for self-expression and creativity through technology. People with
@@ -163,15 +139,10 @@ export default function HackerPack() {
             collaboratively build a unique solution from scratch. Whether you&#39;re a frequent
             hackathon attendee or just getting started, we&#39;d love to see what you can make.
           </p>
-          {/* <p>
-            <br></br>Cursus mattis molestie a iaculis at. Fusce ut placerat orci nulla pellentesque
-            dignissim enim sit amet. Placerat orci nulla pellentesque dignissim enim sit amet
-            venenatis. Dolor magna eget est lorem ipsum dolor sit.
-          </p> */}
         </div>
 
         <div id="" className="my-7">
-          <div className="font-bold text-lg md:text-xl lg-text-3xl mb-4">Purpose</div>
+          <div className="font-bold text-lg md:text-xl lg:text-3xl mb-4">Purpose</div>
           <p>
             Develop CS &amp; non-CS student relations and skills through hacking challenges.
             Showcase new technologies through workshops and facilitate meetings with industry
@@ -180,7 +151,7 @@ export default function HackerPack() {
         </div>
 
         <div id="" className="my-7">
-          <div className="font-bold text-lg md:text-xl lg-text-3xl mb-4">Why attend HackUTD?</div>
+          <div className="font-bold text-lg md:text-xl lg:text-3xl mb-4">Why attend HackUTD?</div>
           <p>
             HackUTD is a student organized hackathon aimed at offering fellow students an outlet for
             self expression and welcoming everyone with or without experience! HackUTD hosts events
@@ -188,24 +159,10 @@ export default function HackerPack() {
           </p>
         </div>
 
-        <div id="Subsection2" className="my-7">
-          <div className="font-bold text-lg md:text-xl lg-text-3xl mb-4">Sponsor Challenges</div>
-          <div className="w-full flex flex-wrap">
-            <SponsorCard challenge="General Challenge" description="Challenge Description" />
-            <SponsorCard
-              challenge="American Airlines Challenge"
-              description="Challenge Description"
-            />
-            <SponsorCard challenge="Goldman Sachs Challenge" description="Challenge Description" />
-            <SponsorCard challenge="Capital One Challenge" description="Challenge Description" />
-            <SponsorCard challenge="StateFarm Challenge" description="Challenge Description" />
-          </div>
-        </div>
-
         <div id="Subsection3" className="my-7">
           <div className="font-bold text-lg md:text-xl lg-text-3xl mb-4">Places to Eat</div>
           <table className="border-collapse w-full">
-            <tr>
+            <tr className="tableShadow lg:text-xl md:text-lg text-md">
               <th>Student Union</th>
               <th>Saturday</th>
               <th>Sunday</th>
@@ -230,7 +187,7 @@ export default function HackerPack() {
               <td></td>
               <td></td>
             </tr>
-            <tr>
+            <tr className="tableShadow lg:text-xl md:text-lg text-md">
               <th>Parking Structure 3</th>
               <th>Saturday</th>
               <th>Sunday</th>
@@ -245,7 +202,7 @@ export default function HackerPack() {
               <td></td>
               <td></td>
             </tr>
-            <tr>
+            <tr className="tableShadow lg:text-xl md:text-lg text-md">
               <th>Dining Hall West</th>
               <th>Saturday</th>
               <th>Sunday</th>
@@ -265,7 +222,7 @@ export default function HackerPack() {
               <td></td>
               <td></td>
             </tr>
-            <tr>
+            <tr className="tableShadow lg:text-xl md:text-lg text-md">
               <th>Northside</th>
               <th>Saturday</th>
               <th>Sunday</th>
@@ -293,8 +250,52 @@ export default function HackerPack() {
           </table>
         </div>
 
+        {/* MOVE TO HACKCENTER */}
+        {/* <div id="Subsection2" className="my-7">
+          <div className="font-bold text-lg md:text-xl lg:text-3xl mb-4">Sponsor Challenges</div>
+          <div className="w-full flex flex-wrap">
+            <SponsorCard challenge="General Challenge" description="Challenge Description" />
+            <SponsorCard
+              challenge="American Airlines Challenge"
+              description="Challenge Description"
+            />
+            <SponsorCard challenge="Goldman Sachs Challenge" description="Challenge Description" />
+            <SponsorCard challenge="Capital One Challenge" description="Challenge Description" />
+            <SponsorCard challenge="StateFarm Challenge" description="Challenge Description" />
+          </div>
+        </div> */}
+
+        <div id="Subsection3" className="my-7 w-full">
+          <div className="font-bold text-lg md:text-xl lg:text-3xl mb-4">Clubs</div>
+          <ClubCard
+            path="/assets/clubImages/WINStem.png"
+            club="WIN Stem"
+            description="Win STEM at UT Dallas is a charitable, service-oriented organization aimed at supporting and recruiting ambitious women to pursue STEM careers through building confidence, community engagement, and opportunity guidance."
+          />
+          <ClubCard
+            path="/assets/clubImages/blockchain.png"
+            club="UTD BlockChain"
+            description="UTD Blockchain is a club that focuses on creating awareness about blockchain technology and it's application in various industries like finance, supply chain, and e-commerce to name a few. We want to help people to get involved in blockchain and other financial technologies from the very start. Our club gives a lot of importance to preparing our students to succeed on a professional level by exposing them to both engineering and business regardless of their majors."
+          />
+          <ClubCard
+            path="/assets/clubImages/IEEE.png"
+            club="Institute of Electrical and Electronics Engineers"
+            description="IEEE is a student run branch of IEEE whose purpose is to provide current undergraduate students with an opportunity to enrich their learning experience and connect with local industry professionals. We provide students with an environment that allows them to socialize through IEEE events and enables them to develop professional skills through tech talks and personal interactions. By sustaining a close community of passionate young engineers, we hope to encourage excellence among our members and enhance the character of the engineering profession at large. "
+          />
+          <ClubCard
+            path="/assets/clubImages/EntrepreneurshipClub.png"
+            club="Entrepreneurship Club"
+            description="The mission of Entrepreneurship Club is to promote the entrepreneurship spirit on campus by empowering students to collaborate, create and most importantly become change makers. We do so by promoting local startup events, inviting guest speakers, hosting pitch competitions, and we’re constantly trying to expand the impact of our club both on campus and off campus."
+          />
+          <ClubCard
+            path="/assets/clubImages/gdsc.png"
+            club="Google Developer Student Clubs"
+            description="Google Developer Student Clubs are university based community groups for students interested in Google developer technologies. Students from all undergraduate or graduate programs with an interest in growing as a developer are welcome. By joining a GDSC, students grow their knowledge in a peer-to-peer learning environment and build solutions for local businesses and their community."
+          />
+        </div>
+
         <div id="Subsection4" className="my-7">
-          <div className="font-bold text-lg md:text-xl lg-text-3xl mb-4">SubHeading 4</div>
+          <div className="font-bold text-lg md:text-xl lg:text-3xl mb-4">SubHeading 4</div>
           <p>
             Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Mauris nunc congue nisi
             vitae suscipit. Vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet.
@@ -306,7 +307,7 @@ export default function HackerPack() {
         </div>
 
         <div id="Subsection5" className="my-7">
-          <div className="font-bold text-lg md:text-xl lg-text-3xl mb-4">SubHeading 5</div>
+          <div className="font-bold text-lg md:text-xl lg:text-3xl mb-4">SubHeading 5</div>
           <div>
             <p>
               Turpis egestas pretium aenean pharetra magna. Turpis in eu mi bibendum neque egestas
@@ -325,7 +326,7 @@ export default function HackerPack() {
         </div>
 
         <div id="Subsection6" className="my-7">
-          <div className="font-bold text-lg md:text-xl lg-text-3xl mb-4">SubHeading 6</div>
+          <div className="font-bold text-lg md:text-xl lg:text-3xl mb-4">SubHeading 6</div>
           <div className="flex grid grid-cols-2 gap-x-4 ">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et eu et vitae, in quis metus
