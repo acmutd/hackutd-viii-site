@@ -21,6 +21,7 @@
     "@typeform/embed-react": "^1.1.0",
     "acorn": "^8.4.1",
     "antd": "^4.16.13",
+    "dotenv": "^10.0.0",
     "firebase": "^8.10.0",
     "firebase-admin": "^9.11.0",
     "heroicons": "^1.0.5",

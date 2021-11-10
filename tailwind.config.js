@@ -40,6 +40,9 @@ module.exports = {
         lightBackground: '#F4F4F4',
         aqua: '#D8F8FF',
         darkAqua: '#B0F1FF',
+        pink: '#FF00E5',
+        cyan: '#00E0FF',
+        yellow: '#FFD600',
       }),
       left: {
         '-0.5': '-0.1rem',
@@ -48,6 +51,8 @@ module.exports = {
         aqua: '#D8F8FF',
         darkAqua: '#B0F1FF',
         pink: '#FF00E5',
+        green: '#66E900',
+        purple: '#AD00FF',
         green: '#66E900',
       }),
     },
