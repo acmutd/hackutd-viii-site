@@ -11,7 +11,7 @@ function ClubCard(props) {
   return (
     <>
       <div className="w-full flex flex-wrap">
-        <div className="border-2 border-aqua min-h-[16rem] min-w-56 rounded-2xl md:mx-4 mx-2 my-3 flex flex-col">
+        <div className="border-2 border-aqua min-w-56 rounded-2xl md:mx-4 mx-2 my-3 flex flex-col">
           <div className="min-h-[1/5] border-b-2 border-aqua rounded-t-xl p-4 md:text-2xl text-lg font-white flex items-center">
             <Image className="" src={props.path} alt="Speaker Picture" width={50} height={50} />
             <p className="mx-4">{props.club}</p>

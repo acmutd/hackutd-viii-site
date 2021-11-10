@@ -160,7 +160,7 @@ export default function HackerPack() {
         </div>
 
         <div id="Subsection3" className="my-7">
-          <div className="font-bold text-lg md:text-xl lg-text-3xl mb-4">Places to Eat</div>
+          <div className="font-bold text-lg md:text-xl lg:text-3xl mb-4">Places to Eat</div>
           <table className="border-collapse w-full">
             <tr className="tableShadow lg:text-xl md:text-lg text-md">
               <th>Student Union</th>
@@ -291,6 +291,31 @@ export default function HackerPack() {
             path="/assets/clubImages/gdsc.png"
             club="Google Developer Student Clubs"
             description="Google Developer Student Clubs are university based community groups for students interested in Google developer technologies. Students from all undergraduate or graduate programs with an interest in growing as a developer are welcome. By joining a GDSC, students grow their knowledge in a peer-to-peer learning environment and build solutions for local businesses and their community."
+          />
+          <ClubCard
+            path="/assets/clubImages/AIS.png"
+            club="Artificial Intelligence Society"
+            description="The Artificial Intelligence Society is one of the largest computer science organizations at the University of Texas at Dallas. We are a team of passionate individuals, devoted to bridging the gap between people's awareness and the world of AI. Our mission is to promote artificial intelligence education at UT Dallas and in the surrounding communities."
+          />
+          <ClubCard
+            path="/assets/clubImages/SGDA.png"
+            club="Student Game Developer Association"
+            description="The SGDA serves to promote game development, create a growing community of students and professionals involved in the games industry, and host events related to video game development and its many facets."
+          />
+          <ClubCard
+            path="/assets/clubImages/Makerspace.png"
+            club="UTDesign Makerspace"
+            description="The mission of UTDesign Makerspace is to provide an environment of innovation, collaboration, and education where Makers can develop their skills and projects among their peers with access to current and next-generation technology."
+          />
+          <ClubCard
+            path="/assets/clubImages/180DegreesConsulting.png"
+            club="180 Degrees Consulting"
+            description="180DC at UT Dallas provides UT Dallas students with opportunities to develop professional consulting skills by bringing together UTD's top talent to solve challenging, real-world problems. Our members make a real impact, gain practical experience, and exercise leadership in one of the most competitive careers in business."
+          />
+          <ClubCard
+            path="/assets/clubImages/AlphaKappaPsi.png"
+            club="Alpha Kappa Psi"
+            description="Alpha Kappa Psi is a professional business fraternity. Our motto is &ldquo;Shaping People, Shaping Business,&rdquo; and we are committed to developing business leaders and professionals one student at a time."
           />
         </div>
 
