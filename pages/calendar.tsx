@@ -47,8 +47,8 @@ class WeekendView extends React.Component {
     let {
       date,
       localizer,
-      min = localizer.startOf(new Date(), 'day'),
-      max = localizer.endOf(new Date(), 'day'),
+      min = new Date(2021, 11, 12, 8, 0, 0),
+      max = new Date(2021, 11, 12, 22, 0, 0),
       scrollToTime = localizer.startOf(new Date(), 'day'),
     } = this.props;
     let range = WeekendView.range(date, { localizer });
