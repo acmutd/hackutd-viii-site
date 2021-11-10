@@ -134,7 +134,7 @@ type TimeTableCellProps = MonthView.TimeTableCellProps & WithStyles<typeof style
 type DayScaleCellProps = MonthView.DayScaleCellProps & WithStyles<typeof styles>;
 
 const isWeekEnd = (date: Date): boolean => date.getDay() === 0 || date.getDay() === 6;
-const defaultCurrentDate = new Date(2021, 10, 6, 9, 0);
+const defaultCurrentDate = new Date(2021, 10, 13, 9, 0);
 
 const DayScaleCell = withStyles(styles)(
   ({ startDate, classes, ...restProps }: DayScaleCellProps) => (
