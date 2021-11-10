@@ -26,7 +26,8 @@ export default function DashboardHeader({ active }: DashboardHeaderProps) {
               </a>
             </a>
           </Link>
-          <Link href="/dashboard/scan-in">
+          {/* Hide scan in for now */}
+          {/* <Link href="/dashboard/scan-in">
             <a>
               <span className="inline md:invisible"></span>
               <a
@@ -37,7 +38,7 @@ export default function DashboardHeader({ active }: DashboardHeaderProps) {
                 Scan-In
               </a>
             </a>
-          </Link>
+          </Link> */}
           <Link href="/dashboard/hackerpack">
             <a>
               <span className="inline md:invisible"></span>
@@ -50,7 +51,7 @@ export default function DashboardHeader({ active }: DashboardHeaderProps) {
               </a>
             </a>
           </Link>
-          <Link href="/dashboard/submit">
+          {/* <Link href="/dashboard/submit">
             <a>
               <span className="inline md:invisible"></span>
               <a
@@ -61,7 +62,7 @@ export default function DashboardHeader({ active }: DashboardHeaderProps) {
                 Submit a Project
               </a>
             </a>
-          </Link>
+          </Link> */}
         </div>
       </header>
     </>

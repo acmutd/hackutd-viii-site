@@ -761,13 +761,14 @@ h5 {
   text-shadow: 1px 1px 7px #65edff, 1px 1px 7px #00e0ff;
 }
 
-.tableShadow {
+.pinkShadow {
   text-shadow: 1px 1px 7px #fc7eef, 1px 1px 7px #ff00e5;
 }
 
 .scrollSnap {
   scroll-margin-top: 100px;
   scroll-behavior: smooth;
+  scroll-snap-margin-top: 200px;
 }
 
 .sponsorBackground {

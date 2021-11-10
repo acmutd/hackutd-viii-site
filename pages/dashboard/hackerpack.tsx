@@ -33,70 +33,25 @@ export default function HackerPack() {
 
       <section
         id="Sidebar"
-        className="flex justify-center min-h-[90vh] max-h-[90vh] fixed top-24 border-r-2 border-t-2 border-aqua w-1/4 md:w-1/6 2xl:w-1/8 text-xs md:text-xs lg:text-sm overflow-auto"
+        className="flex justify-center min-h-[90vh] max-h-[90vh] fixed top-24 border-r-2 border-b-2 border-t-2 border-aqua w-1/4 md:w-1/6 2xl:w-1/8 text-xs md:text-xs lg:text-sm overflow-auto"
       >
         <section id="options" className="relative px-6 py-4">
           <div className="font-bold mb-3">HackerPack</div>
           <ul className="pl-4 pb-32">
             <li>
               General
-              <ul className="pl-4">
+              <ul className="pl-4 list-disc list-outside">
                 <li>
                   <a href="#About">Overview</a>
                 </li>
                 <li>
-                  <a href="#Subsection2">Mentors</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              Tech Workshop Packs
-              <ul className="pl-4">
-                <li>
-                  <a href="#Subsection3">Name of Workshop</a>
+                  <a href="#food">Meals</a>
                 </li>
                 <li>
-                  <a href="#Subsection4">Name of Workshop</a>
+                  <a href="#hackspaces">Hacking Spaces</a>
                 </li>
                 <li>
-                  <a href="#Subsection5">Name of Workshop</a>
-                </li>
-                <li>
-                  <a href="#Subsection6">Name of Workshop</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              Comm Workshop Packs
-              <ul className="pl-4">
-                <li>
-                  <a href="">Name of Workshop</a>
-                </li>
-                <li>
-                  <a href="">Name of Workshop</a>
-                </li>
-                <li>
-                  <a href="">Name of Workshop</a>
-                </li>
-                <li>
-                  <a href="">Name of Workshop</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              Sponsor Workshop Packs
-              <ul className="pl-4">
-                <li>
-                  <a href="">Name of Workshop</a>
-                </li>
-                <li>
-                  <a href="">Name of Workshop</a>
-                </li>
-                <li>
-                  <a href="">Name of Workshop</a>
-                </li>
-                <li>
-                  <a href="">Name of Workshop</a>
+                  <a href="#clubs">Clubs &amp; Orgs</a>
                 </li>
               </ul>
             </li>
@@ -131,7 +86,7 @@ export default function HackerPack() {
         </section> */}
 
         <div id="About" className="my-7 scrollSnap">
-          <div className="font-bold text-lg md:text-xl lg:text-3xl mb-4">What is HackUTD?</div>
+          <div className="font-bold text-xl lg:text-3xl mb-4">🖥️ What is HackUTD?</div>
           <p>
             HackUTD is a weekend-long event where students build apps, hardware, and more. HackUTD
             provides a venue for self-expression and creativity through technology. People with
@@ -142,7 +97,7 @@ export default function HackerPack() {
         </div>
 
         <div id="" className="my-7">
-          <div className="font-bold text-lg md:text-xl lg:text-3xl mb-4">Purpose</div>
+          <div className="font-bold text-xl lg:text-3xl mb-4">💫 What&#39;s the Purpose?</div>
           <p>
             Develop CS &amp; non-CS student relations and skills through hacking challenges.
             Showcase new technologies through workshops and facilitate meetings with industry
@@ -151,7 +106,7 @@ export default function HackerPack() {
         </div>
 
         <div id="" className="my-7">
-          <div className="font-bold text-lg md:text-xl lg:text-3xl mb-4">Why attend HackUTD?</div>
+          <div className="font-bold text-xl lg:text-3xl mb-4">🎉 Why attend HackUTD?</div>
           <p>
             HackUTD is a student organized hackathon aimed at offering fellow students an outlet for
             self expression and welcoming everyone with or without experience! HackUTD hosts events
@@ -159,10 +114,57 @@ export default function HackerPack() {
           </p>
         </div>
 
-        <div id="Subsection3" className="my-7">
-          <div className="font-bold text-lg md:text-xl lg:text-3xl mb-4">Places to Eat</div>
+        <div id="food" className="my-7 scrollSnap">
+          <div className="font-bold text-xl lg:text-3xl mb-4">🍕 Meals</div>
+          <p className="md:text-xl text-md">Provided</p>
           <table className="border-collapse w-full">
-            <tr className="tableShadow lg:text-xl md:text-lg text-md">
+            <tr className="pinkShadow lg:text-xl md:text-lg text-md">
+              <th>Name</th>
+              <th>Catering</th>
+              <th>Time</th>
+              <th>Location</th>
+            </tr>
+            <tr>
+              <td>Saturday Breakfast</td>
+              <td>Coffee &amp; Donuts</td>
+              <td>9:00 am</td>
+              <td>Room ECS 1.100, Main Community Commons</td>
+            </tr>
+            <tr>
+              <td>Saturday Lunch</td>
+              <td>Wafflelicious Food Truck, Yummy Pizza Food Truck</td>
+              <td>12:00 pm</td>
+              <td>Pedestrian Promenade</td>
+            </tr>
+            <tr>
+              <td>Saturday Dinner</td>
+              <td>Jimmy John&#39;s</td>
+              <td>7:30 pm</td>
+              <td>Room ECS 1.100, Main Community Commons</td>
+            </tr>
+            <tr>
+              <td>Saturday Snacks</td>
+              <td>Assorted Snacks</td>
+              <td>11:30 pm</td>
+              <td>Room ECS 1.100, Main Community Commons</td>
+            </tr>
+            <tr>
+              <td>Sunday Breakfast</td>
+              <td>Einstein&#39;s</td>
+              <td>9:00 am</td>
+              <td>Room ECS 1.100, Main Community Commons</td>
+            </tr>
+            <tr>
+              <td>Sunday Lunch</td>
+              <td>Freebird&#39;s</td>
+              <td>12:00 pm</td>
+              <td>Room ECS 1.100, Main Community Commons</td>
+            </tr>
+          </table>
+          <br />
+          <p className="md:text-xl text-md">On-Campus Restaurants</p>
+          <table className="border-collapse w-full">
+            <tr className="pinkShadow lg:text-xl md:text-lg text-md">
               <th>Student Union</th>
               <th>Saturday</th>
               <th>Sunday</th>
@@ -187,7 +189,7 @@ export default function HackerPack() {
               <td></td>
               <td></td>
             </tr>
-            <tr className="tableShadow lg:text-xl md:text-lg text-md">
+            <tr className="pinkShadow lg:text-xl md:text-lg text-md">
               <th>Parking Structure 3</th>
               <th>Saturday</th>
               <th>Sunday</th>
@@ -202,7 +204,7 @@ export default function HackerPack() {
               <td></td>
               <td></td>
             </tr>
-            <tr className="tableShadow lg:text-xl md:text-lg text-md">
+            <tr className="pinkShadow lg:text-xl md:text-lg text-md">
               <th>Dining Hall West</th>
               <th>Saturday</th>
               <th>Sunday</th>
@@ -222,7 +224,7 @@ export default function HackerPack() {
               <td></td>
               <td></td>
             </tr>
-            <tr className="tableShadow lg:text-xl md:text-lg text-md">
+            <tr className="pinkShadow lg:text-xl md:text-lg text-md">
               <th>Northside</th>
               <th>Saturday</th>
               <th>Sunday</th>
@@ -248,6 +250,94 @@ export default function HackerPack() {
               <td>6:00 am - 10:00 pm</td>
             </tr>
           </table>
+          <br />
+          <p className="md:text-xl text-md">Off-Campus Restaurants</p>
+          <table className="border-collapse w-full">
+            <tr className="pinkShadow lg:text-xl md:text-lg text-md">
+              <th>Name</th>
+              <th>Distance From Campus</th>
+              <th>Saturday</th>
+              <th>Sunday</th>
+            </tr>
+            <tr>
+              <td>Salata</td>
+              <td>1.5 miles</td>
+              <td>11:00 am - 9:00 pm</td>
+              <td>11:00 am - 3:00 pm</td>
+            </tr>
+            <tr>
+              <td>QDOBA</td>
+              <td>1.6 miles</td>
+              <td>11:00 am - 9:00 pm</td>
+              <td>11:00 am - 9:00 pm</td>
+            </tr>
+            <tr>
+              <td>Raising Cane&#39;s</td>
+              <td>1.7 miles</td>
+              <td>10:00 am - 1:00 am</td>
+              <td>10:00 am - 1:00 am</td>
+            </tr>
+            <tr>
+              <td>Whataburger</td>
+              <td>1.9 miles</td>
+              <td>24 hours</td>
+              <td>24 hours</td>
+            </tr>
+            <tr>
+              <td>Skyrocket Burger</td>
+              <td>2 miles</td>
+              <td>11:00 am - 9:00 pm</td>
+              <td>closed</td>
+            </tr>
+            <tr>
+              <td>Pizza Hut</td>
+              <td>2.1 miles</td>
+              <td>10:00 am - 12:00 am</td>
+              <td>10:00 am - 11:00 pm</td>
+            </tr>
+            <tr>
+              <td>Rosa&#39;s Caf&eacute;</td>
+              <td>2.3 miles</td>
+              <td>6:30 am - 11:00 pm</td>
+              <td>6:30 am - 10:00 pm</td>
+            </tr>
+            <tr>
+              <td>Smoothie King</td>
+              <td>2.4 miles</td>
+              <td>8:00 am - 9:00 pm</td>
+              <td>10:00 am - 8:00 pm</td>
+            </tr>
+            <tr>
+              <td>TocoToco Boba Tea</td>
+              <td>2.9 miles</td>
+              <td>10:00 am - 11:00 pm</td>
+              <td>10:00 am - 11:00 pm</td>
+            </tr>
+            <tr>
+              <td>Velvet Taco</td>
+              <td>3.3 miles</td>
+              <td>11:00 am - 2:00 am</td>
+              <td>11:00 am - 11:00 pm</td>
+            </tr>
+            <tr>
+              <td>Cafe Brazil</td>
+              <td>3.8 miles</td>
+              <td>24 hours</td>
+              <td>24 hours</td>
+            </tr>
+            <tr>
+              <td>OMG Tacos</td>
+              <td>4.2 miles</td>
+              <td>11:00 am - 2:45 am</td>
+              <td>11:00 am - 1:45 am</td>
+            </tr>
+          </table>
+          <p className="mt-3">
+            *Off Campus Restaurants with UTD Student Discounts:{' '}
+            <a href="https://sg.utdallas.edu/discount/#dining" target="_blank" rel="noreferrer">
+              https://sg.utdallas.edu/discount/#dining
+            </a>
+          </p>
         </div>
 
         {/* MOVE TO HACKCENTER */}
@@ -264,9 +354,32 @@ export default function HackerPack() {
             <SponsorCard challenge="StateFarm Challenge" description="Challenge Description" />
           </div>
         </div> */}
+        <div id="hackspaces" className="my-7 md:w-3/4 w-full scrollSnap">
+          <div className="font-bold text-xl lg:text-3xl mb-4">⌨️ Hacking Spaces</div>
+          <div className="w-full flex justify-between flex-wrap">
+            <div>
+              <p className="lg:text-xl text-md pinkShadow">ECS West</p>
+              <ul className="list-disc list-inside">
+                <li>More info soon</li>
+              </ul>
+            </div>
+            <div>
+              <p className="lg:text-xl text-md pinkShadow">ECS South</p>
+              <ul className="list-disc list-inside">
+                <li>More info soon</li>
+              </ul>
+            </div>
+            <div>
+              <p className="lg:text-xl text-md pinkShadow">ECS North</p>
+              <ul className="list-disc list-inside">
+                <li>More info soon</li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-        <div id="Subsection3" className="my-7 w-full">
-          <div className="font-bold text-lg md:text-xl lg:text-3xl mb-4">Clubs</div>
+        <div id="clubs" className="my-7 w-full scrollSnap">
+          <div className="font-bold text-xl lg:text-3xl mb-4">👥 Clubs and Organizations</div>
           <ClubCard
             path="/assets/clubImages/WINStem.png"
             club="WIN Stem"
@@ -317,54 +430,6 @@ export default function HackerPack() {
             club="Alpha Kappa Psi"
             description="Alpha Kappa Psi is a professional business fraternity. Our motto is &ldquo;Shaping People, Shaping Business,&rdquo; and we are committed to developing business leaders and professionals one student at a time."
           />
-        </div>
-
-        <div id="Subsection4" className="my-7">
-          <div className="font-bold text-lg md:text-xl lg:text-3xl mb-4">SubHeading 4</div>
-          <p>
-            Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Mauris nunc congue nisi
-            vitae suscipit. Vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet.
-            Mi proin sed libero enim sed. Sit amet nisl suscipit adipiscing bibendum. Enim sit amet
-            venenatis urna cursus eget. Est lorem ipsum dolor sit amet consectetur adipiscing elit
-            pellentesque. Donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum
-            arcu. Enim nulla aliquet porttitor lacus luctus accumsan tortor.
-          </p>
-        </div>
-
-        <div id="Subsection5" className="my-7">
-          <div className="font-bold text-lg md:text-xl lg:text-3xl mb-4">SubHeading 5</div>
-          <div>
-            <p>
-              Turpis egestas pretium aenean pharetra magna. Turpis in eu mi bibendum neque egestas
-              congue quisque egestas. Egestas fringilla phasellus faucibus scelerisque. Tincidunt
-              ornare massa eget egestas purus viverra accumsan in. Elit ut aliquam purus sit.
-              Interdum varius sit amet mattis vulputate enim nulla. Lacinia quis vel eros donec ac
-              odio.
-              <ul className="list-disc list-inside">
-                <li>Cu erat prompta his</li>
-                <li>A habitasse velit </li>
-                <li>Duis at tellus at urna</li>
-                <li>Egestas nisi</li>
-              </ul>
-            </p>
-          </div>
-        </div>
-
-        <div id="Subsection6" className="my-7">
-          <div className="font-bold text-lg md:text-xl lg:text-3xl mb-4">SubHeading 6</div>
-          <div className="flex grid grid-cols-2 gap-x-4 ">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et eu et vitae, in quis metus
-              quam integer et. Luctus elit cursus a habitasse velit. Egestas nisi, vel, sodales
-              proin vitae quam aenean ullamcorper. Fames enim nunc augue velit nunc neque, fermentum
-              odio elementum.
-            </p>
-            <p>
-              Lacinia quis vel eros donec ac odio tempor orci. Mauris cursus mattis molestie a
-              iaculis at. Ipsum dolor sit amet consectetur adipiscing elit duis. Integer vitae justo
-              eget magna fermentum. Leo in vitae turpis massa sed elementum tempus.
-            </p>
-          </div>
         </div>
       </section>
     </div>
