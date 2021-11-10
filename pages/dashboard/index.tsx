@@ -76,7 +76,7 @@ export default function Dashboard() {
                 page="HackerPack"
               />
             */}
-              <div className="carouselScroll w-11/12 bg-lightBackground overflow-x-scroll flex h-3/4">
+              <div className="carouselScroll w-11/12 bg-000 overflow-x-scroll flex h-3/4">
                 <SpotlightCardScroll
                   title="Tensorflow w/ Google"
                   speakers={['Abdullah Hasani', 'Nam Truong']}
@@ -138,7 +138,7 @@ export default function Dashboard() {
           </div>
           {/* Mentor Center */}
           <div className="my-16">
-            <h1 className="md:text-3xl text-xl font-black">Mentor Center</h1>
+            <h1 className="md:text-3xl text-xl font-header font-black">Mentor Center</h1>
             <p className="my-3">
               Mentors are available 24/7 in ECSW 2.414! You may also see some walking around the
               building in

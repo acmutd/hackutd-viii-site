@@ -54,12 +54,14 @@ module.exports = {
         green: '#66E900',
         purple: '#AD00FF',
         green: '#66E900',
+        cyan: '#00E0FF',
       }),
     },
     fontFamily: {
       sans: ['Neon 80s', 'sans-serif'],
       display: ['Good Times', 'sans-serif'],
       header: ['Neon 80s', 'sans-serif'],
+      body: ['sans-wavehaus'],
     },
   },
   variants: {
