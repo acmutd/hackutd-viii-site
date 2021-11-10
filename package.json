@@ -25,6 +25,7 @@
     "firebase": "^8.10.0",
     "firebase-admin": "^9.11.0",
     "heroicons": "^1.0.5",
+    "jsqr": "^1.4.0",
     "next": "^11.1.2",
     "next-fonts": "^1.5.1",
     "next-images": "^1.8.1",

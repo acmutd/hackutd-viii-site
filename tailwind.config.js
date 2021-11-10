@@ -48,7 +48,7 @@ module.exports = {
         '-0.5': '-0.1rem',
       },
       borderColor: (theme) => ({
-        aqua: '#D8F8FF',
+        aqua: '#00e0ff',
         darkAqua: '#B0F1FF',
         pink: '#FF00E5',
         green: '#66E900',
@@ -56,6 +56,12 @@ module.exports = {
         green: '#66E900',
         cyan: '#00E0FF',
       }),
+      textColor: {
+        aqua: '#00e0ff',
+      },
+      boxShadow: {
+        lgAqua: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 224, 255, 1)',
+      },
     },
     fontFamily: {
       sans: ['Neon 80s', 'sans-serif'],
