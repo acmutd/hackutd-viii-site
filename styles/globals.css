@@ -29,7 +29,8 @@ body {
   width: 100%;
   /* text-align: center; */
   font-family: Neon 80s, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif !important;
+  font-family: 'Neon 80s';
   color: #ffffff;
   background-color: #000000;
 }
@@ -756,12 +757,12 @@ h5 {
   color: #66e900 !important;
 }
 
-.dashboardTag {
-  background-color: #000000 !important;
-}
-
 .hackerPackShadow {
   text-shadow: 1px 1px 7px #65edff, 1px 1px 7px #00e0ff;
+}
+
+.tableShadow {
+  text-shadow: 1px 1px 7px #fc7eef, 1px 1px 7px #ff00e5;
 }
 
 .scrollSnap {

@@ -24,13 +24,16 @@ function SpeakerCard(props) {
             <br></br>
             <p className="text-2xl lg:hidden inline">{props.name}</p>
             <p className="text-xl lg:hidden inline">{props.company}</p>
-            <a href={props.website} target="_blank" rel="noreferrer" className="text-sm">
+            <p className="text-xl lg:hidden inline text-center">{props.role}</p>
+            <a href={props.website} target="_blank" rel="noreferrer" className="text-sm mt-4">
               {result}
             </a>
           </div>
           <div className="h-1/3 p-8 flex flex-col">
             <h1 className="text-3xl hidden lg:inline">{props.name}</h1>
-            <h2 className="text-xl hidden lg:inline">{props.company}</h2>
+            <h2 className="text-xl hidden lg:inline">
+              {props.company} - {props.role}
+            </h2>
             <p className="text-sm">{props.description}</p>
           </div>
         </div>
@@ -48,7 +51,9 @@ function SpeakerCard(props) {
           </div>
           <div className="p-5">
             <h1>{props.name}</h1>
-            <h2>{props.company}</h2>
+            <h2>
+              {props.company} - {props.role}
+            </h2>
             <p className="text-xs">{props.description}</p>
             <a href={props.website} target="_blank" rel="noreferrer" className="text-sm">
               {result}
