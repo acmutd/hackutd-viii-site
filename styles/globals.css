@@ -769,13 +769,44 @@ h5 {
   scroll-behavior: smooth;
 }
 
+.MuiIconButton-label {
+  color: red;
+}
+.MuiToolbar-root {
+  background-color: black;
+}
+
+.Label-text-52 {
+  color: #66e900 !important;
+}
+.Cell-dayView-42,
+.Cell-dayOfWeek-39,
+.Cell-dayOfMonth-40 {
+  color: #66e900 !important;
+}
+.MuiTableCell-body {
+  border-color: grey !important;
+}
+.MuiTableBody-root {
+  background-color: black;
+  color: white;
+}
+.DayScaleEmptyCell-emptyCell-34 {
+  background-color: black;
+}
+
+.MuiButton-label {
+  color: #66e900;
+}
+.MuiSelect-nativeInput {
+  color: #66e900;
+}
 .sponsorBackground {
   background-color: #00e0ff;
 }
 
 td,
 th {
-  border: 1px solid #00e0ff;
   text-align: left;
   padding: 8px;
 }
