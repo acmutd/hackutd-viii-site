@@ -768,38 +768,44 @@ h5 {
   scroll-margin-top: 100px;
   scroll-behavior: smooth;
 }
+td div p{
+  color: #66e900 !important;
+}
+div div div div div div {
+  background-color: black;
+}
+td div div{
+  color: #66e900 !important;
+}
+
+td div span{
+  color: #66e900 !important;
+}
 
 .MuiIconButton-label {
-  color: red;
+  color: red ;
 }
 .MuiToolbar-root {
-  background-color: black;
+  background-color: black !important;
 }
 
-.Label-text-52 {
-  color: #66e900 !important;
-}
-.Cell-dayView-42,
-.Cell-dayOfWeek-39,
-.Cell-dayOfMonth-40 {
-  color: #66e900 !important;
-}
 .MuiTableCell-body {
   border-color: grey !important;
+  color:  #66e900 !important;
 }
-.MuiTableBody-root {
-  background-color: black;
-  color: white;
+.MuiPaper-root{
+background-color: black !important;
 }
-.DayScaleEmptyCell-emptyCell-34 {
-  background-color: black;
+.MuiTableRow-root{
+  background-color: black !important;
+  color:#66e900 !important;
 }
 
 .MuiButton-label {
-  color: #66e900;
+  color: #66e900 !important;
 }
 .MuiSelect-nativeInput {
-  color: #66e900;
+  color: #66e900 !important;
 }
 .sponsorBackground {
   background-color: #00e0ff;
