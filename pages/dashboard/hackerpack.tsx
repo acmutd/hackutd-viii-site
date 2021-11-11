@@ -124,12 +124,12 @@ export default function HackerPack() {
               <th>Time</th>
               <th>Location</th>
             </tr>
-            <tr>
+            {/* <tr>
               <td>Saturday Breakfast</td>
               <td>Coffee &amp; Donuts</td>
               <td>9:00 am</td>
               <td>Room ECS 1.100, Main Community Commons</td>
-            </tr>
+            </tr> */}
             <tr>
               <td>Saturday Lunch</td>
               <td>Wafflelicious Food Truck, Yummy Pizza Food Truck</td>
@@ -144,7 +144,7 @@ export default function HackerPack() {
             </tr>
             <tr>
               <td>Saturday Snacks</td>
-              <td>Assorted Snacks</td>
+              <td>Mystery item 👀</td>
               <td>11:30 pm</td>
               <td>Room ECS 1.100, Main Community Commons</td>
             </tr>
