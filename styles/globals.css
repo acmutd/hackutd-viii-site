@@ -785,3 +785,11 @@ th {
 .row {
   background-color: #00e0ff;
 }
+
+.bottomz {
+  z-index: 0;
+}
+
+.topz {
+  z-index: 999;
+}

@@ -33,7 +33,7 @@ export default function HackerPack() {
 
       <section
         id="Sidebar"
-        className="flex justify-center min-h-[90vh] max-h-[90vh] fixed top-24 border-r-2 border-b-2 border-t-2 border-aqua w-1/4 md:w-1/6 2xl:w-1/8 text-xs md:text-xs lg:text-sm overflow-auto"
+        className="flex justify-center min-h-[90vh] max-h-[90vh] fixed top-24 border-r-2 border-b-2 border-t-2 border-aqua w-1/4 md:w-1/6 2xl:w-1/8 text-xs md:text-xs lg:text-sm overflow-auto bg-black z-51 topz"
       >
         <section id="options" className="relative px-6 py-4">
           <div className="font-bold mb-3">HackerPack</div>
@@ -63,7 +63,7 @@ export default function HackerPack() {
         </div>
       </section>
 
-      <section id="mainContent" className="px-6 py-3 w-3/4 md:wd-5/6 2xl:w-7/8">
+      <section id="mainContent" className="px-6 py-3 w-3/4 md:wd-5/6 2xl:w-7/8 z-0 bottomz">
         <section id="subheader" className="p-4">
           <DashboardHeader active="/dashboard/hackerpack" />
         </section>
@@ -117,7 +117,7 @@ export default function HackerPack() {
         <div id="food" className="my-7 scrollSnap">
           <div className="font-bold text-xl lg:text-3xl mb-4">🍕 Meals</div>
           <p className="md:text-xl text-md">Provided</p>
-          <table className="border-collapse w-full">
+          <table className="border-collapse w-full text-xs md:text-md lg:text-lg">
             <tr className="pinkShadow lg:text-xl md:text-lg text-md">
               <th>Name</th>
               <th>Catering</th>
@@ -163,7 +163,7 @@ export default function HackerPack() {
           </table>
           <br />
           <p className="md:text-xl text-md">On-Campus Restaurants</p>
-          <table className="border-collapse w-full">
+          <table className="border-collapse w-full text-xs md:text-md lg:text-lg">
             <tr className="pinkShadow lg:text-xl md:text-lg text-md">
               <th>Student Union</th>
               <th>Saturday</th>
@@ -252,7 +252,7 @@ export default function HackerPack() {
           </table>
           <br />
           <p className="md:text-xl text-md">Off-Campus Restaurants</p>
-          <table className="border-collapse w-full">
+          <table className="border-collapse w-full text-xs md:text-md lg:text-lg">
             <tr className="pinkShadow lg:text-xl md:text-lg text-md">
               <th>Name</th>
               <th>Distance From Campus</th>
