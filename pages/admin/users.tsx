@@ -40,9 +40,14 @@ export default function UserPage({ userData }: { userData: UserData[] }) {
     timer = setTimeout(() => {
       if (searchQuery !== '') {
         const newFiltered = users.filter(
-          ({ user }) => `${user.firstName} ${user.lastName}`.indexOf(searchQuery) !== -1,
+          ({ user }) =>
+            `${user.firstName} ${user.lastName}`
+              .toLowerCase()
+              .indexOf(searchQuery.toLowerCase()) !== -1,
         );
         setFilteredUsers(newFiltered);
+      } else {
+        setFilteredUsers([...users]);
       }
     }, 750);
 

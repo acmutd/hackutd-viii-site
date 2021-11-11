@@ -848,3 +848,32 @@ div.tableOutline td {
   text-align: left;
   padding: 8px;
 }
+
+.profile-view {
+  display: grid;
+  grid-template-areas:
+    'name role'
+    'university university';
+  row-gap: 2rem;
+  column-gap: 1rem;
+}
+
+.profile-view-name {
+  grid-area: name;
+}
+
+.profile-view-role {
+  grid-area: role;
+}
+
+.profile-view-univ {
+  grid-area: university;
+}
+
+.profile-view-lunch {
+  grid-area: lunchGroup;
+}
+
+.profile-view-interests {
+  grid-area: interests;
+}
