@@ -18,14 +18,15 @@ export default function DashboardHeader({ active }: DashboardHeaderProps) {
               <span className="inline md:invisible"></span>
               <a
                 className={`link font-bold ${
-                  active === '/dashboard/' && 'border-b-2 border-black p-2'
+                  active === '/dashboard' && 'border-b-2 border-black p-2'
                 }`}
                 onClick={getItemCount}
               >
-                Hack Center
+                HackCenter
               </a>
             </a>
           </Link>
+          {/* Hide scan in for now */}
           <Link href="/dashboard/scan-in">
             <a>
               <span className="inline md:invisible"></span>
