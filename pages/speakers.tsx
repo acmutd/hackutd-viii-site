@@ -18,7 +18,25 @@ export default function speakers() {
             His background in digital transformation, digital communications, emerging payments, operational excellence, data-driven decision-making and ongoing product innovation is unparalleled. 
             His blue-chip background encompasses Google, Apple, ATT, Bank of America, 
             Goldman Sachs, MasterCard, American Express, GE, Citibank, Federal Reserve Bank of New York, NYC Transit Authority and US Department of Transportation."
-            website="https://www.linkedin.com/in/paulbailo/"
+            website="linkedin.com/in/paulbailo"
+          />
+        </div>
+        <div id="SpeakerCards" className="flex flex-wrap justify-center md:w-5/6 w-screen">
+          {/* path is relative path from speakers.tsx file(this file) to assets*/}
+          {/* general path -  /../public/assets/speakerImages/{speaker file}*/}
+          <SpeakerCard
+            path="/assets/speakerImages/speaker2.png"
+            name="Suresh Thumma"
+            company="Goldman Sachs"
+            description="Suresh Thumma is a Managing Director and Tech Fellow at Goldman Sachs. 
+            He manages software engineering for cloud enablement, which enables business application deployments on public cloud.
+             Before rejoining Goldman Sachs, Suresh was co-founder and chief executive officer of StackLynx, 
+             an online platform for deploying and managing micro services on public cloud. Prior to that, 
+             he was a vice president and global head of Cloud Platforms and Platform Automation at Visa. 
+             Earlier in his career, Suresh held a variety of roles, including director of Software Engineering 
+             for the Investment Research Division at Merrill Lynch and development manager at IBM. 
+             He first joined Goldman Sachs in 2008."
+            website="https://www.linkedin.com/in/suresh-thumma-9a67086/"
           />
         </div>
         <div id="SpeakerCards" className="flex flex-wrap justify-center md:w-5/6 w-screen">
