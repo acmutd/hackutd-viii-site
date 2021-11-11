@@ -6,12 +6,12 @@ export default function speakers() {
       <div className="speakersMainPage flex flex-col items-center">
         <h4 className="speakersTitle">Speakers</h4>
         <div id="SpeakerCards" className="flex flex-wrap justify-center md:w-5/6 w-screen">
-          {/* path is relative path from speakers.tsx file(this file) to assets*/}
-          {/* general path -  /../public/assets/speakerImages/{speaker file}*/}
+          {/* general path -  /assets/speakerImages/{speaker file}*/}
           <SpeakerCard
-            path="/assets/speakerImages/speaker.jpg"
+            path="/assets/speakerImages/PaulBailo.svg"
             name="Paul Bailo"
-            company="CEO — PIP Consulting Group"
+            company="PIP Consulting Group"
+            role="CEO"
             description="Paul Bailo is widely recognized by industry thought leaders for his C-level executive skills in Digital Transformation, Marketing and Business Operations. 
             He has earned deep career success in multiple fields, along with an outstanding industry reputation and important executive roles as Digital Innovator, Strategic Thinker, 
             Change Agent, Customer Champion, Industry Author and Creative Entrepreneur. He has built and led top performing teams, start-up entities and world-class organizations. 
@@ -20,22 +20,15 @@ export default function speakers() {
             Goldman Sachs, MasterCard, American Express, GE, Citibank, Federal Reserve Bank of New York, NYC Transit Authority and US Department of Transportation."
             website="linkedin.com/in/paulbailo"
           />
-        </div>
-        <div id="SpeakerCards" className="flex flex-wrap justify-center md:w-5/6 w-screen">
-          {/* path is relative path from speakers.tsx file(this file) to assets*/}
-          {/* general path -  /../public/assets/speakerImages/{speaker file}*/}
           <SpeakerCard
-            path="/assets/speakerImages/speaker2.png"
+            path="/assets/speakerImages/SureshThumma-GS.png"
             name="Suresh Thumma"
-            company="Managing Director - Goldman Sachs"
-            description="Suresh Thumma is a Managing Director and Tech Fellow at Goldman Sachs. 
-            He manages software engineering for cloud enablement, which enables business application deployments on public cloud.
-             Before rejoining Goldman Sachs, Suresh was co-founder and chief executive officer of StackLynx, 
-             an online platform for deploying and managing micro services on public cloud. Prior to that, 
-             he was a vice president and global head of Cloud Platforms and Platform Automation at Visa. 
-             Earlier in his career, Suresh held a variety of roles, including director of Software Engineering 
-             for the Investment Research Division at Merrill Lynch and development manager at IBM. 
-             He first joined Goldman Sachs in 2008."
+            company="Goldman Sachs"
+            role="Managing Director &amp; Tech Fellow"
+            description="Suresh Thumma is a Managing Director and Tech Fellow at Goldman Sachs. He manages software engineering for cloud enablement, which enables business application deployments 
+            on public cloud. Before rejoining Goldman Sachs, Suresh was co-founder and chief executive officer of StackLynx, an online platform for deploying and managing micro services on public 
+            cloud. Prior to that, he was a vice president and global head of Cloud Platforms and Platform Automation at Visa. Earlier in his career, Suresh held a variety of roles, including 
+            director of Software Engineering for the Investment Research Division at Merrill Lynch and development manager at IBM. He first joined Goldman Sachs in 2008."
             website="https://www.linkedin.com/in/suresh-thumma-9a67086/"
           />
         </div>

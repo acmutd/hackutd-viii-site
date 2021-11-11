@@ -32,7 +32,7 @@ export default function AppHeader() {
 
   return (
     <>
-      <header className="top-0 sticky flex flex-row justify-between p-2 md:p-4 bg-black shadow-md items-center z-50">
+      <header className="top-0 sticky flex flex-row justify-between p-2 md:p-4 bg-black shadow-md items-center z-50 min-h-[6rem]">
         <Link href="/">
           <a
             className="flex font-display self-center inline-block items-center"
@@ -44,54 +44,41 @@ export default function AppHeader() {
         </Link>
         {/* Menu items */}
         <div className="lg:inline hidden md:flex justify-left md:text-xl text-md font-header md:text-left cursor:pointer">
-          {navItems.map((navItem, idx) => (
-            <Link key={idx} href={navItem.path}>
-              <a onClick={dismissDialog}>
-                <span className="inline scheduledot md:invisible"></span>
-                <a className="link lg:inline hidden">{navItem.text}</a>
-              </a>
-            </Link>
-          ))}
-          {/* Menu dropdown for mobile */}
-          <div className="sm:hidden">
-            <div className="dropdown inline-block relative">
-              <button className="bg-gray-300 text-gray-700 font-semibold py-1 px-2 rounded inline-flex items-center">
-                <span className="mr-1">Menu</span>
-                <MenuIcon />
-              </button>
-              <ul className="dropdown-menu absolute hidden text-gray-700 pt-1">
-                <li className="">
-                  <Link href="/dashboard">
-                    <a className="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">
-                      Dashboard
-                    </a>
-                  </Link>
-                </li>
-                <li className="">
-                  <Link href="/sponsors">
-                    <a className="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">
-                      Sponsors
-                    </a>
-                  </Link>
-                </li>
-                <li className="">
-                  <Link href="/schedule">
-                    <a className="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">
-                      Schedule
-                    </a>
-                  </Link>
-                </li>
-                <li className="">
-                  <Link href="/about">
-                    <a className="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">
-                      About
-                    </a>
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          {/* End of main menu items */}
+          <Link href="/dashboard">
+            <a
+              onClick={() => {
+                dismissDialog();
+                getItemCount();
+              }}
+            >
+              <span className="inline scheduledot md:invisible"></span>
+              <a className="link lg:inline hidden">Dashboard</a>
+            </a>
+          </Link>
+          <Link href="/schedule">
+            <a onClick={dismissDialog}>
+              <span className="inline scheduledot md:invisible"></span>
+              <a className="link lg:inline hidden">Schedule</a>
+            </a>
+          </Link>
+          <Link href="/speakers">
+            <a onClick={dismissDialog}>
+              <span className="inline speakerdot md:invisible"></span>
+              <a className="link lg:inline hidden">Speakers</a>
+            </a>
+          </Link>
+          <Link href="/sponsors">
+            <a onClick={dismissDialog}>
+              <span className="inline sponsordot md:invisible"></span>
+              <a className="link lg:inline hidden">Sponsors</a>
+            </a>
+          </Link>
+          <Link href="/faq">
+            <a onClick={dismissDialog}>
+              <span className="inline faqdot md:invisible"></span>
+              <a className="link lg:inline hidden">FAQ</a>
+            </a>
+          </Link>
         </div>
         {/* Menu dropdown for mobile */}
         <div className="lg:hidden">
@@ -101,6 +88,19 @@ export default function AppHeader() {
               <MenuIcon />
             </button>
             <ul className="dropdown-menu absolute hidden text-gray-700 pt-1 -left-0.5">
+              <li className="">
+                <Link href="/dashboard">
+                  <a
+                    className="bg-black hover:bg-gray-700 py-2 px-4 block whitespace-no-wrap"
+                    onClick={() => {
+                      dismissDialog();
+                      getItemCount();
+                    }}
+                  >
+                    Dashboard
+                  </a>
+                </Link>
+              </li>
               <li className="">
                 <Link href="/schedule">
                   <a className="bg-black hover:bg-gray-700 py-2 px-4 block whitespace-no-wrap">

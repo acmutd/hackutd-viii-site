@@ -33,7 +33,8 @@ body {
   width: 100%;
   /* text-align: center; */
   font-family: Neon 80s, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif !important;
+  font-family: 'Neon 80s';
   color: #ffffff;
   background-color: #000000;
 }
@@ -765,17 +766,18 @@ h5 {
   color: #66e900 !important;
 }
 
-.dashboardTag {
-  background-color: #000000 !important;
-}
-
 .hackerPackShadow {
   text-shadow: 1px 1px 7px #65edff, 1px 1px 7px #00e0ff;
+}
+
+.pinkShadow {
+  text-shadow: 1px 1px 7px #fc7eef, 1px 1px 7px #ff00e5;
 }
 
 .scrollSnap {
   scroll-margin-top: 100px;
   scroll-behavior: smooth;
+  scroll-snap-margin-top: 200px;
 }
 td div p {
   color: #66e900 !important;
@@ -823,6 +825,26 @@ td div span {
 
 td,
 th {
+  text-align: left;
+  padding: 8px;
+}
+
+.row {
+  background-color: #00e0ff;
+}
+
+.bottomz {
+  z-index: 0;
+}
+
+.topz {
+  z-index: 999;
+}
+
+div.tableOutline tr,
+div.tableOutline th,
+div.tableOutline td {
+  border: 1px solid #00e0ff;
   text-align: left;
   padding: 8px;
 }

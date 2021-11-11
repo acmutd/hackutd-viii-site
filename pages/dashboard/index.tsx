@@ -124,22 +124,11 @@ export default function Dashboard(props: { announcements: Announcement[] }) {
 
           <div className="flex flex-wrap my-16">
             {/* Spotlight Events */}
-            <div className="md:w-3/5 w-screen h-96">
+
+            {/* <div className="md:w-3/5 w-screen h-96">
               <h1 className="md:text-3xl text-xl font-black">Spotlight</h1>
               <h3 className="md:text-xl text-md font-bold my-3">{eventCountString}</h3>
-              {/* Carousel Section */}
-              {/*
-            <div className="carousel">
-              <SpotlightCard
-                title="Tensorflow w/ Google"
-                speakers={['Abdullah Hasani', 'Nam Truong']}
-                date="Saturday, Nov 13th"
-                location="ECSW 1.154"
-                time="12:30 - 1:30 PM"
-                page="HackerPack"
-              />
-            */}
-              <div className="carouselScroll w-11/12 bg-lightBackground overflow-x-scroll flex h-3/4">
+              <div className="carouselScroll w-11/12 bg-000 overflow-x-scroll flex h-3/4">
                 <SpotlightCardScroll
                   title="Tensorflow w/ Google"
                   speakers={['Abdullah Hasani', 'Nam Truong']}
@@ -173,35 +162,19 @@ export default function Dashboard(props: { announcements: Announcement[] }) {
                   page="HackerPack"
                 />
               </div>
-            </div>
+            </div> */}
 
             {/* Announcements */}
-            <div className="md:w-2/5 w-screen h-96">
+            <div className="md:w-3/5 w-screen h-96">
               <h1 className="md:text-3xl text-xl font-black">Announcements</h1>
               <div id="announcement-items" className="overflow-y-scroll h-9/10">
-                <AnnouncementCard
-                  text="AWAKE Chocolate Bars available in ECSW Lobby for limited time only! Come and grab some now!"
-                  time="1:12 PM"
-                />
-                <AnnouncementCard
-                  text="Keynote Speaker Antonio Bendaras' speech has been moved from room 1.1501 to 1.514"
-                  time="1:02 PM"
-                />
-                <AnnouncementCard
-                  text="Hacking has officially started! Get hacking hackers :)"
-                  time="11:00 AM"
-                />
-                <AnnouncementCard
-                  text="Check-in has opened! Come to the entrance at ECSW to get checked-in."
-                  time="8:00 AM"
-                />
-                <AnnouncementCard text="Gooooood Mooooorning!" time="6:00 AM" />
+                <AnnouncementCard text="More announcements coming soon!" time="8:39 PM" />
               </div>
             </div>
           </div>
           {/* Mentor Center */}
-          <div className="my-16">
-            <h1 className="md:text-3xl text-xl font-black">Mentor Center</h1>
+          {/* <div className="my-16">
+            <h1 className="md:text-3xl text-xl font-header font-black">Mentor Center</h1>
             <p className="my-3">
               Mentors are available 24/7 in ECSW 2.414! You may also see some walking around the
               building in
@@ -237,6 +210,11 @@ export default function Dashboard(props: { announcements: Announcement[] }) {
                 status="Open"
               />
             </div>
+          </div> */}
+
+          <div className="my-16">
+            <h1 className="md:text-3xl text-xl font-header font-black">Challenges</h1>
+            <h1 className="md:text-2xl text-lg font-header font-black">Challenges coming soon!</h1>
           </div>
           {/* Events and Team */}
           {/* <div className="flex flex-wrap h-96 my-16">
