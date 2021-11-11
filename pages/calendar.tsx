@@ -127,8 +127,8 @@ const appointments = [
   },
   {
     title: 'Walk-in Registration',
-    startDate: new Date(2021, 10, 13, 11, 30),
-    endDate: new Date(2021, 10, 13, 12, 0),
+    startDate: new Date(2021, 10, 13, 10, 0),
+    endDate: new Date(2021, 10, 13, 11, 0),
     Event: 1,
     location: 'ECSW',
   },
@@ -246,13 +246,6 @@ const appointments = [
     location: 'ECSW',
   },
   {
-    title: 'Debrief',
-    startDate: new Date(2021, 10, 14, 12, 0),
-    endDate: new Date(2021, 10, 14, 12, 30),
-    Event: 5,
-    location: 'ECSW',
-  },
-  {
     title: 'Hacking Ends',
     startDate: new Date(2021, 10, 14, 12, 0),
     endDate: new Date(2021, 10, 14, 12, 30),
@@ -268,8 +261,8 @@ const appointments = [
   },
   {
     title: 'Closing Ceremony',
-    startDate: new Date(2021, 10, 13, 15, 0),
-    endDate: new Date(2021, 10, 13, 16, 30),
+    startDate: new Date(2021, 10, 14, 15, 0),
+    endDate: new Date(2021, 10, 14, 16, 30),
     Event: 1,
     location: 'ECSW',
   },
