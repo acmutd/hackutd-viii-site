@@ -18,11 +18,11 @@ function setup() {
   const messaging = firebase.messaging();
 
   messaging.onBackgroundMessage(function (payload) {
-    console.log("From background: ", payload);
     const { announcement } = JSON.parse(payload.data.notification);
     var options = {
       body: announcement,
       icon: '/icons/launcher-icon-4x.png',
+      tag: new Date().toUTCString(),
     };
     self.registration.showNotification("HackPortal Announcement", options);
   });

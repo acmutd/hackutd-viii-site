@@ -6,8 +6,6 @@ import { RequestHelper } from '../request-helper';
 interface FCMContextState {
   fcmSw: ServiceWorkerRegistration;
   messageToken: string;
-  resetToken: () => Promise<void>;
-  messagingObj: firebase.messaging.Messaging;
   announcements: Announcement[];
 }
 
@@ -22,7 +20,6 @@ function useFCMContext(): FCMContextState {
 function FCMProvider({ children }: React.PropsWithChildren<Record<string, any>>): JSX.Element {
   const [swRegistration, setSwRegistration] = useState<ServiceWorkerRegistration>();
   const [messageToken, setMessageToken] = useState<string>();
-  const [messagingObj, setMessagingObj] = useState<firebase.messaging.Messaging>();
   const [announcements, setAnnouncements] = useState<Announcement[]>([]);
 
   useEffect(() => {
@@ -47,8 +44,6 @@ function FCMProvider({ children }: React.PropsWithChildren<Record<string, any>>)
               });
 
             const messaging = firebase.messaging();
-            setMessagingObj(messaging);
-
             if (Notification.permission !== 'granted') await Notification.requestPermission();
             let token = await messaging.getToken({
               vapidKey: process.env.NEXT_PUBLIC_VAPID_KEY,
@@ -98,6 +93,7 @@ function FCMProvider({ children }: React.PropsWithChildren<Record<string, any>>)
               const { announcement } = JSON.parse(payload.data.notification);
               const options = {
                 body: announcement,
+                tag: new Date().toUTCString(),
               };
               registration.showNotification('HackPortal Announcement', options);
               setAnnouncements((prev) => [
@@ -115,17 +111,9 @@ function FCMProvider({ children }: React.PropsWithChildren<Record<string, any>>)
     }
   }, []);
 
-  const resetToken = async () => {
-    await messagingObj.deleteToken();
-    const newToken = await messagingObj.getToken({ vapidKey: process.env.NEXT_PUBLIC_VAPID_KEY });
-    setMessageToken(newToken);
-  };
-
   const swContextValue: FCMContextState = {
     fcmSw: swRegistration,
     messageToken,
-    resetToken,
-    messagingObj,
     announcements,
   };
 
