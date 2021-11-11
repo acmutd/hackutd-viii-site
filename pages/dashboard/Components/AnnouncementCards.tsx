@@ -11,7 +11,7 @@ function AnouncementCard(props) {
     <>
       <div
         id="announcement-content"
-        className="bg-000 md:min-h-1/4 rounded-lg p-3 text-purple border-2 border-purple"
+        className="bg-000 min-h-[1/4] rounded-lg p-3 text-purple border-2 border-purple"
       >
         {props.text}
       </div>

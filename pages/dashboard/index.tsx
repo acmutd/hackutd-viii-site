@@ -102,7 +102,7 @@ export default function Dashboard() {
             </div> */}
 
             {/* Announcements */}
-            <div className="md:w-3/5 w-screen h-96">
+            <div className="md:w-3/5 w-screen max-h-[24rem]">
               <h1 className="md:text-3xl text-xl font-black">Announcements</h1>
               <div id="announcement-items" className="overflow-y-scroll h-9/10">
                 <AnnouncementCard text="More announcements coming soon!" time="8:39 PM" />

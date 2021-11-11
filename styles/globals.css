@@ -48,7 +48,21 @@ button.SigninButton {
   @apply p-2;
 }
 
+div.tableOutline tr,
+div.tableOutline th,
+div.tableOutline td {
+  border: 1px solid #00e0ff;
+  text-align: left;
+  padding: 8px;
+}
+
 @media (max-width: 600px) {
+  div.tableOutline tr,
+  div.tableOutline th,
+  div.tableOutline td {
+    padding: 1px !important;
+  }
+
   div.Navbar {
     display: none !important;
   }
@@ -830,12 +844,4 @@ th {
 
 .topz {
   z-index: 999;
-}
-
-div.tableOutline tr,
-div.tableOutline th,
-div.tableOutline td {
-  border: 1px solid #00e0ff;
-  text-align: left;
-  padding: 8px;
 }
