@@ -1,4 +1,8 @@
 import { useRouter } from 'next/router';
+import Head from 'next/head';
+import React from 'react';
+import Script from 'next/script';
+import { buttonDatas, stats } from '../lib/data';
 
 export default function Home() {
   const router = useRouter();

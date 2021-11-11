@@ -24,15 +24,26 @@ export default function Admin() {
     setCurrentScan(data);
   };
 
-  const handleScan = async (data, video: HTMLVideoElement, setVideoReady, setPaused, tick) => {
+  const handleScan = async (
+    data: string,
+    video: HTMLVideoElement,
+    setVideoReady,
+    setPaused,
+    tick,
+  ) => {
+    if (!data.startsWith('hack:')) {
+      setScanData(data);
+      setSuccess('Invalid hacker tag format...');
+      return;
+    }
     const query = new URL(`http://localhost:3000/api/scan`);
-    query.searchParams.append('id', user.id);
+    query.searchParams.append('id', data.replaceAll('hack:', ''));
     fetch(query.toString().replaceAll('http://localhost:3000', ''), {
       mode: 'cors',
       headers: { Authorization: user.token },
       method: 'POST',
       body: JSON.stringify({
-        id: user.id,
+        id: data.replaceAll('hack:', ''),
         scan: currentScan.name,
       }),
     })

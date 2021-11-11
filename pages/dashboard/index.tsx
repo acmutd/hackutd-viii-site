@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import DashboardHeader from '../../components/DashboardHeader';
 import { useUser } from '../../lib/profile/user-data';
@@ -11,6 +11,11 @@ import Sidebar from './Components/Sidebar';
 import SpotlightCard from './Components/SpotlightCard';
 import SpotlightCardScroll from './Components/SpotlightCardScroll';
 import Script from 'next/script';
+import firebase from 'firebase';
+import 'firebase/messaging';
+import { GetServerSideProps } from 'next';
+import { RequestHelper } from '../../lib/request-helper';
+import { useFCMContext } from '../../lib/service-worker/FCMContext';
 
 /**
  * The dashboard / hack center.
@@ -27,10 +32,68 @@ export const getItemCount = () => {
   }
 };
 
-export default function Dashboard() {
+export default function Dashboard(props: { announcements: Announcement[] }) {
   const { isSignedIn } = useAuthContext();
   const user = useUser();
   const role = user.permissions?.length > 0 ? user.permissions[0] : '';
+  const [announcements, setAnnouncements] = useState<Announcement[]>([]);
+
+  // Change this to check-in condition instead of signed in
+  const checkin =
+    !user || !isSignedIn ? (
+      <p>
+        It looks like you&apos;re not checked in! Please click{' '}
+        <Link href="/dashboard/scan-in" passHref>
+          <u>here</u>
+        </Link>{' '}
+        to check in to the event.
+      </p>
+    ) : (
+      'You are successfully checked in!'
+    );
+
+  var eventCount = 0;
+  if (typeof window !== 'undefined') {
+    document.querySelectorAll('.carousel').forEach((carousel) => {
+      const items = carousel.querySelectorAll('.carousel__item');
+
+      //run if there are carousel items
+      if (items !== undefined && items !== null && items.length !== 0) {
+        const buttonsHtml = Array.from(items, () => {
+          return `<span class="carousel__button"></span>`;
+        });
+
+        carousel.insertAdjacentHTML(
+          'beforeend',
+          `
+	        	<div class="carousel__nav">
+	        		${buttonsHtml.join('')}
+	        	</div>
+	        `,
+        );
+
+        const buttons = carousel.querySelectorAll('.carousel__button');
+        eventCount = items.length;
+        buttons.forEach((button, i) => {
+          button.addEventListener('click', () => {
+            // un-select all the items
+            items.forEach((item) => item.classList.remove('carousel__item--selected'));
+            buttons.forEach((button) => button.classList.remove('carousel__button--selected'));
+
+            console.log(i - buttons.length / 2);
+            const itemNumber = i - buttons.length / 2;
+
+            items[itemNumber].classList.add('carousel__item--selected');
+            button.classList.add('carousel__button--selected');
+          });
+        });
+
+        //Set default to first item
+        items[0].classList.add('carousel__item--selected');
+        buttons[0].classList.add('carousel__button--selected');
+      }
+    });
+  }
 
   var eventCountString;
   if (eventCount === 1) {

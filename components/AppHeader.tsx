@@ -5,11 +5,18 @@ import ProfileDialog from './ProfileDialog';
 import HackUTDLogo from './HackUTDLogo';
 import MenuIcon from '@material-ui/icons/Menu';
 import { getItemCount } from '../pages/dashboard/index';
+import { useUser } from '../lib/profile/user-data';
+import { useAuthContext } from '../lib/user/AuthContext';
+
+import { navItems } from '../lib/data';
 
 /**
  * A global site header throughout the entire app.
  */
 export default function AppHeader() {
+  const { isSignedIn } = useAuthContext();
+  const user = useUser();
+
   const [showProfileDialog, setShowProfileDialog] = React.useState(false);
 
   const [mobileViewOpen, setMobileViewOpen] = React.useState(false);
@@ -37,30 +44,54 @@ export default function AppHeader() {
         </Link>
         {/* Menu items */}
         <div className="lg:inline hidden md:flex justify-left md:text-xl text-md font-header md:text-left cursor:pointer">
-          <Link href="/schedule">
-            <a onClick={dismissDialog}>
-              <span className="inline scheduledot md:invisible"></span>
-              <a className="link lg:inline hidden">Schedule</a>
-            </a>
-          </Link>
-          <Link href="/speakers">
-            <a onClick={dismissDialog}>
-              <span className="inline speakerdot md:invisible"></span>
-              <a className="link lg:inline hidden">Speakers</a>
-            </a>
-          </Link>
-          <Link href="/sponsors">
-            <a onClick={dismissDialog}>
-              <span className="inline sponsordot md:invisible"></span>
-              <a className="link lg:inline hidden">Sponsors</a>
-            </a>
-          </Link>
-          <Link href="/faq">
-            <a onClick={dismissDialog}>
-              <span className="inline faqdot md:invisible"></span>
-              <a className="link lg:inline hidden">FAQ</a>
-            </a>
-          </Link>
+          {navItems.map((navItem, idx) => (
+            <Link key={idx} href={navItem.path}>
+              <a onClick={dismissDialog}>
+                <span className="inline scheduledot md:invisible"></span>
+                <a className="link lg:inline hidden">{navItem.text}</a>
+              </a>
+            </Link>
+          ))}
+          {/* Menu dropdown for mobile */}
+          <div className="sm:hidden">
+            <div className="dropdown inline-block relative">
+              <button className="bg-gray-300 text-gray-700 font-semibold py-1 px-2 rounded inline-flex items-center">
+                <span className="mr-1">Menu</span>
+                <MenuIcon />
+              </button>
+              <ul className="dropdown-menu absolute hidden text-gray-700 pt-1">
+                <li className="">
+                  <Link href="/dashboard">
+                    <a className="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">
+                      Dashboard
+                    </a>
+                  </Link>
+                </li>
+                <li className="">
+                  <Link href="/sponsors">
+                    <a className="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">
+                      Sponsors
+                    </a>
+                  </Link>
+                </li>
+                <li className="">
+                  <Link href="/schedule">
+                    <a className="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">
+                      Schedule
+                    </a>
+                  </Link>
+                </li>
+                <li className="">
+                  <Link href="/about">
+                    <a className="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">
+                      About
+                    </a>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+          {/* End of main menu items */}
         </div>
         {/* Menu dropdown for mobile */}
         <div className="lg:hidden">
@@ -101,10 +132,16 @@ export default function AppHeader() {
             </ul>
           </div>
         </div>
-        <div className="flex flex-row-reverse md:text-xl text-sm">
-          <div className="md:mx-4 mx-1">
-            <button className="SigninButton font-header rounded-full" onClick={toggleDialog}>
-              Sign In
+        <div className="flex flex-row-reverse md:text-xl text-s">
+          <div className="mx-4">
+            <button
+              className="SigninButton font-headerSigninButton font-header font-bold bg-white px-8 py-1 rounded-full border-2 border-black text-sm"
+              onClick={toggleDialog}
+            >
+              {!user || !isSignedIn ? 'Sign in' : 'Profile'}
+              {/* To Do: must fix profile pic button */}
+              {/* {!user || !isSignedIn ? 'Sign in' : <Image src={user.photoUrl} alt="Profile">} */}
+              {/* {clsx({'Sign in' : (!user || !isSignedIn)})} */}
             </button>
           </div>
         </div>
