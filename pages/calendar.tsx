@@ -22,8 +22,8 @@ import classNames from 'clsx';
 const appointments = [
   {
     title: 'Sponsor Fair',
-    startDate: new Date(2021, 10, 13, 9, 15),
-    endDate: new Date(2021, 10, 13, 10, 45),
+    startDate: new Date(2021, 10, 13, 9, 30),
+    endDate: new Date(2021, 10, 13, 11, 0),
     Event: 5,
     location: 'ECSW',
   },
@@ -35,7 +35,7 @@ const appointments = [
     location: 'ECSW',
   },
   {
-    title: 'Squid Game 1 Team Ddakkji',
+    title: 'Squid Game 1',
     startDate: new Date(2021, 10, 13, 13, 30),
     endDate: new Date(2021, 10, 13, 14, 0),
     Event: 5,
@@ -57,15 +57,15 @@ const appointments = [
   },
   {
     title: 'Casual Game Hangout IEEE',
-    startDate: new Date(2021, 10, 13, 12, 30),
-    endDate: new Date(2021, 10, 13, 13, 30),
+    startDate: new Date(2021, 10, 13, 14, 30),
+    endDate: new Date(2021, 10, 13, 15, 30),
     Event: 5,
     location: 'ECSW',
   },
   {
     title: 'Casual Hangout with American Airlines',
     startDate: new Date(2021, 10, 13, 18, 30),
-    endDate: new Date(2021, 10, 13, 19, 15),
+    endDate: new Date(2021, 10, 13, 19, 30),
     Event: 5,
     location: 'ECSW',
   },
@@ -93,7 +93,7 @@ const appointments = [
   {
     title: 'Lunch',
     startDate: new Date(2021, 10, 13, 12, 0),
-    endDate: new Date(2021, 10, 13, 13, 15),
+    endDate: new Date(2021, 10, 13, 13, 0),
     Event: 1,
     location: 'ECSW',
   },
@@ -105,13 +105,6 @@ const appointments = [
     location: 'ECSW',
   },
   {
-    title: 'Snacks',
-    startDate: new Date(2021, 10, 13, 23, 0),
-    endDate: new Date(2021, 10, 13, 23, 30),
-    Event: 1,
-    location: 'ECSW',
-  },
-  {
     title: 'Midnight Dance',
     startDate: new Date(2021, 10, 13, 23, 30),
     endDate: new Date(2021, 10, 14, 0, 30),
@@ -119,7 +112,7 @@ const appointments = [
     location: 'ECSW',
   },
   {
-    title: 'Hackers Checkin',
+    title: 'Hacker Check-in',
     startDate: new Date(2021, 10, 13, 9, 0),
     endDate: new Date(2021, 10, 13, 9, 30),
     Event: 1,
@@ -133,9 +126,9 @@ const appointments = [
     location: 'ECSW',
   },
   {
-    title: 'Walk-ins Registration',
-    startDate: new Date(2021, 10, 13, 11, 30),
-    endDate: new Date(2021, 10, 13, 12, 0),
+    title: 'Walk-in Registration',
+    startDate: new Date(2021, 10, 13, 10, 0),
+    endDate: new Date(2021, 10, 13, 11, 0),
     Event: 1,
     location: 'ECSW',
   },
@@ -154,7 +147,7 @@ const appointments = [
     location: 'ECSW',
   },
   {
-    title: 'Full stack development with Next.js by American Airlines',
+    title: 'Full-stack Development with Next.js by American Airlines',
     startDate: new Date(2021, 10, 13, 15, 0),
     endDate: new Date(2021, 10, 13, 15, 45),
     Event: 4,
@@ -162,7 +155,7 @@ const appointments = [
   },
   {
     title:
-      'Understanding Digital Innovation in FinTech: The Effects of Social Media and Cloud Computing Goldman Sachs',
+      'Understanding Digital Innovation in FinTech: The Effects of Social Media and Cloud Computing by Goldman Sachs',
     startDate: new Date(2021, 10, 13, 16, 15),
     endDate: new Date(2021, 10, 13, 17, 0),
     Event: 4,
@@ -253,13 +246,6 @@ const appointments = [
     location: 'ECSW',
   },
   {
-    title: 'Debrief',
-    startDate: new Date(2021, 10, 14, 12, 0),
-    endDate: new Date(2021, 10, 14, 12, 30),
-    Event: 5,
-    location: 'ECSW',
-  },
-  {
     title: 'Hacking Ends',
     startDate: new Date(2021, 10, 14, 12, 0),
     endDate: new Date(2021, 10, 14, 12, 30),
@@ -275,8 +261,8 @@ const appointments = [
   },
   {
     title: 'Closing Ceremony',
-    startDate: new Date(2021, 10, 13, 15, 0),
-    endDate: new Date(2021, 10, 13, 16, 30),
+    startDate: new Date(2021, 10, 14, 15, 0),
+    endDate: new Date(2021, 10, 14, 16, 30),
     Event: 1,
     location: 'ECSW',
   },
