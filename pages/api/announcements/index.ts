@@ -67,10 +67,15 @@ async function postAnnouncementToDB(req: NextApiRequest, res: NextApiResponse) {
  *
  */
 async function getAllAnnouncements(req: NextApiRequest, res: NextApiResponse) {
-  const snapshot = await db.collection(ANNOUNCEMENTS_COLLECTION).orderBy('timestamp', 'desc').get();
+  const snapshot = await db.collection(ANNOUNCEMENTS_COLLECTION).get();
   let data = [];
   snapshot.forEach((doc) => {
     data.push(doc.data());
+  });
+  data.sort((a, b) => {
+    const timeA = new Date(a.timestamp),
+      timeB = new Date(b.timestamp);
+    return timeB.getTime() - timeA.getTime();
   });
   res.json(data);
 }

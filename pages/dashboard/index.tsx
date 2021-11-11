@@ -166,7 +166,11 @@ export default function Dashboard(props: { announcements: Announcement[] }) {
             {/* Announcements */}
             <div className="md:w-3/5 w-screen h-96">
               <h1 className="md:text-3xl text-xl font-black">Announcements</h1>
-              <div id="announcement-items" className="overflow-y-scroll h-9/10">
+              <div
+                id="announcement-items"
+                className="overflow-y-scroll p-3"
+                style={{ height: '400px' }}
+              >
                 {announcements.map((announcement, idx) => {
                   const dateObj = new Date(announcement.timestamp!);
                   const hour = dateObj.getHours(),
@@ -177,14 +181,17 @@ export default function Dashboard(props: { announcements: Announcement[] }) {
                   }${minutes}`;
 
                   return (
-                    idx <= 5 && (
-                      <AnnouncementCard key={idx} text={announcement.announcement} time={time} />
-                    )
+                    <AnnouncementCard key={idx} text={announcement.announcement} time={time} />
                   );
                 })}
                 {/* <AnnouncementCard text="More announcements coming soon!" time="8:39 PM" /> */}
               </div>
             </div>
+          </div>
+
+          <div className="my-8 py-2">
+            <h1 className="md:text-3xl text-xl font-header font-black">Challenges</h1>
+            <h1 className="md:text-2xl text-lg font-header font-black">Challenges coming soon!</h1>
           </div>
           {/* Mentor Center */}
           {/* <div className="my-16">
@@ -226,10 +233,6 @@ export default function Dashboard(props: { announcements: Announcement[] }) {
             </div>
           </div> */}
 
-          <div className="my-16">
-            <h1 className="md:text-3xl text-xl font-header font-black">Challenges</h1>
-            <h1 className="md:text-2xl text-lg font-header font-black">Challenges coming soon!</h1>
-          </div>
           {/* Events and Team */}
           {/* <div className="flex flex-wrap h-96 my-16">
             <div className="md:w-3/5 w-screen ">
