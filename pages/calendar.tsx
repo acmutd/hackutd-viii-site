@@ -186,7 +186,7 @@ const appointments = [
     title: 'FreePlay PS4 SFV + DB FZ',
     startDate: new Date(2021, 10, 13, 22, 30),
     endDate: new Date(2021, 10, 13, 23, 15),
-    Event: 1,
+    Event: 5,
     location: 'ECSW',
   },
   {
