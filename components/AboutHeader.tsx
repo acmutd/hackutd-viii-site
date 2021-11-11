@@ -9,7 +9,7 @@ import React from 'react';
  *
  */
 interface AboutHeaderProps {
-  active: '/about' | '/about/faq' | '/about/questions';
+  active: '/about' | '/about/questions';
 }
 
 /**
@@ -25,18 +25,6 @@ export default function AboutHeader({ active }: AboutHeaderProps) {
               <span className="inline md:invisible"></span>
               <a
                 className={`link font-bold ${active === '/about' && 'border-b-2 border-black p-2'}`}
-              >
-                About
-              </a>
-            </a>
-          </Link>
-          <Link href="/about/faq">
-            <a>
-              <span className="inline md:invisible"></span>
-              <a
-                className={`link font-bold ${
-                  active === '/about/faq' && 'border-b-2 border-black p-2'
-                }`}
               >
                 FAQ
               </a>

@@ -36,8 +36,7 @@ export default function Dashboard(props: { announcements: Announcement[] }) {
   const { isSignedIn } = useAuthContext();
   const user = useUser();
   const role = user.permissions?.length > 0 ? user.permissions[0] : '';
-  const [announcements, setAnnouncements] = useState<Announcement[]>([]);
-
+  const { announcements } = useFCMContext();
   // Change this to check-in condition instead of signed in
   const checkin =
     !user || !isSignedIn ? (
@@ -168,7 +167,22 @@ export default function Dashboard(props: { announcements: Announcement[] }) {
             <div className="md:w-3/5 w-screen h-96">
               <h1 className="md:text-3xl text-xl font-black">Announcements</h1>
               <div id="announcement-items" className="overflow-y-scroll h-9/10">
-                <AnnouncementCard text="More announcements coming soon!" time="8:39 PM" />
+                {announcements.map((announcement, idx) => {
+                  const dateObj = new Date(announcement.timestamp!);
+                  const hour = dateObj.getHours(),
+                    minutes = dateObj.getMinutes();
+
+                  const time = `${hour < 10 ? '0' : ''}${hour}:${
+                    minutes < 10 ? '0' : ''
+                  }${minutes}`;
+
+                  return (
+                    idx <= 5 && (
+                      <AnnouncementCard key={idx} text={announcement.announcement} time={time} />
+                    )
+                  );
+                })}
+                {/* <AnnouncementCard text="More announcements coming soon!" time="8:39 PM" /> */}
               </div>
             </div>
           </div>
@@ -233,3 +247,16 @@ export default function Dashboard(props: { announcements: Announcement[] }) {
     </>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const protocol = context.req.headers.referer?.split('://')[0] || 'http';
+  const { data } = await RequestHelper.get<Announcement[]>(
+    `${protocol}://${context.req.headers.host}/api/announcements/`,
+    {},
+  );
+  return {
+    props: {
+      announcements: data,
+    },
+  };
+};

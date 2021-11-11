@@ -15,9 +15,8 @@ import { UserData } from '../api/users';
  *
  */
 export default function UserPage({ userData }: { userData: UserData[] }) {
-  const [loading, setLoading] = useState(true);
-  const [users, setUsers] = useState<UserData[]>([]);
-  const [filteredUsers, setFilteredUsers] = useState<UserData[]>([]);
+  const [users, setUsers] = useState<UserData[]>(userData);
+  const [filteredUsers, setFilteredUsers] = useState<UserData[]>(users);
   const [searchQuery, setSearchQuery] = useState('');
 
   let timer: NodeJS.Timeout;
@@ -30,16 +29,9 @@ export default function UserPage({ userData }: { userData: UserData[] }) {
   });
 
   useEffect(() => {
-    setLoading(true);
-    setUsers(userData);
-    setFilteredUsers([...userData]);
-    setLoading(false);
-  }, []);
-
-  useEffect(() => {
     timer = setTimeout(() => {
       if (searchQuery !== '') {
-        const newFiltered = users.filter(
+        const newFiltered = [...users].filter(
           ({ user }) =>
             `${user.firstName} ${user.lastName}`
               .toLowerCase()
@@ -47,13 +39,12 @@ export default function UserPage({ userData }: { userData: UserData[] }) {
         );
         setFilteredUsers(newFiltered);
       } else {
+        console.log(users);
         setFilteredUsers([...users]);
       }
     }, 750);
 
-    return () => {
-      clearTimeout(timer);
-    };
+    return () => clearTimeout(timer);
   }, [searchQuery]);
 
   const updateFilter = (name: string) => {
@@ -82,14 +73,6 @@ export default function UserPage({ userData }: { userData: UserData[] }) {
       }),
     );
   };
-
-  if (loading) {
-    return (
-      <div>
-        <h1>Loading...</h1>
-      </div>
-    );
-  }
 
   return (
     <div className="flex flex-col flex-grow">

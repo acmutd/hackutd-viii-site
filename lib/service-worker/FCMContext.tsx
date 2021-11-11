@@ -8,6 +8,7 @@ interface FCMContextState {
   messageToken: string;
   resetToken: () => Promise<void>;
   messagingObj: firebase.messaging.Messaging;
+  announcements: Announcement[];
 }
 
 const FCMContext = createContext<FCMContextState | undefined>(undefined);
@@ -22,8 +23,14 @@ function FCMProvider({ children }: React.PropsWithChildren<Record<string, any>>)
   const [swRegistration, setSwRegistration] = useState<ServiceWorkerRegistration>();
   const [messageToken, setMessageToken] = useState<string>();
   const [messagingObj, setMessagingObj] = useState<firebase.messaging.Messaging>();
+  const [announcements, setAnnouncements] = useState<Announcement[]>([]);
 
   useEffect(() => {
+    RequestHelper.get<Announcement[]>('/api/announcements', {}).then(({ data, status }) => {
+      if (status < 400) {
+        setAnnouncements(data);
+      }
+    });
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
         this.navigator.serviceWorker.register('/firebase-messaging-sw.js').then(
@@ -85,14 +92,18 @@ function FCMProvider({ children }: React.PropsWithChildren<Record<string, any>>)
                 token,
               },
             );
-
             setMessageToken(token);
             messaging.onMessage((payload) => {
+              console.log('message received');
               const { announcement } = JSON.parse(payload.data.notification);
               const options = {
                 body: announcement,
               };
               registration.showNotification('HackPortal Announcement', options);
+              setAnnouncements((prev) => [
+                JSON.parse(payload.data.notification) as Announcement,
+                ...prev,
+              ]);
             });
             console.log('Service Worker registration successfully');
           },
@@ -115,6 +126,7 @@ function FCMProvider({ children }: React.PropsWithChildren<Record<string, any>>)
     messageToken,
     resetToken,
     messagingObj,
+    announcements,
   };
 
   return <FCMContext.Provider value={swContextValue}>{children}</FCMContext.Provider>;

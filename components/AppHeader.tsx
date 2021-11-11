@@ -73,10 +73,10 @@ export default function AppHeader() {
               <a className="link lg:inline hidden">Sponsors</a>
             </a>
           </Link>
-          <Link href="/faq">
+          <Link href="/about">
             <a onClick={dismissDialog}>
               <span className="inline faqdot md:invisible"></span>
-              <a className="link lg:inline hidden">FAQ</a>
+              <a className="link lg:inline hidden">About</a>
             </a>
           </Link>
         </div>
@@ -123,9 +123,9 @@ export default function AppHeader() {
                 </Link>
               </li>
               <li className="">
-                <Link href="/faq">
+                <Link href="/about">
                   <a className="bg-black hover:bg-gray-700 py-2 px-4 block whitespace-no-wrap">
-                    FAQ
+                    About
                   </a>
                 </Link>
               </li>
