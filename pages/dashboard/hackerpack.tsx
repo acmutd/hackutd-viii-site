@@ -119,7 +119,7 @@ export default function HackerPack() {
           <p className="md:text-xl text-md">Provided</p>
           <table className="border-collapse w-full text-xs md:text-md lg:text-lg">
             <tr className="pinkShadow lg:text-xl md:text-lg text-md">
-              <th>Name</th>
+              <th>Day</th>
               <th>Catering</th>
               <th>Time</th>
               <th>Location</th>
