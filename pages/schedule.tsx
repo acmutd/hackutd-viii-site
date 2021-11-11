@@ -1,10 +1,20 @@
+import Head from 'next/head';
+import React from 'react';
+import { render } from 'react-dom';
+import Calendar from './calendar';
+
+/**
+ * The schedule.
+ * Landing: /schedule
+ */
 export default function schedule() {
   return (
-    <div className="schedulePage">
-      <div className="scheduleMainPage">
-        <h4 className="scheduleTitle">SCHEDULE</h4>
-        <h5>Come back later for some good news!</h5>
-      </div>
+    <div className="flex flex-col flex-grow">
+      <Head>
+        <title>HackPortal - Schedule</title>
+        <meta name="description" content="HackPortal's Schedule" />
+      </Head>
+      <Calendar />
     </div>
   );
 }
