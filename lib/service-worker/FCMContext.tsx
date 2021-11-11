@@ -43,9 +43,37 @@ function FCMProvider({ children }: React.PropsWithChildren<Record<string, any>>)
             setMessagingObj(messaging);
 
             if (Notification.permission !== 'granted') await Notification.requestPermission();
-            const token = await messaging.getToken({
+            let token = await messaging.getToken({
               vapidKey: process.env.NEXT_PUBLIC_VAPID_KEY,
             });
+
+            const { data } = await RequestHelper.post<unknown, any>(
+              'https://fcm.googleapis.com/fcm/send',
+              {
+                headers: {
+                  Authorization: `key=${process.env.NEXT_PUBLIC_CLOUD_MESSAGING_SERVER_TOKEN}`,
+                  'Content-Type': 'application/json',
+                },
+              },
+              {
+                to: token,
+                data: {
+                  notification: {
+                    announcement: 'Here goes another one',
+                    time: 'test data goes here',
+                  },
+                },
+                dry_run: true,
+              },
+            );
+
+            if (data.results[0].error) {
+              await messaging.deleteToken();
+              token = await messaging.getToken({
+                vapidKey: process.env.NEXT_PUBLIC_VAPID_KEY,
+              });
+            }
+
             await RequestHelper.post<{ token: string }, void>(
               '/api/tokens',
               {

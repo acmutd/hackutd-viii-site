@@ -80,7 +80,7 @@
 
 .element {
   font-family: 'wavehaus';
- }
+}
 
 .card {
   margin: 1rem;
@@ -119,7 +119,7 @@
 
 @font-face {
   font-family: 'wavehaus';
-  src: url('/fonts/Wavehaus-66Book.ttf') format("truetype");
+  src: url('/fonts/Wavehaus-66Book.ttf') format('truetype');
   font-display: auto;
 }
 
