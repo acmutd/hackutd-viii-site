@@ -105,13 +105,6 @@ const appointments = [
     location: 'ECSW',
   },
   {
-    title: 'Snacks',
-    startDate: new Date(2021, 10, 13, 23, 0),
-    endDate: new Date(2021, 10, 13, 23, 30),
-    Event: 1,
-    location: 'ECSW',
-  },
-  {
     title: 'Midnight Dance',
     startDate: new Date(2021, 10, 13, 23, 30),
     endDate: new Date(2021, 10, 14, 0, 30),
