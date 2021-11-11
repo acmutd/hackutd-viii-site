@@ -63,14 +63,14 @@ const appointments = [
     location: 'ECSW',
   },
   {
-    title: 'Casual Hangout with American Airlines',
+    title: 'So You Think You Can Fly? with American Airlines',
     startDate: new Date(2021, 10, 13, 18, 30),
     endDate: new Date(2021, 10, 13, 19, 30),
     Event: 5,
     location: 'ECSW',
   },
   {
-    title: 'Casual Hangout with Goldman Sachs',
+    title: 'GS Watch Party with Goldman Sachs',
     startDate: new Date(2021, 10, 13, 20, 30),
     endDate: new Date(2021, 10, 13, 21, 15),
     Event: 5,
@@ -169,7 +169,7 @@ const appointments = [
     location: 'ECSW',
   },
   {
-    title: 'FreePlay PS4 SFV + DB FZ',
+    title: 'Freeplay:PS4 SFV + DB FZ Meta Quest VR Games',
     startDate: new Date(2021, 10, 13, 21, 30),
     endDate: new Date(2021, 10, 13, 22, 30),
     Event: 5,
