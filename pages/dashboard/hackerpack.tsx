@@ -114,7 +114,7 @@ export default function HackerPack() {
           </p>
         </div>
 
-        <div id="food" className="my-7 scrollSnap">
+        <div id="food" className="my-7 scrollSnap tableOutline">
           <div className="font-bold text-xl lg:text-3xl mb-4">🍕 Meals</div>
           <p className="md:text-xl text-md">Provided</p>
           <table className="border-collapse w-full text-xs md:text-md lg:text-lg">

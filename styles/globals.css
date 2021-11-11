@@ -770,14 +770,52 @@ h5 {
   scroll-behavior: smooth;
   scroll-snap-margin-top: 200px;
 }
+td div p {
+  color: #66e900 !important;
+}
 
+td div div {
+  color: #66e900 !important;
+}
+.jss33 {
+  background-color: black !important;
+}
+
+td div span {
+  color: #66e900 !important;
+}
+
+.MuiIconButton-label {
+  color: red;
+}
+.MuiToolbar-root {
+  background-color: black !important;
+}
+
+.MuiTableCell-body {
+  border-color: grey !important;
+  color: #66e900 !important;
+}
+.MuiPaper-root {
+  background-color: black !important;
+}
+.MuiTableRow-root {
+  background-color: black !important;
+  color: #66e900 !important;
+}
+
+.MuiButton-label {
+  color: #66e900 !important;
+}
+.MuiSelect-nativeInput {
+  color: #66e900 !important;
+}
 .sponsorBackground {
   background-color: #00e0ff;
 }
 
 td,
 th {
-  border: 1px solid #00e0ff;
   text-align: left;
   padding: 8px;
 }
@@ -792,4 +830,12 @@ th {
 
 .topz {
   z-index: 999;
+}
+
+div.tableOutline tr,
+div.tableOutline th,
+div.tableOutline td {
+  border: 1px solid #00e0ff;
+  text-align: left;
+  padding: 8px;
 }
