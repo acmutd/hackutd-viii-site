@@ -13,7 +13,7 @@ import {
   AppointmentTooltip,
 } from '@devexpress/dx-react-scheduler-material-ui';
 import { withStyles, Theme, createStyles } from '@material-ui/core';
-import { indigo, blue, teal, purple, red, orange } from '@material-ui/core/colors';
+import { grey, indigo, blue, teal, purple, red, orange } from '@material-ui/core/colors';
 import Paper from '@material-ui/core/Paper';
 import { fade } from '@material-ui/core/styles/colorManipulator';
 import { WithStyles } from '@material-ui/styles';
@@ -299,24 +299,34 @@ const styles = ({ palette }: Theme) =>
     },
 
     EventTypeAppointment: {
-      borderLeft: `4px solid ${red[500]}`,
-      backgroundColor: `${red[500]}`,
+      border: `2px solid ${red[500]}`,
+      backgroundColor: `${grey[900]}`,
+      borderRadius: 8,
+      boxShadow: ` 0 0 16px 1px ${red[400]} `,
     },
     SponsorTypeAppointment: {
-      borderLeft: `4px solid ${blue[500]}`,
-      backgroundColor: `${blue[500]}`,
+      border: `2px solid ${orange[500]}`,
+      backgroundColor: `${grey[900]}`,
+      borderRadius: 8,
+      boxShadow: ` 0 0 16px 4px ${orange[500]} `,
     },
     TechTalkTypeAppointment: {
-      borderLeft: `4px solid ${indigo[500]}`,
-      backgroundColor: `${indigo[500]}`,
+      border: `2px solid ${indigo[500]}`,
+      backgroundColor: `${grey[900]}`,
+      borderRadius: 8,
+      boxShadow: ` 0 0 16px 4px ${indigo[500]} `,
     },
     WorkshopTypeAppointment: {
-      borderLeft: `4px solid ${purple[500]}`,
-      backgroundColor: `${purple[500]}`,
+      border: `2px solid ${purple[500]}`,
+      backgroundColor: `${grey[900]}`,
+      borderRadius: 8,
+      boxShadow: ` 0 0 16px 4px ${purple[500]} `,
     },
     SocialTypeAppointment: {
-      borderLeft: `4px solid ${orange[500]}`,
-      backgroundColor: `4px solid ${orange[500]}`,
+      border: `2px solid ${blue[500]}`,
+      backgroundColor: `${grey[900]}`,
+      borderRadius: 8,
+      boxShadow: ` 0 0 16px 4px ${blue[500]} `,
     },
     weekEndCell: {
       backgroundColor: fade(palette.action.disabledBackground, 0.04),
@@ -335,7 +345,6 @@ const styles = ({ palette }: Theme) =>
       textOverflow: 'ellipsis',
       whiteSpace: 'nowrap',
     },
-
     content: {
       opacity: 0.7,
     },
