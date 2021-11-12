@@ -117,7 +117,7 @@ export default function Register() {
               *Enter your first name:
               <br />
               <input
-                className="border min-w-full pt-3 pb-3 text-grey-darkest px-5 bg-indigo-100 rounded-md"
+                className="border min-w-full pt-3 pb-3 text-grey-darkest px-5 bg-black rounded-md"
                 placeholder="John"
                 type="text"
                 name="firstName"
@@ -133,7 +133,7 @@ export default function Register() {
               *Enter your last name:
               <br />
               <input
-                className="border min-w-full pt-3 pb-3 text-grey-darkest px-5 bg-indigo-100 rounded-md"
+                className="border min-w-full pt-3 pb-3 text-grey-darkest px-5 bg-black rounded-md"
                 placeholder="Smith"
                 type="text"
                 name="lastName"
@@ -152,7 +152,7 @@ export default function Register() {
                 placeholder="email@example.com"
                 type="type"
                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                className="border min-w-full pt-3 pb-3 text-grey-darkest px-5 bg-indigo-100 rounded-md"
+                className="border min-w-full pt-3 pb-3 text-grey-darkest px-5 bg-black rounded-md"
                 name="preferredEmail"
                 autoComplete="email"
                 required
@@ -173,7 +173,7 @@ export default function Register() {
               <br />
               <input
                 placeholder="University of Knowledge"
-                className="border min-w-full pt-3 pb-3 text-grey-darkest px-5 bg-indigo-100 rounded-md"
+                className="border min-w-full pt-3 pb-3 text-grey-darkest px-5 bg-black rounded-md"
                 type="text"
                 name="university"
                 value={registrationData.university}
@@ -189,7 +189,7 @@ export default function Register() {
               <br />
               <input
                 placeholder="Computer Science, Accounting, etc."
-                className="border min-w-full pt-3 pb-3 text-grey-darkest px-5 bg-indigo-100 rounded-md"
+                className="border min-w-full pt-3 pb-3 text-grey-darkest px-5 bg-black rounded-md"
                 type="text"
                 name="major"
                 value={registrationData.major}
@@ -204,7 +204,7 @@ export default function Register() {
               *Current level of study?
               <br />
               <select
-                className="border min-w-50 px-2 text-grey-darkest absolute h-8 bg-indigo-100 rounded-md"
+                className="border min-w-50 px-2 text-grey-darkest absolute h-8 bg-black rounded-md"
                 placeholder="Select One"
                 name="studyLevel"
                 value={registrationData.studyLevel}
