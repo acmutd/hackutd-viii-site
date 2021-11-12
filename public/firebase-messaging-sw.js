@@ -7,7 +7,7 @@ importScripts('https://www.gstatic.com/firebasejs/8.9.0/firebase-messaging.js');
 function setup() {
     firebase.initializeApp({
       apiKey: "AIzaSyCsZiZS2pr27YgSQsFC8eoojQ5hXtRUFvA",
-      authDomain: "AIzaSyCsZiZS2pr27YgSQsFC8eoojQ5hXtRUFvA",
+      authDomain: "acmutd-hackportal.firebaseapp.com",
       projectId: "acmutd-hackportal",
       storageBucket: "acmutd-hackportal.appspot.com",
       messagingSenderId: "926149825282",
