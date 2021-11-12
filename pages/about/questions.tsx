@@ -175,7 +175,7 @@ export default function QuestionsPage() {
                 <button
                   type="button"
                   className="p-2 rounded-lg"
-                  style={{ backgroundColor: '#9CA6FF', color: 'black' }}
+                  style={{ backgroundColor: 'black', color: '#66e900' }}
                   onClick={() => {
                     if (!isSignedIn) {
                       addError('Please sign in to ask a question.');
