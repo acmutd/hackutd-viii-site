@@ -890,6 +890,9 @@ div.tableOutline td {
 .profile-view-lunch {
   grid-area: lunchGroup;
 }
+textarea {
+  color: #000000;
+}
 
 .profile-view-interests {
   grid-area: interests;
