@@ -53,6 +53,8 @@ export default function Admin() {
           return setSuccess('Invalid user...');
         } else if (result.status === 201) {
           return setSuccess('User has already claimed...');
+        } else if (result.status === 403) {
+          return setSuccess("User hasn't checked in!");
         } else if (result.status !== 200) {
           return setSuccess('Unexpected error...');
         }

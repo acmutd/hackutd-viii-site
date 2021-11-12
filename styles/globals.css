@@ -363,6 +363,16 @@ a.link {
   /* @apply px-4; */
 }
 
+div.link {
+  /* padding-right: 30px; */
+  font-family: 'Neon 80s';
+  align-items: center;
+  justify-content: center;
+  display: flex-center;
+  padding: 0px 1rem;
+  /* @apply px-4; */
+}
+
 @media (max-width: 900px) {
   a.link {
     padding: 0px 0.5rem !important;
