@@ -51,6 +51,9 @@ export default function HackerPack() {
                   <a href="#submission">Submission &amp; Judging</a>
                 </li>
                 <li>
+                  <a href="#workshop">Workshop Info</a>
+                </li>
+                <li>
                   <a href="#food">Meals</a>
                 </li>
                 <li>
@@ -134,6 +137,79 @@ export default function HackerPack() {
           <a href="" target="_blank" rel="noreferrer" className="underline">
             🔗 Dev post link coming soon
           </a>
+        </div>
+
+        <div id="workshop" className="my-7 scrollSnap">
+          <div className="font-bold text-xl lg:text-3xl mb-4">📄 Workshop Info</div>
+          <div className="my-2">Click on the following workshops to access workshop info!</div>
+          <a
+            href="https://ericmutton.notion.site/ericmutton/Arduino-Crash-Course-5bc6961801d34b2d968c9c06570b72e3"
+            target="_blank"
+            rel="noreferrer"
+            className="m-1"
+          >
+            Makerspace - Arduino Crash Course
+          </a>{' '}
+          <br />
+          <a
+            href="https://curse-squash-d4d.notion.site/180DC-7-Step-Problem-Solving-Methodology-Workshop-c1821a15ae364789bb26b260b8e9f095"
+            target="_blank"
+            rel="noreferrer"
+            className="m-1"
+          >
+            180 Degrees Consulting - 7 Step Problem-Solving Methodology
+          </a>{' '}
+          <br />
+          <a
+            href="https://fifth-ink-847.notion.site/IEEEUTD-Team-Building-Social-4af07c3653f54fcd9bc6585750371e24"
+            target="_blank"
+            rel="noreferrer"
+            className="m-1"
+          >
+            IEEE UTD - Team-Building Social
+          </a>{' '}
+          <br />
+          <a
+            href="https://carnelian-tiglon-e2f.notion.site/American-Airlines-Full-Stack-Development-with-Next-js-1c98a94d9fed4be9bcb11cfa6ec98d84"
+            target="_blank"
+            rel="noreferrer"
+            className="m-1"
+          >
+            {' '}
+            American Airlines - Full stack development with Next.js
+          </a>{' '}
+          <br />
+          <a
+            href="https://believed-swift-e2c.notion.site/HackUTD-VIII-Pitch-Perfect-Workshop-Hacker-Guide-524a1055ef2e49afba940b19697b1a6a"
+            target="_blank"
+            rel="noreferrer"
+            className="m-1"
+          >
+            {' '}
+            Entrepreneur Club - Pitch Perfect
+          </a>{' '}
+          <br />
+          <a
+            href="https://carnelian-tiglon-e2f.notion.site/EOG-Resources-Crash-Course-on-React-and-Functional-Components-5e8597fdc55b4672a4d25865b337fb48"
+            target="_blank"
+            rel="noreferrer"
+            className="m-1"
+          >
+            {' '}
+            EOG Resources - Crash Course on React and Functional Components
+          </a>{' '}
+          <br />
+          <a
+            href="https://sponge-snipe-bbf.notion.site/Building-a-Blockchain-dApp-with-UTD-Blockchain-Club-90f1fd5e3ff542218a2cf986750cc4f2"
+            target="_blank"
+            rel="noreferrer"
+            className="m-1"
+          >
+            {' '}
+            UTD Block Chain - Building a Blockchain dApp
+          </a>{' '}
+          <br />
+          {/* <a href="https://illustrious-broker-f40.notion.site/HackUTD-VIII-Workshop-Hacker-Guide-068ef2f76f654121be68d7a1c2016d6e" target = "_blank" rel="noreferrer" className = "m-1"> AIS Workshop</a> <br /> */}
         </div>
 
         <div id="food" className="my-7 scrollSnap tableOutline">
