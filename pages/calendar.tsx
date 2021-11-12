@@ -100,7 +100,7 @@ const appointments = [
   {
     title: 'Hacker Check-in',
     startDate: new Date(2021, 10, 13, 9, 0),
-    endDate: new Date(2021, 10, 13, 11, 0),
+    endDate: new Date(2021, 10, 13, 9, 30),
     Event: 1,
     location: 'ECSW',
   },
