@@ -138,7 +138,6 @@
 import React from 'react';
 import firebase from 'firebase/app';
 import 'firebase/auth';
-import { RequestHelper } from '../request-helper';
 
 /**
  * Utility attributes and functions used to handle user auth state within an AuthContext.
@@ -163,11 +162,6 @@ interface AuthContextState {
    * Signs out of the current user session if active.
    */
   signOut: () => Promise<void>;
-
-  /**
-   * Check if a user already has a profile
-   */
-  checkIfProfileExists: () => Promise<boolean>;
 }
 
 const AuthContext = React.createContext<AuthContextState | undefined>(undefined); // Find a better solution for this
@@ -192,7 +186,7 @@ function useAuthContext(): AuthContextState {
 function AuthProvider({ children }: React.PropsWithChildren<Record<string, any>>): JSX.Element {
   const [user, setUser] = React.useState<User>(null);
 
-  const updateUser = async (firebaseUser: firebase.User | null) => {
+  const updateUser = (firebaseUser: firebase.User | null) => {
     if (firebaseUser === null) {
       // User is signed out
       // TODO(auth): Determine if we want to remove user data from device on sign out
@@ -200,28 +194,13 @@ function AuthProvider({ children }: React.PropsWithChildren<Record<string, any>>
       return;
     }
     const { displayName, email, photoURL, uid } = firebaseUser;
-    const token = await firebaseUser.getIdToken();
-    const query = new URL(`http://localhost:3000/api/userinfo`);
-    query.searchParams.append('id', uid);
-    const data = await fetch(query.toString().replaceAll('http://localhost:3000', ''), {
-      mode: 'cors',
-      headers: { Authorization: token },
-      method: 'GET',
-    });
-    if (data.status !== 200) {
-      console.error('Unexpected error when fetching AuthContext permission data...');
-    }
-    const userData = await data.json();
-    let permissions: UserPermission[] = userData.user?.permissions || ['hacker'];
     setUser({
       id: uid,
-      token,
       firstName: displayName,
       lastName: '',
       preferredEmail: email,
       photoUrl: photoURL,
-      permissions, // probably not the best way to do this, but it works for hackutd and that's what matters
-      university: userData.university,
+      permissions: [], // TODO: Get permissions from database, likely slim down auth-specific features
     });
   };
 
@@ -248,38 +227,18 @@ function AuthProvider({ children }: React.PropsWithChildren<Record<string, any>>
       });
   }
 
-  async function checkIfProfileExists(): Promise<boolean> {
-    if (!user) return false;
-    const query = new URL(`http://localhost:3000/api/userinfo`);
-    query.searchParams.append('id', user.id);
-    try {
-      const resData = await RequestHelper.get<unknown>(
-        query.toString().replaceAll('http://localhost:3000', ''),
-        {
-          headers: {
-            Authorization: user.token,
-          },
-        },
-      );
-      if (resData.status >= 400) throw new Error('');
-      return !!resData.data;
-    } catch (error) {
-      return false;
-    }
-  }
-
   const signInWithGoogle = async () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     return firebase
       .auth()
       .signInWithPopup(provider)
-      .then(async ({ credential, user }) => {
+      .then(({ credential, user }) => {
         if (user === null) {
           // Something really went wrong
           console.warn("The signed-in user is null? That doesn't seem right.");
           return;
         }
-        await updateUser(user);
+        updateUser(user);
       })
       .catch((error) => {
         console.error('Error when signing in', error);
@@ -294,7 +253,6 @@ function AuthProvider({ children }: React.PropsWithChildren<Record<string, any>>
     isSignedIn,
     signInWithGoogle,
     signOut,
-    checkIfProfileExists,
   };
 
   return <AuthContext.Provider value={authContextValue}>{children}</AuthContext.Provider>;

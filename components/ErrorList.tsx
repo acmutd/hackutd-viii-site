@@ -7,7 +7,7 @@ interface ErrorListProps {
 
 export default function ErrorList({ errors, onClose }: ErrorListProps) {
   return (
-    <div>
+    <div className="p-4">
       {errors.map((error, idx) => (
         <ErrorCard
           key={idx}

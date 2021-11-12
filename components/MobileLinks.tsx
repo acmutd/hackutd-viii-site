@@ -21,7 +21,7 @@ export default function MobileLinks() {
           <a>Sponsors</a>
         </div>
       </Link>
-      <Link href="/about">
+      <Link href="/faq">
         <div className="link">
           <span className="faqdot"></span>
           <a>FAQ</a>

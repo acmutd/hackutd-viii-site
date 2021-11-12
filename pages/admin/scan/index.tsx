@@ -7,22 +7,6 @@ import LoadIcon from '../../../components/LoadIcon';
 import { useAuthContext } from '../../../lib/user/AuthContext';
 import { isAuthorized } from '..';
 
-const successStrings = {
-  claimed: 'Scan claimed...',
-  invalidUser: 'Invalid user...',
-  alreadyClaimed: 'User has already claimed...',
-  unexpectedError: 'Unexpected error...',
-  notCheckedIn: "User hasn't checked in!",
-  invalidFormat: 'Invalid hacker tag format...',
-};
-
-function getSuccessColor(success: string) {
-  if (success === successStrings.claimed) {
-    return '#5fde05';
-  }
-  return '#ff0000';
-}
-
 /**
  * The admin scanning page.
  *
@@ -40,46 +24,33 @@ export default function Admin() {
     setCurrentScan(data);
   };
 
-  const handleScan = async (
-    data: string,
-    video: HTMLVideoElement,
-    setVideoReady,
-    setPaused,
-    tick,
-  ) => {
-    if (!data.startsWith('hack:')) {
-      setScanData(data);
-      setSuccess(successStrings.invalidFormat);
-      return;
-    }
+  const handleScan = async (data, video: HTMLVideoElement, setVideoReady, setPaused, tick) => {
     const query = new URL(`http://localhost:3000/api/scan`);
-    query.searchParams.append('id', data.replaceAll('hack:', ''));
+    query.searchParams.append('id', user.id);
     fetch(query.toString().replaceAll('http://localhost:3000', ''), {
       mode: 'cors',
       headers: { Authorization: user.token },
       method: 'POST',
       body: JSON.stringify({
-        id: data.replaceAll('hack:', ''),
+        id: user.id,
         scan: currentScan.name,
       }),
     })
       .then(async (result) => {
         setScanData(data);
         if (result.status === 404) {
-          return setSuccess(successStrings.invalidUser);
+          return setSuccess('Invalid user...');
         } else if (result.status === 201) {
-          return setSuccess(successStrings.alreadyClaimed);
-        } else if (result.status === 403) {
-          return setSuccess(successStrings.notCheckedIn);
+          return setSuccess('User has already claimed...');
         } else if (result.status !== 200) {
-          return setSuccess(successStrings.unexpectedError);
+          return setSuccess('Unexpected error...');
         }
-        setSuccess(successStrings.claimed);
+        setSuccess('Scan claimed...');
       })
       .catch((err) => {
         console.log(err);
         setScanData(data);
-        setSuccess(successStrings.unexpectedError);
+        setSuccess('Unexpected error...');
       });
   };
 
@@ -140,12 +111,7 @@ export default function Admin() {
           )}
 
           {scanData ? (
-            <div
-              className="text-center text-3xl font-black"
-              style={{ color: getSuccessColor(success) }}
-            >
-              {success ?? 'Unexpected error!'}
-            </div>
+            <div className="text-center text-3xl font-black">{success ?? 'Unexpected error!'}</div>
           ) : (
             <div />
           )}

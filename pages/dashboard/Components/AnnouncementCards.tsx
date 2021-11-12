@@ -9,10 +9,7 @@ import React from 'react';
 function AnouncementCard(props) {
   return (
     <>
-      <div
-        id="announcement-content"
-        className="bg-000 min-h-[1/4] rounded-lg p-3 text-purple border-2 border-purple"
-      >
+      <div id="announcement-content" className="bg-purple-200 md:min-h-1/4 rounded-lg p-3">
         {props.text}
       </div>
       <p className="text-right">{props.time}</p>

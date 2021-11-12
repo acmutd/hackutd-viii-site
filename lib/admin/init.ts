@@ -1,8 +1,6 @@
 import admin from 'firebase-admin';
 
 let apiInitialized = false;
-//This path is a JSON object for the Firebase service account's private key
-// let servAcc = require('../../private_keys/acmutd-hackportal-firebase-adminsdk-ev404-afcb7fdeb3.json');
 
 /**
  * Initializes all services used to power API routes.
