@@ -135,7 +135,7 @@ export default function AppHeader() {
         <div className="flex flex-row-reverse md:text-xl text-s">
           <div className="mx-4">
             <button
-              className="SigninButton font-headerSigninButton font-header font-bold bg-white px-8 py-1 rounded-full border-2 border-black text-sm"
+              className="SigninButton font-headerSigninButton font-header font-bold px-8 py-1 rounded-full border-2 border-black text-sm"
               onClick={toggleDialog}
             >
               {!user || !isSignedIn ? 'Sign in' : 'Profile'}

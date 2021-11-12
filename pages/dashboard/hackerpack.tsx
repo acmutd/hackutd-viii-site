@@ -45,6 +45,15 @@ export default function HackerPack() {
                   <a href="#About">Overview</a>
                 </li>
                 <li>
+                  <a href="#team">Team Formation</a>
+                </li>
+                <li>
+                  <a href="#submission">Submission &amp; Judging</a>
+                </li>
+                <li>
+                  <a href="#workshop">Workshop Info</a>
+                </li>
+                <li>
                   <a href="#food">Meals</a>
                 </li>
                 <li>
@@ -70,20 +79,6 @@ export default function HackerPack() {
         <p className="hackerPackShadow inline font-bold text-2xl md:text-4xl lg-text-6xl text-white">
           HackerPack
         </p>
-
-        {/* <section
-          id="docLinks"
-          className="bg-gray-200 rounded-lg my-6 p-5 w-5/6 bg-opacity-0 border-2 border-aqua"
-        >
-          Linked Documents:
-          <div className="flex flex-wrap grid grid-cols-2 lg:grid-cols-3">
-            <DocLink
-              type="doc"
-              link="https://docs.google.com/document/d/1adXBUwGyVwdzgt43W8JTWb67JMPAaiERei6QWopodVw/edit"
-              title="Easy Mac and Cheese Recipe"
-            />
-          </div>
-        </section> */}
 
         <div id="About" className="my-7 scrollSnap">
           <div className="font-bold text-xl lg:text-3xl mb-4">🖥️ What is HackUTD?</div>
@@ -114,9 +109,115 @@ export default function HackerPack() {
           </p>
         </div>
 
+        <div id="team" className="my-7 scrollSnap">
+          <div className="font-bold text-xl lg:text-3xl mb-4">👯 Team Formation</div>
+          <p>
+            Team formation will be happening virtually this year! Follow the instructions on the
+            linked slide deck to meet people and make groups together. Of course, you might also
+            consider going around ECSW and seeing who you might bump into :)
+          </p>
+          <a
+            href="https://docs.google.com/presentation/d/1eQjd3C9n6snN8EMms_x4BUofCfQ77YeEGSSL3aPcOmA/edit#slide=id.gbcac21a7b8_0_160"
+            target="_blank"
+            rel="noreferrer"
+            className="underline"
+          >
+            🔗 Team formation slide deck
+          </a>
+        </div>
+
+        <div id="submission" className="my-7 scrollSnap">
+          <div className="font-bold text-xl lg:text-3xl mb-4">
+            💯 Submission &amp; Judging Instructions
+          </div>
+          <p>
+            To submit your project, please create a submission in our Devpost before 12:00 PM on
+            Sunday, November 14th. Try to include as much information as possible!
+          </p>
+          <a href="" target="_blank" rel="noreferrer" className="underline">
+            🔗 Dev post link coming soon
+          </a>
+        </div>
+
+        <div id="workshop" className="my-7 scrollSnap">
+          <div className="font-bold text-xl lg:text-3xl mb-4">📄 Workshop Info</div>
+          <div className="my-2">Click on the following workshops to access workshop info!</div>
+          <a
+            href="https://ericmutton.notion.site/ericmutton/Arduino-Crash-Course-5bc6961801d34b2d968c9c06570b72e3"
+            target="_blank"
+            rel="noreferrer"
+            className="m-1"
+          >
+            Makerspace - Arduino Crash Course
+          </a>{' '}
+          <br />
+          <a
+            href="https://curse-squash-d4d.notion.site/180DC-7-Step-Problem-Solving-Methodology-Workshop-c1821a15ae364789bb26b260b8e9f095"
+            target="_blank"
+            rel="noreferrer"
+            className="m-1"
+          >
+            180 Degrees Consulting - 7 Step Problem-Solving Methodology
+          </a>{' '}
+          <br />
+          <a
+            href="https://fifth-ink-847.notion.site/IEEEUTD-Team-Building-Social-4af07c3653f54fcd9bc6585750371e24"
+            target="_blank"
+            rel="noreferrer"
+            className="m-1"
+          >
+            IEEE UTD - Team-Building Social
+          </a>{' '}
+          <br />
+          <a
+            href="https://carnelian-tiglon-e2f.notion.site/American-Airlines-Full-Stack-Development-with-Next-js-1c98a94d9fed4be9bcb11cfa6ec98d84"
+            target="_blank"
+            rel="noreferrer"
+            className="m-1"
+          >
+            {' '}
+            American Airlines - Full stack development with Next.js
+          </a>{' '}
+          <br />
+          <a
+            href="https://believed-swift-e2c.notion.site/HackUTD-VIII-Pitch-Perfect-Workshop-Hacker-Guide-524a1055ef2e49afba940b19697b1a6a"
+            target="_blank"
+            rel="noreferrer"
+            className="m-1"
+          >
+            {' '}
+            Entrepreneur Club - Pitch Perfect
+          </a>{' '}
+          <br />
+          <a
+            href="https://carnelian-tiglon-e2f.notion.site/EOG-Resources-Crash-Course-on-React-and-Functional-Components-5e8597fdc55b4672a4d25865b337fb48"
+            target="_blank"
+            rel="noreferrer"
+            className="m-1"
+          >
+            {' '}
+            EOG Resources - Crash Course on React and Functional Components
+          </a>{' '}
+          <br />
+          <a
+            href="https://sponge-snipe-bbf.notion.site/Building-a-Blockchain-dApp-with-UTD-Blockchain-Club-90f1fd5e3ff542218a2cf986750cc4f2"
+            target="_blank"
+            rel="noreferrer"
+            className="m-1"
+          >
+            {' '}
+            UTD Block Chain - Building a Blockchain dApp
+          </a>{' '}
+          <br />
+          {/* <a href="https://illustrious-broker-f40.notion.site/HackUTD-VIII-Workshop-Hacker-Guide-068ef2f76f654121be68d7a1c2016d6e" target = "_blank" rel="noreferrer" className = "m-1"> AIS Workshop</a> <br /> */}
+        </div>
+
         <div id="food" className="my-7 scrollSnap tableOutline">
-          <div className="font-bold text-xl lg:text-3xl mb-4">🍕 Meals</div>
-          <p className="md:text-xl text-md">Provided</p>
+          <div className="font-bold text-xl lg:text-3xl">🍕 Meals</div>
+          <p className="md:text-lg text-sm my-2">
+            Grab a bite while you&#39;re hacking! You can&#39;t get anywhere on an empty stomach.
+          </p>
+          <p className="md:text-xl text-md">Provided Meals - Free of Charge 🤩</p>
           <table className="border-collapse w-full text-xs md:text-md lg:text-lg">
             <tr className="pinkShadow lg:text-xl md:text-lg text-md">
               <th>Day</th>
@@ -124,12 +225,6 @@ export default function HackerPack() {
               <th>Time</th>
               <th>Location</th>
             </tr>
-            {/* <tr>
-              <td>Saturday Breakfast</td>
-              <td>Coffee &amp; Donuts</td>
-              <td>9:00 am</td>
-              <td>Room ECS 1.100, Main Community Commons</td>
-            </tr> */}
             <tr>
               <td>Saturday Lunch</td>
               <td>Wafflelicious Food Truck, Yummy Pizza Food Truck</td>
@@ -145,7 +240,7 @@ export default function HackerPack() {
             <tr>
               <td>Saturday Snacks</td>
               <td>Mystery item 👀</td>
-              <td>11:30 pm</td>
+              <td>12:00 am</td>
               <td>Room ECS 1.100, Main Community Commons</td>
             </tr>
             <tr>
@@ -162,7 +257,7 @@ export default function HackerPack() {
             </tr>
           </table>
           <br />
-          <p className="md:text-xl text-md">On-Campus Restaurants</p>
+          <p className="md:text-xl text-md">🍽️ On-Campus Restaurants</p>
           <table className="border-collapse w-full text-xs md:text-md lg:text-lg">
             <tr className="pinkShadow lg:text-xl md:text-lg text-md">
               <th>Student Union</th>
@@ -251,7 +346,7 @@ export default function HackerPack() {
             </tr>
           </table>
           <br />
-          <p className="md:text-xl text-md">Off-Campus Restaurants</p>
+          <p className="md:text-xl text-md">🚗 Off-Campus Restaurants</p>
           <table className="border-collapse w-full text-xs md:text-md lg:text-lg">
             <tr className="pinkShadow lg:text-xl md:text-lg text-md">
               <th>Name</th>
@@ -354,25 +449,71 @@ export default function HackerPack() {
             <SponsorCard challenge="StateFarm Challenge" description="Challenge Description" />
           </div>
         </div> */}
-        <div id="hackspaces" className="my-7 md:w-3/4 w-full scrollSnap">
-          <div className="font-bold text-xl lg:text-3xl mb-4">⌨️ Hacking Spaces</div>
-          <div className="w-full flex justify-between flex-wrap">
-            <div>
-              <p className="lg:text-xl text-md pinkShadow">ECS West</p>
-              <ul className="list-disc list-inside">
-                <li>More info soon</li>
-              </ul>
+        <div id="hackspaces" className="my-7 w-full scrollSnap">
+          <div className="font-bold text-xl lg:text-3xl mb-2">⌨️ Hacking Spaces</div>
+          <div className="w-full">
+            There&#39;s a lot of places around campus to hack. Here are some of our favorites that
+            we want to share with you.
+          </div>
+          <p>
+            3D Searchable Map of UTD :{' '}
+            <a
+              href="https://map.concept3d.com/?id=1772#!m/435231?ce/52264?ct/42147,52300"
+              target="_blank"
+              rel="noreferrer"
+              className="underline"
+            >
+              here
+            </a>
+          </p>
+          <div className="w-full flex justify-between flex-wrap mt-2">
+            {/* ECS West */}
+            <div className="w-full">
+              <p className="lg:text-2xl text-lg pinkShadow">ECS West</p>
+              <div className="flex flex-wrap w-full grid md:grid-cols-2 grid-cols-1 gap-2">
+                <div>
+                  <p className="lg:text-xl text-md">1️⃣ Floor 1</p>
+                  <ul className="list-disc list-outside">
+                    <li>Collaboration Rooms: 1.330, 1.340</li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="lg:text-xl text-md">2️⃣ Floor 2</p>
+                  <ul className="list-disc list-outside">
+                    <li>Collaboration Rooms: 2.305</li>
+                    <li>Classrooms: 2.325</li>
+                    <li>Study Area: 2.100, 2.115, 2.125, 2.160, 2.164, 2.330, 2.336, 2.369</li>
+                    <li>Student Lounge: 2.475</li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="lg:text-xl text-md">3️⃣ Floor 3</p>
+                  <ul className="list-disc list-outside">
+                    <li>Collaboration Rooms: 3.305, 3.321</li>
+                    <li>Study Area: 3.330, 3.336, 3.160, 3,115, 3.125</li>
+                    <li>Student Lounge: 3.475, 3.104</li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="lg:text-xl text-md">4️⃣ Floor 4</p>
+                  <ul className="list-disc list-outside">
+                    <li>Collaboration Rooms: 4.305</li>
+                    <li>Classrooms: 4.325</li>
+                    <li>Study Area: 4.330, 4.336, 4.125, 4.115</li>
+                    <li>Student Lounge: 4.475</li>
+                  </ul>
+                </div>
+              </div>
             </div>
+            {/* Other */}
             <div>
-              <p className="lg:text-xl text-md pinkShadow">ECS South</p>
-              <ul className="list-disc list-inside">
-                <li>More info soon</li>
-              </ul>
-            </div>
-            <div>
-              <p className="lg:text-xl text-md pinkShadow">ECS North</p>
-              <ul className="list-disc list-inside">
-                <li>More info soon</li>
+              <p className="lg:text-2xl text-lg pinkShadow">Other Hacking Spaces On Campus</p>
+              <ul className="">
+                <li>ECSS and ECSN Lobbies</li>
+                <li>Plinth Staircase</li>
+                <li>Sciences Building/Courtyard</li>
+                <li>Student Union Lounge</li>
+                <li>Student Services Building</li>
               </ul>
             </div>
           </div>

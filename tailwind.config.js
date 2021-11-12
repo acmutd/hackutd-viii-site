@@ -7,9 +7,6 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['wavehaus'],
-      },
       minWidth: {
         '1/4': '25%',
         '1/2': '50%',
@@ -19,6 +16,10 @@ module.exports = {
         56: '14rem',
         '9/10': '90%',
         '30px': '30px',
+        '5/12': '41.67%',
+      },
+      height: {
+        '9/10': '90%',
       },
       width: {
         '1/8': '12.5%',
@@ -28,13 +29,19 @@ module.exports = {
         '1/7': '14.29%',
         '6/7': '85.71%',
       },
+      maxWidth: {
+        '1/2': '50%',
+        '5/12': '41.67%',
+      },
       minHeight: {
         '1/3': '33.33%',
         '9/10': '90%',
         '1/2': '50%',
         '1/4': '25%',
+        '1/5': '20%',
         '5/8': '62.5%',
         16: '4rem',
+        22: '22rem',
       },
       backgroundColor: (theme) => ({
         lightBackground: '#F4F4F4',
@@ -69,6 +76,8 @@ module.exports = {
       header: ['Neon 80s', 'sans-serif'],
       body: ['sans-wavehaus'],
     },
+  },
+  variants: {
     extend: {
       display: ['group-hover'],
     },
