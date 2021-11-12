@@ -58,54 +58,56 @@ export default function ProfilePage() {
 
   return (
     <div className="p-8 w-full">
-      <h1 className="text-xl font-bold">User Profile</h1>
-      <section className="w-full py-5">
-        <div className="flex flex-col md:flex-row gap-x-10">
-          <div
-            className="bg-gray-300 w-full md:w-2/5 rounded-xl p-4 flex flex-col justify-around"
-            style={{ minHeight: '500px' }}
-          >
-            <h1 className="font-bold text-xl text-center">HackUTD VIII: Blast from the Past</h1>
-            <div className="mx-auto">
-              <Image
-                className="rounded-full object-cover"
-                src={userData.photoUrl}
-                height={180}
-                width={180}
-                alt="Your profile"
-              />
+      <div className="max-w-6xl mx-auto">
+        <h1 className="text-3xl font-bold">User Profile</h1>
+        <section className="w-full py-5">
+          <div className="flex flex-col md:flex-row gap-x-10">
+            <div
+              className="bg-gray-900 w-full md:w-2/3 rounded-xl p-4 flex flex-col justify-around"
+              style={{ minHeight: '500px' }}
+            >
+              <h1 className="font-bold text-xl text-center">HackUTD VIII: Blast from the Past</h1>
+              <div className="mx-auto">
+                <Image
+                  className="rounded-full object-cover"
+                  src={userData.photoUrl}
+                  height={180}
+                  width={180}
+                  alt="Your profile"
+                />
+              </div>
+              <div>
+                <h1 className="text-center font-bold text-xl">{userData.name}</h1>
+                <p className="text-center">{role}</p>
+              </div>
             </div>
-            <div>
-              <h1 className="text-center font-bold text-xl">{userData.name}</h1>
-              <p className="text-center">{role}</p>
+            <div className="w-full my-5">
+              <div className="profile-view">
+                <div className="profile-view-name flex flex-col gap-y-2">
+                  <div className="font-bold text-xl">Name</div>
+                  <h1 className="font-bold">{userData.name}</h1>
+                </div>
+                <div className="profile-view-role flex flex-col gap-y-2">
+                  <div className="font-bold text-xl">Role</div>
+                  <h1 className="font-bold">{role}</h1>
+                </div>
+                <div className="profile-view-univ flex flex-col gap-y-2">
+                  <div className="font-bold text-xl">University</div>
+                  <h1 className="font-bold">{userData.university}</h1>
+                </div>
+                <div className="profile-view-major flex flex-col gap-y-2">
+                  <div className="font-bold text-xl">Major</div>
+                  <h1 className="font-bold">{userData.major}</h1>
+                </div>
+                <div className="profile-view-stlvl flex flex-col gap-y-2">
+                  <div className="font-bold text-xl">Level of Study</div>
+                  <h1 className="font-bold">{userData.studyLevel}</h1>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="w-full my-5">
-            <div className="profile-view">
-              <div className="profile-view-name flex flex-col gap-y-2">
-                <h1>Name</h1>
-                <h1 className="font-bold">{userData.name}</h1>
-              </div>
-              <div className="profile-view-role flex flex-col gap-y-2">
-                <h1>Role</h1>
-                <h1 className="font-bold">{role}</h1>
-              </div>
-              <div className="profile-view-univ flex flex-col gap-y-2">
-                <h1>University</h1>
-                <h1 className="font-bold">{userData.university}</h1>
-              </div>
-              <div className="profile-view-major flex flex-col gap-y-2">
-                <h1>Major</h1>
-                <h1 className="font-bold">{userData.major}</h1>
-              </div>
-              <div className="profile-view-stlvl flex flex-col gap-y-2">
-                <h1>Level of Study</h1>
-                <h1 className="font-bold">{userData.studyLevel}</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   );
 }
