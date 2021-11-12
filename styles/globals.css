@@ -48,6 +48,7 @@ button.SigninButton {
   font-family: 'Neon 80s';
   width: 125px;
   color: #66e900;
+  background-color: #000000;
   border: 2px solid #66e900;
   @apply p-2;
 }
