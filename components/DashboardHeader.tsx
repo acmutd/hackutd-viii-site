@@ -16,41 +16,41 @@ export default function DashboardHeader({ active }: DashboardHeaderProps) {
           <Link href="/dashboard/">
             <a>
               <span className="inline md:invisible"></span>
-              <a
+              <div
                 className={`link font-bold ${
-                  active === '/dashboard/' && 'border-b-2 border-black p-2'
+                  active === '/dashboard' && 'border-b-2 border-black p-2'
                 }`}
                 onClick={getItemCount}
               >
-                Hack Center
-              </a>
+                HackCenter
+              </div>
             </a>
           </Link>
           <Link href="/dashboard/scan-in">
             <a>
               <span className="inline md:invisible"></span>
-              <a
+              <div
                 className={`link font-bold ${
                   active === '/dashboard/scan-in' && 'border-b-2 border-black p-2'
                 }`}
               >
                 Scan-In
-              </a>
+              </div>
             </a>
           </Link>
           <Link href="/dashboard/hackerpack">
             <a>
               <span className="inline md:invisible"></span>
-              <a
+              <div
                 className={`link font-bold ${
                   active === '/dashboard/hackerpack' && 'border-b-2 border-black p-2'
                 }`}
               >
                 HackerPack
-              </a>
+              </div>
             </a>
           </Link>
-          <Link href="/dashboard/submit">
+          {/* <Link href="/dashboard/submit">
             <a>
               <span className="inline md:invisible"></span>
               <a
@@ -61,7 +61,7 @@ export default function DashboardHeader({ active }: DashboardHeaderProps) {
                 Submit a Project
               </a>
             </a>
-          </Link>
+          </Link> */}
         </div>
       </header>
     </>

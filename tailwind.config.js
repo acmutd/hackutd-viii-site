@@ -16,6 +16,7 @@ module.exports = {
         56: '14rem',
         '9/10': '90%',
         '30px': '30px',
+        '5/12': '41.67%',
       },
       height: {
         '9/10': '90%',
@@ -28,18 +29,27 @@ module.exports = {
         '1/7': '14.29%',
         '6/7': '85.71%',
       },
+      maxWidth: {
+        '1/2': '50%',
+        '5/12': '41.67%',
+      },
       minHeight: {
         '1/3': '33.33%',
         '9/10': '90%',
         '1/2': '50%',
         '1/4': '25%',
+        '1/5': '20%',
         '5/8': '62.5%',
         16: '4rem',
+        22: '22rem',
       },
       backgroundColor: (theme) => ({
         lightBackground: '#F4F4F4',
         aqua: '#D8F8FF',
         darkAqua: '#B0F1FF',
+        pink: '#FF00E5',
+        cyan: '#00E0FF',
+        yellow: '#FFD600',
       }),
       left: {
         '-0.5': '-0.1rem',
@@ -49,6 +59,9 @@ module.exports = {
         darkAqua: '#B0F1FF',
         pink: '#FF00E5',
         green: '#66E900',
+        purple: '#AD00FF',
+        green: '#66E900',
+        cyan: '#00E0FF',
       }),
       textColor: {
         aqua: '#00e0ff',
@@ -61,6 +74,7 @@ module.exports = {
       sans: ['Neon 80s', 'sans-serif'],
       display: ['Good Times', 'sans-serif'],
       header: ['Neon 80s', 'sans-serif'],
+      body: ['sans-wavehaus'],
     },
   },
   variants: {

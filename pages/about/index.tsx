@@ -1,12 +1,15 @@
-import MobileHeader from '../components/MobileHeader';
-import MobileLinks from '../components/MobileLinks';
-import FAQComponent from '../components/FAQComponent';
-import FAQDropdownItem from '../components/FAQDropdownItem';
+import MobileHeader from '../../components/MobileHeader';
+import MobileLinks from '../../components/MobileLinks';
+import FAQComponent from '../../components/FAQComponent';
+import FAQDropdownItem from '../../components/FAQDropdownItem';
+import AboutHeader from '../../components/AboutHeader';
 
 export default function faq() {
   return (
     <div>
       <div className="mainFAQSContent">
+        <AboutHeader active="/about" />
+
         <h4 className="faqTitle">FREQUENTLY ASKED QUESTIONS</h4>
         <h4 className="faqTitle-mobile">FAQ</h4>
         <div className="faqs">
