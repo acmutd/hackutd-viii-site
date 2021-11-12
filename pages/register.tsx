@@ -197,7 +197,7 @@ export default function Register() {
                 type="type"
                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                 className="border min-w-full pt-3 pb-3 text-grey-darkest px-5 bg-indigo-100 rounded-md"
-                name="email"
+                name="preferredEmail"
                 autoComplete="email"
                 required
                 value={registrationData.user.preferredEmail}
