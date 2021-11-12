@@ -120,9 +120,13 @@ export default function Dashboard(props: { announcements: Announcement[] }) {
 
           <div className="flex flex-wrap my-16 mb-28">
             {/* Announcements */}
-            <div className="md:w-3/5 w-screen max-h-[24rem]">
-              <h1 className="md:text-3xl text-2xl font-black">Announcements</h1>
-              <div id="announcement-items" className="overflow-y-scroll h-9/10">
+            <div className="md:w-3/5 w-screen h-96">
+              <h1 className="md:text-3xl text-xl font-black">Announcements</h1>
+              <div
+                id="announcement-items"
+                className="overflow-y-scroll p-3"
+                style={{ height: '400px' }}
+              >
                 {announcements.map((announcement, idx) => {
                   const dateObj = new Date(announcement.timestamp!);
                   const hour = dateObj.getHours(),
@@ -133,9 +137,7 @@ export default function Dashboard(props: { announcements: Announcement[] }) {
                   }${minutes}`;
 
                   return (
-                    idx <= 5 && (
-                      <AnnouncementCard key={idx} text={announcement.announcement} time={time} />
-                    )
+                    <AnnouncementCard key={idx} text={announcement.announcement} time={time} />
                   );
                 })}
                 {/* <AnnouncementCard text="More announcements coming soon!" time="8:39 PM" /> */}

@@ -88,25 +88,13 @@ type Registration = {
   // TODO: Allow for qualifiers like "how old will you be at the day of the event?"
   // TODO: Allow this to be dynamically defined by the organizers
   // TODO: responses: { [questionId: string]: Question }
-  age: number;
-  gender: string;
-  race: string;
-  ethnicity: string;
+
   university: string;
   major: string;
   studyLevel: string;
-  hackathonExperience: number;
-  softwareExperience: string;
-  heardFrom: string;
-  size: string;
-  dietary: string[];
-  accomodations: string;
-  github?: string;
-  linkedin?: string;
-  website?: string;
-  resume?: string;
-  companies: Companies[];
+
   //claims: []; //Array of Strings will be used to id any claims (lunch, merch, etc.) made by user
+  scans?: string[];
 };
 
 /**
@@ -159,83 +147,4 @@ type ColorScheme = {
 type Announcement = {
   announcement: string;
   timestamp?: string;
-};
-
-/**
- * Information about a specific event registration.
- */
-type Registration = {
-  id: string;
-  /**
-   * A UNIX timestamp corresponding to when a hacker registered for the event.
-   */
-  timestamp: number;
-  /**
-   * Basic biographical user data
-   */
-  user: {
-    id: string;
-    permissions: UserPermission[];
-    firstName: string;
-    lastName: string;
-    /**
-     * The email used to contact the user.
-     */
-    preferredEmail: string;
-  };
-  // TODO: Allow for qualifiers like "how old will you be at the day of the event?"
-  // TODO: Allow this to be dynamically defined by the organizers
-  // TODO: responses: { [questionId: string]: Question }
-  age: number;
-  gender: string;
-  race: string;
-  ethnicity: string;
-  university: string;
-  major: string;
-  studyLevel: string;
-  hackathonExperience: number;
-  softwareExperience: string;
-  heardFrom: string;
-  size: string;
-  dietary: string;
-  accomodations: string;
-  github?: string;
-  linkedin?: string;
-  website?: string;
-  resume?: string;
-  companies: Companies[];
-};
-
-/**
- * Represent an answered question
- *
- * @param question a question
- * @param answer answer to corresponding question
- *
- *  */
-type AnsweredQuestion = {
-  question: string;
-  answer: string;
-};
-
-/**
- * Represent a waiting-for-response question
- *
- * @param question a question
- *
- *  */
-type PendingQuestion = {
-  question: string;
-};
-
-/**
- *
- * Represent a color scheme consist of a light and dark version used by a component
- *
- * @param light color code of the light variant
- * @param dark color code of the dark variant
- */
-type ColorScheme = {
-  light: string;
-  dark: string;
 };

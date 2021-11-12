@@ -83,19 +83,7 @@ async function handleGetApplications(req: NextApiRequest, res: NextApiResponse) 
  */
 async function handlePostApplications(req: NextApiRequest, res: NextApiResponse) {
   const {} = req.query;
-  const applicationBody = req.body;
-
-  let body: Registration;
-  try {
-    body = req.body;
-  } catch (error) {
-    console.error('Could not parse request JSON body');
-    res.status(400).json({
-      type: 'invalid',
-      message: '',
-    });
-    return;
-  }
+  const body = JSON.parse(req.body);
 
   const snapshot = await db
     .collection(APPLICATIONS_COLLECTION)
@@ -110,7 +98,9 @@ async function handlePostApplications(req: NextApiRequest, res: NextApiResponse)
 
   await db.collection(APPLICATIONS_COLLECTION).doc(body.user.id).set(body);
 
-  res.status(200).end();
+  res.status(200).json({
+    msg: 'Operation completed',
+  });
 }
 
 type ApplicationsResponse = {};
