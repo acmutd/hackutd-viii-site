@@ -536,6 +536,7 @@ div.row {
   flex-direction: row;
   flex-wrap: inherit;
   justify-content: center;
+  background-color: #000000;
 }
 
 /* div.video {
