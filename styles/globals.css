@@ -845,3 +845,7 @@ th {
 .topz {
   z-index: 999;
 }
+
+.trebuchet {
+  font-family: 'Trebuchet MS', sans-serif;
+}
