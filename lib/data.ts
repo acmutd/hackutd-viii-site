@@ -7,8 +7,9 @@ export const buttonDatas = [
 export const navItems = [
   { text: 'Dashboard', path: '/dashboard' },
   { text: 'Sponsors', path: '/sponsors' },
+  { text: 'Speakers', path: '/speakers' },
   { text: 'Schedule', path: '/schedule' },
-  { text: 'About', path: '/about' },
+  { text: 'FAQ', path: '/faq' },
   { text: 'Admin', path: '/admin' },
 ];
 
