@@ -46,36 +46,39 @@ export default function ResolveQuestionPage({
     }
   };
   return (
-    <div className="p-6">
-      <ErrorList
-        errors={errors}
-        onClose={(idx: number) => {
-          const newErrorList = [...errors];
-          newErrorList.splice(idx, 1);
-          setErrors(newErrorList);
-        }}
-      />
-      <PendingQuestion question={question.question} />
-      <textarea
-        className="w-full rounded-xl p-4"
-        rows={5}
-        value={answer}
-        onChange={(e) => setAnswer(e.target.value)}
-        style={{ backgroundColor: '#F2F3FF' }}
-        placeholder="Type your answer here"
-      ></textarea>
-      <div className="flex flex-row justify-end my-4">
-        <button
-          type="button"
-          className="p-2 rounded-lg"
-          style={{ backgroundColor: '#9CA6FF', color: 'black' }}
-          onClick={() => {
-            submitAnswer();
+    <div className="p-4">
+      <section className="max-w-4xl mx-auto">
+        <div className="font-bold text-3xl py-2">Answer question</div>
+        <ErrorList
+          errors={errors}
+          onClose={(idx: number) => {
+            const newErrorList = [...errors];
+            newErrorList.splice(idx, 1);
+            setErrors(newErrorList);
           }}
-        >
-          Submit Answer
-        </button>
-      </div>
+        />
+        <PendingQuestion question={question.question} />
+        <textarea
+          className="w-full rounded-xl p-4"
+          rows={5}
+          value={answer}
+          onChange={(e) => setAnswer(e.target.value)}
+          style={{ backgroundColor: '#F2F3FF' }}
+          placeholder="Type your answer here"
+        />
+        <div className="flex flex-row justify-end my-4">
+          <button
+            type="button"
+            className="p-2 rounded-lg"
+            style={{ backgroundColor: '#9CA6FF', color: 'black' }}
+            onClick={() => {
+              submitAnswer();
+            }}
+          >
+            Submit Answer
+          </button>
+        </div>
+      </section>
     </div>
   );
 }
