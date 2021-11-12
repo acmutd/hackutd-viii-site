@@ -139,8 +139,8 @@ export default function QuestionsPage() {
   ];
 
   return (
-    <div className="flex flex-col flex-grow">
-      <div className="max-w-6xl mx-auto">
+    <div>
+      <div className="max-w-4xl mx-auto">
         <Head>
           <title>HackUTD VIII - Questions and Answers</title>
           <meta
@@ -149,7 +149,7 @@ export default function QuestionsPage() {
           />
         </Head>
         <AboutHeader active="/about/questions" />
-        <div className="top-6 p-4 flex flex-col gap-y-3">
+        <div>
           <ErrorList
             errors={errors}
             onClose={(idx: number) => {
