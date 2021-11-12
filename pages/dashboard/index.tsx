@@ -149,6 +149,7 @@ export default function Dashboard(props: { announcements: Announcement[] }) {
           <div className="my-16">
             <h1 className="md:text-3xl text-2xl font-header font-black">Challenges</h1>
             <h1 className="md:text-2xl text-lg font-header font-black">Challenges coming soon!</h1>
+            {/* Add 5 min video requirement for capital one */}
           </div>
         </section>
       </div>

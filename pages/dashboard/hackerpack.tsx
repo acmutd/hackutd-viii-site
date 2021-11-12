@@ -131,8 +131,37 @@ export default function HackerPack() {
             💯 Submission &amp; Judging Instructions
           </div>
           <p>
-            To submit your project, please create a submission in our Devpost before 12:00 PM on
-            Sunday, November 14th. Try to include as much information as possible!
+            To submit your project, use devpost and create a submission in our Devpost before 12:00
+            PM on Sunday, November 14th. Include as much information as possible, so judges can look
+            at your project before your presentation! To be considered for judging and prizes, you{' '}
+            <strong className="underline">must submit a project on devpost by 12:00 PM.</strong>
+          </p>
+          <p className="my-4">
+            Judging will work differently depending on if your team is hybrid, in-person, or
+            virtual. *Additionally, if you are submitting a project to the Capital One &lsquo;Best
+            Financial Hack&rsquo; challenge, you must submit a 5-minute video to be considered.*
+          </p>
+          <ul className="list-disc list-outside">
+            <li>
+              If you are not comfortable participating in in-person judging, you may also submit a
+              5-minute video.
+            </li>
+            <li>
+              If your team is in-person, a spreadsheet with booth numbers will be posted on the
+              hackathon portal. Booths will be spread out throughout the building, in numerical
+              order. Once you find your booth, judges will start coming around to hear your
+              presentation and judge your projects.
+            </li>
+            <li>
+              If your team is virtual, we ask that you submit a video presentation, up to 5 minutes
+              long. This presentation can cover whatever content you want, but ideally should
+              encompass all aspects of your project. Judges will then be shown your video during the
+              judging timeslot.
+            </li>
+          </ul>
+          <p className="my-2">
+            Lastly, if your team is hybrid, you get to choose how the presentation is done! It can
+            either be done with the 5-minute video, or in-person, depending on your teams decision.
           </p>
           <a href="" target="_blank" rel="noreferrer" className="underline">
             🔗 Dev post link coming soon
@@ -141,75 +170,93 @@ export default function HackerPack() {
 
         <div id="workshop" className="my-7 scrollSnap">
           <div className="font-bold text-xl lg:text-3xl mb-4">📄 Workshop Info</div>
-          <div className="my-2">Click on the following workshops to access workshop info!</div>
-          <a
-            href="https://ericmutton.notion.site/ericmutton/Arduino-Crash-Course-5bc6961801d34b2d968c9c06570b72e3"
-            target="_blank"
-            rel="noreferrer"
-            className="m-1"
-          >
-            Makerspace - Arduino Crash Course
-          </a>{' '}
-          <br />
-          <a
-            href="https://curse-squash-d4d.notion.site/180DC-7-Step-Problem-Solving-Methodology-Workshop-c1821a15ae364789bb26b260b8e9f095"
-            target="_blank"
-            rel="noreferrer"
-            className="m-1"
-          >
-            180 Degrees Consulting - 7 Step Problem-Solving Methodology
-          </a>{' '}
-          <br />
-          <a
-            href="https://fifth-ink-847.notion.site/IEEEUTD-Team-Building-Social-4af07c3653f54fcd9bc6585750371e24"
-            target="_blank"
-            rel="noreferrer"
-            className="m-1"
-          >
-            IEEE UTD - Team-Building Social
-          </a>{' '}
-          <br />
-          <a
-            href="https://carnelian-tiglon-e2f.notion.site/American-Airlines-Full-Stack-Development-with-Next-js-1c98a94d9fed4be9bcb11cfa6ec98d84"
-            target="_blank"
-            rel="noreferrer"
-            className="m-1"
-          >
-            {' '}
-            American Airlines - Full stack development with Next.js
-          </a>{' '}
-          <br />
-          <a
-            href="https://believed-swift-e2c.notion.site/HackUTD-VIII-Pitch-Perfect-Workshop-Hacker-Guide-524a1055ef2e49afba940b19697b1a6a"
-            target="_blank"
-            rel="noreferrer"
-            className="m-1"
-          >
-            {' '}
-            Entrepreneur Club - Pitch Perfect
-          </a>{' '}
-          <br />
-          <a
-            href="https://carnelian-tiglon-e2f.notion.site/EOG-Resources-Crash-Course-on-React-and-Functional-Components-5e8597fdc55b4672a4d25865b337fb48"
-            target="_blank"
-            rel="noreferrer"
-            className="m-1"
-          >
-            {' '}
-            EOG Resources - Crash Course on React and Functional Components
-          </a>{' '}
-          <br />
-          <a
-            href="https://sponge-snipe-bbf.notion.site/Building-a-Blockchain-dApp-with-UTD-Blockchain-Club-90f1fd5e3ff542218a2cf986750cc4f2"
-            target="_blank"
-            rel="noreferrer"
-            className="m-1"
-          >
-            {' '}
-            UTD Block Chain - Building a Blockchain dApp
-          </a>{' '}
-          <br />
-          {/* <a href="https://illustrious-broker-f40.notion.site/HackUTD-VIII-Workshop-Hacker-Guide-068ef2f76f654121be68d7a1c2016d6e" target = "_blank" rel="noreferrer" className = "m-1"> AIS Workshop</a> <br /> */}
+          <div className="my-2">
+            Click on the following workshops to access certain workshop info! These will help you
+            prepare and learn more about the workshop.
+          </div>
+          <ul className="list-disc list-outside">
+            <li>
+              <a
+                href="https://ericmutton.notion.site/ericmutton/Arduino-Crash-Course-5bc6961801d34b2d968c9c06570b72e3"
+                target="_blank"
+                rel="noreferrer"
+                className="m-1"
+              >
+                Makerspace - Arduino Crash Course
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://curse-squash-d4d.notion.site/180DC-7-Step-Problem-Solving-Methodology-Workshop-c1821a15ae364789bb26b260b8e9f095"
+                target="_blank"
+                rel="noreferrer"
+                className="m-1"
+              >
+                180 Degrees Consulting - 7 Step Problem-Solving Methodology
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://fifth-ink-847.notion.site/IEEEUTD-Team-Building-Social-4af07c3653f54fcd9bc6585750371e24"
+                target="_blank"
+                rel="noreferrer"
+                className="m-1"
+              >
+                IEEE UTD - Team-Building Social
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://carnelian-tiglon-e2f.notion.site/American-Airlines-Full-Stack-Development-with-Next-js-1c98a94d9fed4be9bcb11cfa6ec98d84"
+                target="_blank"
+                rel="noreferrer"
+                className="m-1"
+              >
+                American Airlines - Full stack development with Next.js
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://believed-swift-e2c.notion.site/HackUTD-VIII-Pitch-Perfect-Workshop-Hacker-Guide-524a1055ef2e49afba940b19697b1a6a"
+                target="_blank"
+                rel="noreferrer"
+                className="m-1"
+              >
+                Entrepreneur Club - Pitch Perfect
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://carnelian-tiglon-e2f.notion.site/EOG-Resources-Crash-Course-on-React-and-Functional-Components-5e8597fdc55b4672a4d25865b337fb48"
+                target="_blank"
+                rel="noreferrer"
+                className="m-1"
+              >
+                EOG Resources - Crash Course on React and Functional Components
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://sponge-snipe-bbf.notion.site/Building-a-Blockchain-dApp-with-UTD-Blockchain-Club-90f1fd5e3ff542218a2cf986750cc4f2"
+                target="_blank"
+                rel="noreferrer"
+                className="m-1"
+              >
+                UTD Block Chain - Building a Blockchain dApp
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://illustrious-broker-f40.notion.site/HackUTD-VIII-Workshop-Hacker-Guide-068ef2f76f654121be68d7a1c2016d6e"
+                target="_blank"
+                rel="noreferrer"
+                className="m-1"
+              >
+                {' '}
+                AIS Workshop
+              </a>
+            </li>
+          </ul>
         </div>
 
         <div id="food" className="my-7 scrollSnap tableOutline">
