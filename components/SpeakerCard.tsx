@@ -7,6 +7,7 @@ import Image from 'next/image';
  * Cards for Speaker section
  */
 function SpeakerCard(props) {
+  const result = props.website.replace(/(^\w+:|^)\/\//, '');
   return (
     <>
       <div id="SpeakerCards" className="hidden sm:flex flex-wrap justify-center w-full">
@@ -15,30 +16,20 @@ function SpeakerCard(props) {
             <Image
               className="rounded-lg border-blue border-2"
               src={props.path}
-              alt={props.name}
+              alt="Speaker Picture"
               width={500}
               height={500}
             />
             <br></br>
-            <div className="text-2xl lg:hidden inline text-[#00E0FF]">{props.name}</div>
+            <p className="text-2xl lg:hidden inline">{props.name}</p>
             <p className="text-xl lg:hidden inline">{props.company}</p>
-            <p className="text-xl lg:hidden inline text-center">{props.role}</p>
-            <div className="text-center">
-              <a
-                href={props.website}
-                target="_blank"
-                rel="noreferrer"
-                className="text-sm text-[#B0F1FF]"
-              >
-                Connect on LinkedIn
-              </a>
-            </div>
+            <a href={props.website} target="_blank" rel="noreferrer" className="text-sm">
+              {result}
+            </a>
           </div>
           <div className="h-1/3 p-8 flex flex-col">
-            <div className="text-3xl hidden lg:inline text-[#00E0FF]">{props.name}</div>
-            <h2 className="text-xl hidden lg:inline">
-              {props.company} - {props.role}
-            </h2>
+            <h1 className="text-3xl hidden lg:inline">{props.name}</h1>
+            <h2 className="text-xl hidden lg:inline">{props.company}</h2>
             <p className="text-sm">{props.description}</p>
           </div>
         </div>
@@ -49,27 +40,18 @@ function SpeakerCard(props) {
             <Image
               className="rounded-xl"
               src={props.path}
-              alt={props.name}
+              alt="Speaker Picture"
               width={150}
               height={150}
             />
           </div>
           <div className="p-5">
             <h1>{props.name}</h1>
-            <h2>
-              {props.company} - {props.role}
-            </h2>
+            <h2>{props.company}</h2>
             <p className="text-xs">{props.description}</p>
-            <div className="text-center py-2">
-              <a
-                href={props.website}
-                target="_blank"
-                rel="noreferrer"
-                className="text-sm text-[#B0F1FF]"
-              >
-                Connect on LinkedIn
-              </a>
-            </div>
+            <a href={props.website} target="_blank" rel="noreferrer" className="text-sm">
+              {result}
+            </a>
           </div>
         </div>
       </div>

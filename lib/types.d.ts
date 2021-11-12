@@ -4,12 +4,11 @@
 type WithId<T> = T & {
   id: string;
 };
-
 /**
  * A flag for the set of functionality that is enabled for an account.
  */
 type UserPermission = 'admin' | 'sponsor' | 'organizer' | 'judge' | 'hacker';
-type Companies = 'SF' | 'AA' | 'C1' | 'EB' | 'FB';
+
 /**
  * Basic information needed for displays on the website.
  *
@@ -55,12 +54,6 @@ type User = Person & {
    * Flags for parts of the app this user can access.
    */
   permissions: UserPermission[];
-
-  /**
-   * University that user currently attends
-   *
-   */
-  university: string;
 };
 
 /**
@@ -88,13 +81,24 @@ type Registration = {
   // TODO: Allow for qualifiers like "how old will you be at the day of the event?"
   // TODO: Allow this to be dynamically defined by the organizers
   // TODO: responses: { [questionId: string]: Question }
-
+  age: number;
+  gender: string;
+  race: string;
+  ethnicity: string;
   university: string;
   major: string;
   studyLevel: string;
-
-  //claims: []; //Array of Strings will be used to id any claims (lunch, merch, etc.) made by user
-  scans?: string[];
+  hackathonExperience: number;
+  softwareExperience: string;
+  heardFrom: string;
+  size: string;
+  dietary: string;
+  accomodations: string;
+  github?: string;
+  linkedin?: string;
+  website?: string;
+  resume?: string;
+  companies: Companies[];
 };
 
 /**
@@ -121,19 +125,6 @@ type PendingQuestion = {
 
 /**
  *
- * Represent a team member in "Meet our Team" section of /about
- *
- * @param name name of the team member
- * @param description description of that team member
- *
- */
-type TeamMember = {
-  name: string;
-  description: string;
-};
-
-/**
- *
  * Represent a color scheme consist of a light and dark version used by a component
  *
  * @param light color code of the light variant
@@ -142,9 +133,4 @@ type TeamMember = {
 type ColorScheme = {
   light: string;
   dark: string;
-};
-
-type Announcement = {
-  announcement: string;
-  timestamp?: string;
 };
