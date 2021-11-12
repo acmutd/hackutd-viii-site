@@ -12,19 +12,19 @@ export default function AdminHeader() {
           <Link href="/admin">
             <a>
               <span className="inline md:invisible"></span>
-              <a className="link font-bold">Event Dashboard</a>
+              <div className="link font-bold">Event Dashboard</div>
             </a>
           </Link>
           <Link href="/admin/scan">
             <a>
               <span className="inline md:invisible"></span>
-              <a className="link font-bold">Scanner</a>
+              <div className="link font-bold">Scanner</div>
             </a>
           </Link>
           <Link href="/admin/users">
             <a>
               <span className="inline md:invisible"></span>
-              <a className="link font-bold">Users Dashboard</a>
+              <div className="link font-bold">Users Dashboard</div>
             </a>
           </Link>
         </div>

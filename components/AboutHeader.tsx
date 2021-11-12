@@ -22,21 +22,23 @@ export default function AboutHeader({ active }: AboutHeaderProps) {
         <Link href="/about">
           <a>
             <span className="inline md:invisible"></span>
-            <a className={`link font-bold ${active === '/about' && 'border-b-2 border-black p-2'}`}>
+            <div
+              className={`link font-bold ${active === '/about' && 'border-b-2 border-black p-2'}`}
+            >
               FAQ
-            </a>
+            </div>
           </a>
         </Link>
         <Link href="/about/questions">
           <a>
             <span className="inline md:invisible"></span>
-            <a
+            <div
               className={`link font-bold ${
                 active === '/about/questions' && 'border-b-2 border-black p-2'
               }`}
             >
               Ask a Question
-            </a>
+            </div>
           </a>
         </Link>
       </div>

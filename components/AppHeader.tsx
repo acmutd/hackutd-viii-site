@@ -52,31 +52,31 @@ export default function AppHeader() {
               }}
             >
               <span className="inline scheduledot md:invisible"></span>
-              <a className="link lg:inline hidden">Dashboard</a>
+              <div className="link lg:inline hidden">Dashboard</div>
             </a>
           </Link>
           <Link href="/schedule">
             <a onClick={dismissDialog}>
               <span className="inline scheduledot md:invisible"></span>
-              <a className="link lg:inline hidden">Schedule</a>
+              <div className="link lg:inline hidden">Schedule</div>
             </a>
           </Link>
           <Link href="/speakers">
             <a onClick={dismissDialog}>
               <span className="inline speakerdot md:invisible"></span>
-              <a className="link lg:inline hidden">Speakers</a>
+              <div className="link lg:inline hidden">Speakers</div>
             </a>
           </Link>
           <Link href="/sponsors">
             <a onClick={dismissDialog}>
               <span className="inline sponsordot md:invisible"></span>
-              <a className="link lg:inline hidden">Sponsors</a>
+              <div className="link lg:inline hidden">Sponsors</div>
             </a>
           </Link>
           <Link href="/about">
             <a onClick={dismissDialog}>
               <span className="inline faqdot md:invisible"></span>
-              <a className="link lg:inline hidden">About</a>
+              <div className="link lg:inline hidden">About</div>
             </a>
           </Link>
         </div>
