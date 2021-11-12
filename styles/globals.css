@@ -853,9 +853,18 @@ div.tableOutline td {
   display: grid;
   grid-template-areas:
     'name role'
-    'university university';
+    'university university'
+    'major studyLevel';
   row-gap: 2rem;
   column-gap: 1rem;
+}
+
+.profile-view-major {
+  grid-area: major;
+}
+
+.profile-view-stlvl {
+  grid-area: studyLevel;
 }
 
 .profile-view-name {
