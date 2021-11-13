@@ -247,6 +247,16 @@ export default function Dashboard(props: { announcements: Announcement[] }) {
                   </div>
                   <p className="md:text-lg text-md mt-2 underline">Prizes</p>
                   <div>Oculus Quests</div>
+                  <br />
+                  Checkout our github for more info&nbsp;
+                  <a
+                    href="https://github.com/humflelump/utd-hackathon"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-2 underline"
+                  >
+                    here!
+                  </a>
                 </div>
               </div>
               <div className="border-2 border-green rounded-lg lg:max-w-5/12 lg:min-w-5/12 min-w-full m-4 h-auto">
