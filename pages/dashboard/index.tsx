@@ -305,8 +305,8 @@ export default function Dashboard(props: { announcements: Announcement[] }) {
                   <div className=" md:text-lg text-md">
                     Project Nebula is an initiative to build tools that help students. We have teams
                     actively developing several projects, including a comprehensive degree planning
-                    tool, a personalized guide for UTD students, and the Nebula API⁠ - a public API
-                    to retrieve UTD data such as course information, degree plan requirements, and
+                    tool, a personalized guide for UTD students, and the Nebula API⁠—a public API to
+                    retrieve UTD data such as course information, degree plan requirements, and
                     historical grade data. <br /> <br />
                     Your challenge is to build a tool using the Nebula API that helps students
                     during their time in college. Think big: we envision dashboards, interactive
@@ -316,20 +316,18 @@ export default function Dashboard(props: { announcements: Announcement[] }) {
                     challenge. All students who submit a project for this challenge will be
                     considered for an interview to join our maintainer team.
                   </div>
+                  <br />
+                  Your project will be evaluated on:
+                  <ul className="list-disc list-inside">
+                    <li>Student usefulness</li>
+                    <li>Novelty and creativity</li>
+                    <li>Project functionality</li>
+                  </ul>
+                  <br />
                   <p className="md:text-lg text-md mt-2 underline">Prizes</p>
                   <div>
-                    The winning team will be given a Logitech Mechanical Gaming Keyboard, an
-                    honorable mention on our website, and a meeting with us to help grow their idea.{' '}
-                    <br />
-                    🔗 Check out the keyboard{' '}
-                    <a
-                      href="https://store.hied.com/item/Logitech/Keyboards/1884053?ref=also_viewed_product&product_id="
-                      target="_blank"
-                      rel="noreferrer"
-                      className="underline"
-                    >
-                      here
-                    </a>
+                    The winning team will be given Corsair mechanical keyboards, an honorable
+                    mention on our website, and a meeting with us to help grow their idea.
                   </div>
                 </div>
               </div>
