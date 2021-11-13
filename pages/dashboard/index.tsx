@@ -152,7 +152,7 @@ export default function Dashboard(props: { announcements: Announcement[] }) {
               {/* card */}
               <div className="border-2 border-green rounded-lg lg:max-w-5/12 lg:min-w-5/12 min-w-full m-4 h-auto">
                 <p className="min-h-[4rem] border-b-2 border-green flex justify-center items-center hackerPackShadow md:text-3xl text-2xl block">
-                  American Airlines Challenge
+                  American Airlines Challenge - Flight Enhancement
                 </p>
                 <div className="sm:p-6 p-2 trebuchet">
                   <div className=" md:text-lg text-md">
@@ -173,7 +173,7 @@ export default function Dashboard(props: { announcements: Announcement[] }) {
               </div>
               <div className="border-2 border-green rounded-lg lg:max-w-5/12 lg:min-w-5/12 min-w-full m-4 h-auto">
                 <p className="min-h-[4rem] border-b-2 border-green flex justify-center items-center hackerPackShadow md:text-3xl text-2xl block">
-                  Goldman Sachs Challenge
+                  Goldman Sachs Challenge - Investment Strategy
                 </p>
                 <div className="sm:p-6 p-2 trebuchet">
                   <div className=" md:text-md text-sm">
@@ -207,12 +207,16 @@ export default function Dashboard(props: { announcements: Announcement[] }) {
                     history and risk tolerance.
                   </div>
                   <p className="md:text-lg text-md mt-2 underline">Prizes</p>
-                  <div>TBA</div>
+                  <div>
+                    First Place: DJ Mini SE Drones <br />
+                    Second Place: Apple Airpods <br />
+                    Third Place: Doordash Gift Cards
+                  </div>
                 </div>
               </div>
               <div className="border-2 border-green rounded-lg lg:max-w-5/12 lg:min-w-5/12 min-w-full m-4 h-auto">
                 <p className="min-h-[4rem] border-b-2 border-green flex justify-center items-center hackerPackShadow md:text-3xl text-2xl p-2">
-                  Capital One - Best Financial Hack Challenge
+                  Capital One Challenge - Best Financial Hack
                 </p>
                 <div className="sm:p-6 p-2 trebuchet">
                   <div className=" md:text-lg text-md">
@@ -229,7 +233,7 @@ export default function Dashboard(props: { announcements: Announcement[] }) {
               </div>
               <div className="border-2 border-green rounded-lg lg:max-w-5/12 lg:min-w-5/12 min-w-full m-4 h-auto">
                 <p className="min-h-[4rem] border-b-2 border-green flex justify-center items-center hackerPackShadow md:text-3xl text-2xl block">
-                  EOG Resources Challenge
+                  EOG Resources Challenge - Operations Optimization
                 </p>
                 <div className="sm:p-6 p-2 trebuchet">
                   <div className=" md:text-lg text-md">
@@ -243,11 +247,21 @@ export default function Dashboard(props: { announcements: Announcement[] }) {
                   </div>
                   <p className="md:text-lg text-md mt-2 underline">Prizes</p>
                   <div>Oculus Quests</div>
+                  <br />
+                  Checkout our github for more info&nbsp;
+                  <a
+                    href="https://github.com/humflelump/utd-hackathon"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-2 underline"
+                  >
+                    here!
+                  </a>
                 </div>
               </div>
               <div className="border-2 border-green rounded-lg lg:max-w-5/12 lg:min-w-5/12 min-w-full m-4 h-auto">
                 <p className="min-h-[4rem] border-b-2 border-green flex justify-center items-center hackerPackShadow md:text-3xl text-2xl block">
-                  StateFarm Challenge
+                  StateFarm Challenge - 100-Year Anniversary
                 </p>
                 <div className="sm:p-6 p-2 trebuchet">
                   <div className=" md:text-lg text-md">
@@ -267,7 +281,7 @@ export default function Dashboard(props: { announcements: Announcement[] }) {
               </div>
               <div className="border-2 border-green rounded-lg lg:max-w-5/12 lg:min-w-5/12 min-w-full m-4 h-auto">
                 <p className="min-h-[4rem] border-b-2 border-green flex justify-center items-center hackerPackShadow md:text-3xl text-2xl block">
-                  Student Government Challenge
+                  Student Government Challenge - Improving Student Life
                 </p>
                 <div className="sm:p-6 p-2 trebuchet">
                   <div className=" md:text-lg text-md">
@@ -291,8 +305,8 @@ export default function Dashboard(props: { announcements: Announcement[] }) {
                   <div className=" md:text-lg text-md">
                     Project Nebula is an initiative to build tools that help students. We have teams
                     actively developing several projects, including a comprehensive degree planning
-                    tool, a personalized guide for UTD students, and the Nebula API⁠ - a public API
-                    to retrieve UTD data such as course information, degree plan requirements, and
+                    tool, a personalized guide for UTD students, and the Nebula API⁠—a public API to
+                    retrieve UTD data such as course information, degree plan requirements, and
                     historical grade data. <br /> <br />
                     Your challenge is to build a tool using the Nebula API that helps students
                     during their time in college. Think big: we envision dashboards, interactive
@@ -302,20 +316,18 @@ export default function Dashboard(props: { announcements: Announcement[] }) {
                     challenge. All students who submit a project for this challenge will be
                     considered for an interview to join our maintainer team.
                   </div>
+                  <br />
+                  Your project will be evaluated on:
+                  <ul className="list-disc list-inside">
+                    <li>Student usefulness</li>
+                    <li>Novelty and creativity</li>
+                    <li>Project functionality</li>
+                  </ul>
+                  <br />
                   <p className="md:text-lg text-md mt-2 underline">Prizes</p>
                   <div>
-                    The winning team will be given a Logitech Mechanical Gaming Keyboard, an
-                    honorable mention on our website, and a meeting with us to help grow their idea.{' '}
-                    <br />
-                    🔗 Check out the keyboard{' '}
-                    <a
-                      href="https://store.hied.com/item/Logitech/Keyboards/1884053?ref=also_viewed_product&product_id="
-                      target="_blank"
-                      rel="noreferrer"
-                      className="underline"
-                    >
-                      here
-                    </a>
+                    The winning team will be given Corsair mechanical keyboards, an honorable
+                    mention on our website, and a meeting with us to help grow their idea.
                   </div>
                 </div>
               </div>
