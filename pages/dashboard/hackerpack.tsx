@@ -169,7 +169,7 @@ export default function HackerPack() {
             rel="noreferrer"
             className="underline"
           >
-            🔗 Check the devpost here
+            🔗 Check the devpost here!
           </a>
         </div>
 
