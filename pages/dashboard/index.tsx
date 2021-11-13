@@ -257,6 +257,15 @@ export default function Dashboard(props: { announcements: Announcement[] }) {
                   >
                     here!
                   </a>
+                  <br />
+                  <a
+                    href="https://github.com/humflelump/utd-hackathon"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-2 underline"
+                  >
+                    https://github.com/humflelump/utd-hackathon
+                  </a>
                 </div>
               </div>
               <div className="border-2 border-green rounded-lg lg:max-w-5/12 lg:min-w-5/12 min-w-full m-4 h-auto">
