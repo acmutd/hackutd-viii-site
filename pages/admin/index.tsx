@@ -85,7 +85,7 @@ export default function Admin({ questions }: { questions: QADocument[] }) {
           value={announcement}
           onChange={(e) => setAnnouncement(e.target.value)}
           className="w-full rounded-xl p-4"
-          style={{ backgroundColor: '#F2F3FF' }}
+          style={{ backgroundColor: 'black', borderColor: 'white', borderWidth: '2px' }}
           placeholder="Type your announcement here"
           rows={5}
         ></textarea>

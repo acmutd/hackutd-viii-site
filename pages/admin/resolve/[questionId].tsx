@@ -63,7 +63,7 @@ export default function ResolveQuestionPage({
           rows={5}
           value={answer}
           onChange={(e) => setAnswer(e.target.value)}
-          style={{ backgroundColor: '#F2F3FF' }}
+          style={{ backgroundColor: 'black', borderWidth: '2px', borderColor: 'white' }}
           placeholder="Type your answer here"
         />
         <div className="flex flex-row justify-end my-4">
