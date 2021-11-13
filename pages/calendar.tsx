@@ -169,7 +169,7 @@ const appointments = [
     location: 'ECSW 3.250',
   },
   {
-    title: 'Workshop with AIS',
+    title: 'Data Visualization with Streamlit by AIS',
     startDate: new Date(2021, 10, 13, 20, 0),
     endDate: new Date(2021, 10, 13, 20, 45),
     Event: 4,

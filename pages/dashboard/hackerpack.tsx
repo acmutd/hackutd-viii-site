@@ -258,7 +258,7 @@ export default function HackerPack() {
                 className="m-1"
               >
                 {' '}
-                AIS Workshop
+                AIS - Data Visualization with Streamlit
               </a>
             </li>
           </ul>
