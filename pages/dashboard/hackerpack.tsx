@@ -163,8 +163,13 @@ export default function HackerPack() {
             Lastly, if your team is hybrid, you get to choose how the presentation is done! It can
             either be done with the 5-minute video, or in-person, depending on your teams decision.
           </p>
-          <a href="" target="_blank" rel="noreferrer" className="underline">
-            🔗 Dev post link coming soon
+          <a
+            href="https://hackutd-viii.devpost.com/?ref_feature=challenge&ref_medium=discover"
+            target="_blank"
+            rel="noreferrer"
+            className="underline"
+          >
+            🔗 Check the devpost here
           </a>
         </div>
 

@@ -152,7 +152,7 @@ export default function Dashboard(props: { announcements: Announcement[] }) {
               {/* card */}
               <div className="border-2 border-green rounded-lg lg:max-w-5/12 lg:min-w-5/12 min-w-full m-4 h-auto">
                 <p className="min-h-[4rem] border-b-2 border-green flex justify-center items-center hackerPackShadow md:text-3xl text-2xl block">
-                  American Airlines Challenge
+                  American Airlines Challenge - Flight Enhancement
                 </p>
                 <div className="sm:p-6 p-2 trebuchet">
                   <div className=" md:text-lg text-md">
@@ -173,7 +173,7 @@ export default function Dashboard(props: { announcements: Announcement[] }) {
               </div>
               <div className="border-2 border-green rounded-lg lg:max-w-5/12 lg:min-w-5/12 min-w-full m-4 h-auto">
                 <p className="min-h-[4rem] border-b-2 border-green flex justify-center items-center hackerPackShadow md:text-3xl text-2xl block">
-                  Goldman Sachs Challenge
+                  Goldman Sachs Challenge - Investment Strategy
                 </p>
                 <div className="sm:p-6 p-2 trebuchet">
                   <div className=" md:text-md text-sm">
@@ -207,12 +207,16 @@ export default function Dashboard(props: { announcements: Announcement[] }) {
                     history and risk tolerance.
                   </div>
                   <p className="md:text-lg text-md mt-2 underline">Prizes</p>
-                  <div>TBA</div>
+                  <div>
+                    First Place: DJ Mini SE Drones <br />
+                    Second Place: Apple Airpods <br />
+                    Third Place: Doordash Gift Cards
+                  </div>
                 </div>
               </div>
               <div className="border-2 border-green rounded-lg lg:max-w-5/12 lg:min-w-5/12 min-w-full m-4 h-auto">
                 <p className="min-h-[4rem] border-b-2 border-green flex justify-center items-center hackerPackShadow md:text-3xl text-2xl p-2">
-                  Capital One - Best Financial Hack Challenge
+                  Capital One Challenge - Best Financial Hack
                 </p>
                 <div className="sm:p-6 p-2 trebuchet">
                   <div className=" md:text-lg text-md">
@@ -229,7 +233,7 @@ export default function Dashboard(props: { announcements: Announcement[] }) {
               </div>
               <div className="border-2 border-green rounded-lg lg:max-w-5/12 lg:min-w-5/12 min-w-full m-4 h-auto">
                 <p className="min-h-[4rem] border-b-2 border-green flex justify-center items-center hackerPackShadow md:text-3xl text-2xl block">
-                  EOG Resources Challenge
+                  EOG Resources Challenge - Operations Optimization
                 </p>
                 <div className="sm:p-6 p-2 trebuchet">
                   <div className=" md:text-lg text-md">
@@ -247,7 +251,7 @@ export default function Dashboard(props: { announcements: Announcement[] }) {
               </div>
               <div className="border-2 border-green rounded-lg lg:max-w-5/12 lg:min-w-5/12 min-w-full m-4 h-auto">
                 <p className="min-h-[4rem] border-b-2 border-green flex justify-center items-center hackerPackShadow md:text-3xl text-2xl block">
-                  StateFarm Challenge
+                  StateFarm Challenge - 100-Year Anniversary
                 </p>
                 <div className="sm:p-6 p-2 trebuchet">
                   <div className=" md:text-lg text-md">
@@ -267,7 +271,7 @@ export default function Dashboard(props: { announcements: Announcement[] }) {
               </div>
               <div className="border-2 border-green rounded-lg lg:max-w-5/12 lg:min-w-5/12 min-w-full m-4 h-auto">
                 <p className="min-h-[4rem] border-b-2 border-green flex justify-center items-center hackerPackShadow md:text-3xl text-2xl block">
-                  Student Government Challenge
+                  Student Government Challenge - Improving Student Life
                 </p>
                 <div className="sm:p-6 p-2 trebuchet">
                   <div className=" md:text-lg text-md">
