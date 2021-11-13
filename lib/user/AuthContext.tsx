@@ -216,8 +216,8 @@ function AuthProvider({ children }: React.PropsWithChildren<Record<string, any>>
     setUser({
       id: uid,
       token,
-      firstName: displayName,
-      lastName: '',
+      firstName: userData.user.firstName,
+      lastName: userData.user.lastName,
       preferredEmail: email,
       photoUrl: photoURL,
       permissions, // probably not the best way to do this, but it works for hackutd and that's what matters

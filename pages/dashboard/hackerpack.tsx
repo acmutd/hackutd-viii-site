@@ -67,7 +67,9 @@ export default function HackerPack() {
           </ul>
         </section>
         <div className="dashboardTag fixed bottom-0 border-t-2 border-r-2 border-aqua w-1/4 md:w-1/6 2xl:w-1/8 text-center py-3 bg-black">
-          <div>Welcome, {!user || !isSignedIn ? 'hacker' : user.firstName}</div>
+          <div>
+            Welcome, {!user || !isSignedIn ? 'hacker' : user.firstName + ' ' + user.lastName}
+          </div>
           <div className="text-indigo-500">{role}</div>
         </div>
       </section>
