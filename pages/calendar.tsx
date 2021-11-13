@@ -32,7 +32,7 @@ const appointments = [
     startDate: new Date(2021, 10, 13, 12, 0),
     endDate: new Date(2021, 10, 13, 12, 30),
     Event: 5,
-    location: 'ECSW 1.100',
+    location: 'Virtual',
   },
   {
     title: 'Squid Game 1',
