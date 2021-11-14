@@ -165,8 +165,13 @@ export default function HackerPack() {
             Lastly, if your team is hybrid, you get to choose how the presentation is done! It can
             either be done with the 5-minute video, or in-person, depending on your teams decision.
           </p>
-          <a href="" target="_blank" rel="noreferrer" className="underline">
-            🔗 Dev post link coming soon
+          <a
+            href="https://hackutd-viii.devpost.com/?ref_feature=challenge&ref_medium=discover"
+            target="_blank"
+            rel="noreferrer"
+            className="underline"
+          >
+            🔗 Check the devpost here!
           </a>
         </div>
 
@@ -255,7 +260,7 @@ export default function HackerPack() {
                 className="m-1"
               >
                 {' '}
-                AIS Workshop
+                AIS - Data Visualization with Streamlit
               </a>
             </li>
           </ul>
@@ -531,7 +536,7 @@ export default function HackerPack() {
                   <ul className="list-disc list-outside">
                     <li>Collaboration Rooms: 2.305</li>
                     <li>Classrooms: 2.325</li>
-                    <li>Study Area: 2.100, 2.115, 2.125, 2.160, 2.164, 2.330, 2.336, 2.369</li>
+                    <li>Study Area: 2.100, 2.115, 2.160, 2.164, 2.336, 2.369</li>
                     <li>Student Lounge: 2.475</li>
                   </ul>
                 </div>
@@ -539,8 +544,8 @@ export default function HackerPack() {
                   <p className="lg:text-xl text-md">3️⃣ Floor 3</p>
                   <ul className="list-disc list-outside">
                     <li>Collaboration Rooms: 3.305, 3.321</li>
-                    <li>Study Area: 3.330, 3.336, 3.160, 3,115, 3.125</li>
-                    <li>Student Lounge: 3.475, 3.104</li>
+                    <li>Study Area: 3.330, 3.160, 3,115</li>
+                    <li>Student Lounge: 3.475</li>
                   </ul>
                 </div>
                 <div>
