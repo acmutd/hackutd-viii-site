@@ -35,7 +35,7 @@ export default function ProfilePage() {
           setUserData({
             id: user.uid,
             preferredEmail: user.email,
-            name: user.displayName,
+            name: `${data.user.firstName} ${data.user.lastName}`,
             permissions: data.user.permissions,
             photoUrl: user.photoURL,
             university: data.university,

@@ -26,7 +26,6 @@ async function postTokenToDB(req: NextApiRequest, res: NextApiResponse) {
     console.error(error);
     return res.status(500).send({
       msg: 'Server Error',
-      error,
     });
   }
 }
