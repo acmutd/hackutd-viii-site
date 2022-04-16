@@ -1,4 +1,4 @@
-import { firestore } from 'firebase-admin';
+import { firestore, auth } from 'firebase-admin';
 import { NextApiRequest, NextApiResponse } from 'next';
 import initializeApi from '../../../lib/admin/init';
 
@@ -22,6 +22,20 @@ export interface UserData {
   };
 }
 
+async function userIsAuthorized(token: string, roles: string[] = ['admin']) {
+  if (!token) return false;
+  const payload = await auth().verifyIdToken(token);
+  const snapshot = await firestore()
+    .collection(USERS_COLLECTION)
+    .where('id', '==', payload.uid)
+    .get();
+  if (snapshot.empty) return false;
+  for (let userRole of snapshot.docs[0].data().user.permissions as string[]) {
+    if (roles.includes(userRole)) return true;
+  }
+  return false;
+}
+
 /**
  *
  * API endpoint to fetch all users from the database
@@ -32,6 +46,17 @@ export interface UserData {
  *
  */
 async function getAllUsers(req: NextApiRequest, res: NextApiResponse) {
+  const { headers } = req;
+
+  const userToken = headers['authorization'];
+  const isAuthorized = await userIsAuthorized(userToken);
+
+  if (!isAuthorized) {
+    return res.status(403).json({
+      msg: 'Request is not authorized to perform admin functionality.',
+    });
+  }
+
   const snapshot = await db.collection(USERS_COLLECTION).get();
   let data = [];
 
