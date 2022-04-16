@@ -1,10 +1,11 @@
-import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
+import { isAuthorized } from '.';
 import AdminHeader from '../../components/AdminHeader';
 import FilterComponent from '../../components/FilterComponent';
 import UserList from '../../components/UserList';
 import { RequestHelper } from '../../lib/request-helper';
+import { useAuthContext } from '../../lib/user/AuthContext';
 import { UserData } from '../api/users';
 
 /**
@@ -14,10 +15,13 @@ import { UserData } from '../api/users';
  * Route: /admin/users
  *
  */
-export default function UserPage({ userData }: { userData: UserData[] }) {
-  const [users, setUsers] = useState<UserData[]>(userData);
-  const [filteredUsers, setFilteredUsers] = useState<UserData[]>(users);
+export default function UserPage() {
+  const [loading, setLoading] = useState(true);
+  const [users, setUsers] = useState<UserData[]>([]);
+  const [filteredUsers, setFilteredUsers] = useState<UserData[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
+
+  const { user } = useAuthContext();
 
   let timer: NodeJS.Timeout;
 
@@ -26,12 +30,33 @@ export default function UserPage({ userData }: { userData: UserData[] }) {
     sponsor: true,
     organizer: true,
     admin: true,
+    super_admin: true,
   });
 
+  async function fetchAllUsers() {
+    setLoading(true);
+    if (!user) return;
+
+    const { data } = await RequestHelper.get<UserData[]>('/api/users', {
+      headers: {
+        Authorization: user.token,
+      },
+    });
+
+    setUsers(data);
+    setFilteredUsers([...data]);
+    setLoading(false);
+  }
+
   useEffect(() => {
+    fetchAllUsers();
+  }, []);
+
+  useEffect(() => {
+    if (loading) return;
     timer = setTimeout(() => {
       if (searchQuery !== '') {
-        const newFiltered = [...users].filter(
+        const newFiltered = users.filter(
           ({ user }) =>
             `${user.firstName} ${user.lastName}`
               .toLowerCase()
@@ -39,13 +64,14 @@ export default function UserPage({ userData }: { userData: UserData[] }) {
         );
         setFilteredUsers(newFiltered);
       } else {
-        console.log(users);
         setFilteredUsers([...users]);
       }
     }, 750);
 
-    return () => clearTimeout(timer);
-  }, [searchQuery]);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [searchQuery, loading, users]);
 
   const updateFilter = (name: string) => {
     const filterCriteria = {
@@ -73,6 +99,17 @@ export default function UserPage({ userData }: { userData: UserData[] }) {
       }),
     );
   };
+
+  if (!user || !isAuthorized(user))
+    return <div className="text-2xl font-black text-center">Unauthorized</div>;
+
+  if (loading) {
+    return (
+      <div>
+        <h1>Loading...</h1>
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col flex-grow">
@@ -148,16 +185,3 @@ export default function UserPage({ userData }: { userData: UserData[] }) {
     </div>
   );
 }
-
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const protocol = context.req.headers.referer?.split('://')[0] || 'http';
-  const { data } = await RequestHelper.get<UserData[]>(
-    `${protocol}://${context.req.headers.host}/api/users/`,
-    {},
-  );
-  return {
-    props: {
-      userData: data,
-    },
-  };
-};

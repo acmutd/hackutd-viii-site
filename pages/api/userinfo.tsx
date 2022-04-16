@@ -55,10 +55,10 @@ async function handleUserInfo(req: NextApiRequest, res: NextApiResponse) {
     const snapshot = await db.collection(REGISTRATION_COLLECTION).doc(userID).get();
     if (!snapshot.exists)
       return res.status(404).json({ code: 'not found', message: "User doesn't exist..." });
-    res.status(200).json(snapshot.data());
+    return res.status(200).json(snapshot.data());
   } catch (error) {
     console.error('Error when fetching applications', error);
-    res.status(500).json({
+    return res.status(500).json({
       code: 'internal-error',
       message: 'Something went wrong when processing this request. Try again later.',
     });
