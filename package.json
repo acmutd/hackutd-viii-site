@@ -27,7 +27,7 @@
     "antd": "^4.16.13",
     "dotenv": "^10.0.0",
     "firebase": "^8.10.0",
-    "firebase-admin": "^9.11.0",
+    "firebase-admin": "^11.4.1",
     "heroicons": "^1.0.5",
     "jsqr": "^1.4.0",
     "localforage": "^1.10.0",
